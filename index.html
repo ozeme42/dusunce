@@ -16,28 +16,40 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+    /* Tam Ekran Okuyucu Modalı */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(4px);
-      z-index: 9999;
+      width: 100vw;
+      height: 100vh;
+      background: #0f172a;
+      z-index: 99999;
       display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
     }
     .modal-content {
-      width: 100%;
-      max-width: 1020px;
-      height: 92vh;
+      width: 100vw;
+      height: 100vh;
       background: #f5f3ec;
-      border: 3.5px solid #eab308;
-      border-radius: 20px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      border: none;
+      border-radius: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
+    }
+    .modal-header {
+      background: #f59e0b;
+      background: linear-gradient(90deg, #d97706 0%, #f59e0b 100%);
+      color: #ffffff;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      z-index: 10;
     }
   </style>
 </head>
@@ -45,7 +57,7 @@
 
   <div class="portal-container space-y-8">
 
-    <!-- Ana Başlık Kartı (Workshet Dokulu) -->
+    <!-- Ana Başlık Kartı (Worksheet Dokulu) -->
     <header class="box-hand-yellow p-6 md:p-10 bg-white relative">
       <div class="flex flex-wrap justify-between items-start gap-4 border-b-4 border-amber-400 pb-6">
         <div>
@@ -66,7 +78,7 @@
         </div>
       </div>
 
-      <!-- Külliyat İstatistikleri ve İlerleme Takibi -->
+      <!-- Külliyat İstatistikleri -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6 text-center">
         <div class="p-4 bg-amber-50 rounded-2xl border-2 border-amber-300">
           <span class="text-3xl block">🎙️</span>
@@ -146,24 +158,30 @@
   </div>
 
 
-  <!-- Sayfa İçi Okuma Modalı (Iframe Reader) -->
+  <!-- BÜTÜNÜYLE TAM EKRAN OKUYUCU MODALI -->
   <div id="reader-modal" class="modal-overlay">
     <div class="modal-content">
-      <div class="p-3 bg-amber-400 border-b-2 border-amber-600 flex justify-between items-center text-slate-900 font-sans-bold">
-        <div class="flex items-center gap-2">
-          <span class="text-xl">📖</span>
-          <span id="modal-title" class="font-extrabold text-base">Fasikül Okuyucu</span>
+      <div class="modal-header">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">📖</span>
+          <div>
+            <h2 id="modal-title" class="font-extrabold text-base md:text-lg leading-tight">Fasikül Okuyucu</h2>
+            <p class="text-xs text-amber-100">Düşünce ve Hayat • Prof. Dr. Ekrem Demirli</p>
+          </div>
         </div>
         <div class="flex items-center gap-2">
-          <a id="modal-open-new-tab" href="#" target="_blank" class="px-3 py-1 bg-white hover:bg-slate-100 rounded-lg text-xs font-bold transition">
+          <button onclick="toggleBrowserFullscreen()" class="px-3 py-1.5 bg-amber-700/80 hover:bg-amber-800 text-white rounded-lg text-xs font-bold font-sans-bold transition flex items-center gap-1 border border-amber-300/40">
+            ⛶ Tarayıcı Tam Ekran
+          </button>
+          <a id="modal-open-new-tab" href="#" target="_blank" class="px-3 py-1.5 bg-white hover:bg-slate-100 text-slate-900 rounded-lg text-xs font-bold font-sans-bold transition flex items-center gap-1 shadow-sm">
             ↗️ Yeni Sekmede Aç
           </a>
-          <button onclick="closeModal()" class="px-3 py-1 bg-rose-500 hover:bg-rose-600 text-white rounded-lg text-xs font-bold transition">
+          <button onclick="closeModal()" class="px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-bold font-sans-bold transition shadow-sm">
             ✕ Kapat
           </button>
         </div>
       </div>
-      <iframe id="modal-iframe" src="" class="w-full flex-1 border-0"></iframe>
+      <iframe id="modal-iframe" src="" class="w-full flex-1 border-0" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -175,13 +193,12 @@
     let searchQuery = '';
     let readStatus = JSON.parse(localStorage.getItem('demirli_read_status') || '{}');
 
-    // Load Episodes Data
     async function init() {
       try {
         const res = await fetch('data/episodes.json');
         allEpisodes = await res.json();
       } catch (err) {
-        console.warn('Veri dosyasından okunamadı, yerel fallback yükleniyor:', err);
+        console.warn('Veri dosyasından okunamadı:', err);
       }
       renderEpisodes();
       updateProgress();
@@ -192,14 +209,12 @@
       container.innerHTML = '';
 
       const filtered = allEpisodes.filter(ep => {
-        // Range & Category Filter
         let matchesCat = true;
         if (activeFilter === '1-10') matchesCat = ep.id >= 1 && ep.id <= 10;
         else if (activeFilter === '11-20') matchesCat = ep.id >= 11 && ep.id <= 20;
         else if (activeFilter === '21-31') matchesCat = ep.id >= 21 && ep.id <= 31;
         else if (activeFilter !== 'all') matchesCat = ep.category === activeFilter;
 
-        // Search Filter
         let matchesSearch = true;
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
@@ -237,7 +252,7 @@
               <span class="pill-doodle-cyan text-xs font-sans-bold">${ep.category}</span>
             </div>
 
-            <h3 class="text-2xl font-bold font-sans-bold text-slate-900 leading-snug mb-2">
+            <h3 class="text-2xl font-bold font-sans-bold text-slate-900 leading-snug mb-2 cursor-pointer hover:text-amber-800 transition" onclick="openModal(${ep.id})">
               ${ep.title}
             </h3>
 
@@ -271,11 +286,11 @@
             </div>
 
             <div class="grid grid-cols-2 gap-2 font-sans-bold text-sm">
-              <button onclick="openModal(${ep.id})" class="px-3 py-2 rounded-xl border border-amber-400 bg-amber-50 hover:bg-amber-100 text-amber-900 text-center transition">
-                🔍 Önizle
+              <button onclick="openModal(${ep.id})" class="px-3 py-2.5 rounded-xl bg-amber-400 hover:bg-yellow-400 text-slate-900 text-center transition shadow-sm font-bold flex items-center justify-center gap-1">
+                <span>📖</span> Tam Ekran Aç
               </button>
-              <a href="episodes/${ep.file}" target="_blank" class="px-3 py-2 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 text-center transition shadow-sm font-bold">
-                📖 Fasikülü Aç
+              <a href="episodes/${ep.file}" target="_blank" class="px-3 py-2.5 rounded-xl border-2 border-amber-400 bg-amber-50 hover:bg-amber-100 text-amber-950 text-center transition font-bold flex items-center justify-center gap-1">
+                <span>↗️</span> Yeni Sekme
               </a>
             </div>
           </div>
@@ -318,6 +333,7 @@
       document.getElementById('progress-bar').style.width = pct + '%';
     }
 
+    // Tam Ekran Modal Açma
     function openModal(id) {
       const ep = allEpisodes.find(e => e.id === id);
       if (!ep) return;
@@ -325,19 +341,40 @@
       document.getElementById('modal-iframe').src = `episodes/${ep.file}`;
       document.getElementById('modal-open-new-tab').href = `episodes/${ep.file}`;
       document.getElementById('reader-modal').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Arka plan kaymasını kilitle
     }
 
     function closeModal() {
       document.getElementById('reader-modal').style.display = 'none';
       document.getElementById('modal-iframe').src = '';
+      document.body.style.overflow = '';
+      if (document.fullscreenElement) {
+        document.exitFullscreen().catch(() => {});
+      }
     }
 
-    window.onclick = function(event) {
-      const modal = document.getElementById('reader-modal');
-      if (event.target === modal) {
+    // Tarayıcı Fullscreen API Desteği
+    function toggleBrowserFullscreen() {
+      const elem = document.getElementById('reader-modal');
+      if (!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+          elem.requestFullscreen();
+        } else if (elem.webkitRequestFullscreen) {
+          elem.webkitRequestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // ESC tuşu ile kapatma
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
         closeModal();
       }
-    };
+    });
 
     document.addEventListener('DOMContentLoaded', init);
   </script>
