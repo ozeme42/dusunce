@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat Kütüphanesi • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" href="assets/css/worksheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    .portal-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-content {
+      width: 100%;
+      max-width: 1020px;
+      height: 92vh;
+      background: #f5f3ec;
+      border: 3.5px solid #eab308;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+  <div class="portal-container space-y-8">
+
+    <!-- Ana Başlık Kartı (Workshet Dokulu) -->
+    <header class="box-hand-yellow p-6 md:p-10 bg-white relative">
+      <div class="flex flex-wrap justify-between items-start gap-4 border-b-4 border-amber-400 pb-6">
+        <div>
+          <span class="badge-doodle text-amber-900 border-amber-500 bg-amber-50">
+            📻 Vav Radyo Arşivi • Bütüncül Ders Külliyatı
+          </span>
+          <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-3 font-sans-bold tracking-tight">
+            DÜŞÜNCE VE HAYAT KÜTÜPHANESİ
+          </h1>
+          <p class="text-2xl text-amber-800 font-bold mt-1">
+            Prof. Dr. Ekrem Demirli • İnteraktif Çalışma Fasikülleri Külliyatı
+          </p>
+        </div>
+        <div class="text-right">
+          <span class="pill-doodle-pink font-sans-bold text-lg">31 BÖLÜM ARŞİVİ</span>
+          <p class="text-sm font-sans-bold text-slate-500 mt-2">Tasavvuf, Ahlak & Hikem</p>
+          <p class="text-sm font-sans-bold text-slate-500">155 İnteraktif Çalışma Sayfası</p>
+        </div>
+      </div>
+
+      <!-- Külliyat İstatistikleri ve İlerleme Takibi -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-6 text-center">
+        <div class="p-4 bg-amber-50 rounded-2xl border-2 border-amber-300">
+          <span class="text-3xl block">🎙️</span>
+          <span class="text-2xl font-bold font-sans-bold text-amber-950">31 Bölüm</span>
+          <p class="text-slate-600 text-sm">Vav Radyo Ders Kaydı</p>
+        </div>
+        <div class="p-4 bg-purple-50 rounded-2xl border-2 border-purple-300">
+          <span class="text-3xl block">📑</span>
+          <span class="text-2xl font-bold font-sans-bold text-purple-950">155 Sayfa</span>
+          <p class="text-slate-600 text-sm">Otantik Çalışma Kâğıdı</p>
+        </div>
+        <div class="p-4 bg-emerald-50 rounded-2xl border-2 border-emerald-300">
+          <span class="text-3xl block">🌿</span>
+          <span class="text-2xl font-bold font-sans-bold text-emerald-950">30+ Ârif</span>
+          <p class="text-slate-600 text-sm">Tezkiretü'l-Evliyâ Öncüsü</p>
+        </div>
+        <div class="p-4 bg-sky-50 rounded-2xl border-2 border-sky-300">
+          <span class="text-3xl block">💎</span>
+          <span class="text-2xl font-bold font-sans-bold text-sky-950">47 Hikmet</span>
+          <p class="text-slate-600 text-sm">Hikem-i Atâiyye Tahlili</p>
+        </div>
+      </div>
+
+      <!-- İlerleme Çubuğu -->
+      <div class="box-hand-green p-4 bg-green-50/50">
+        <div class="flex justify-between items-center mb-2 font-sans-bold text-base text-emerald-950">
+          <span class="flex items-center gap-2">
+            <span>📚</span>
+            <strong>Okuma & Çalışma İlerlemesi:</strong>
+          </span>
+          <span id="progress-text" class="font-extrabold text-emerald-800">0 / 31 Bölüm (%0)</span>
+        </div>
+        <div class="w-full bg-slate-200 h-4 rounded-full overflow-hidden border border-emerald-400">
+          <div id="progress-bar" class="bg-emerald-500 h-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Arama ve Filtreleme Kontrolleri -->
+    <div class="box-hand-purple p-6 bg-white space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <!-- Arama Kutusu -->
+        <div class="flex-1 min-w-[280px] relative">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="🔍 Bölüm adı, kavram (ör: kanaat, tevazu, Kâbe, Hikem, Mâtürîdî)..."
+            class="w-full px-5 py-3 rounded-xl border-2 border-purple-300 bg-purple-50/30 text-slate-800 font-sans-bold text-base focus:outline-none focus:border-purple-600 transition"
+            oninput="filterEpisodes()"
+          >
+        </div>
+        <button onclick="resetFilters()" class="px-4 py-3 rounded-xl border-2 border-slate-300 bg-slate-100 text-slate-700 font-sans-bold text-sm hover:bg-slate-200 transition">
+          ↺ Filtreleri Sıfırla
+        </button>
+      </div>
+
+      <!-- Kategori ve Aralık Filtreleri -->
+      <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-purple-100">
+        <span class="text-sm font-sans-bold text-purple-950 mr-1">Filtrele:</span>
+        <button onclick="setFilter('all')" class="cat-pill active pill-doodle-yellow text-sm" id="btn-cat-all">Tümü (31)</button>
+        <button onclick="setFilter('1-10')" class="cat-pill pill-doodle-purple text-sm" id="btn-cat-1-10">1-10. Bölümler</button>
+        <button onclick="setFilter('11-20')" class="cat-pill pill-doodle-cyan text-sm" id="btn-cat-11-20">11-20. Bölümler</button>
+        <button onclick="setFilter('21-31')" class="cat-pill pill-doodle-pink text-sm" id="btn-cat-21-31">21-31. Bölümler</button>
+        <button onclick="setFilter('Tasavvuf')" class="cat-pill pill-doodle-green text-sm" id="btn-cat-Tasavvuf">Tasavvuf & İrfan</button>
+        <button onclick="setFilter('Ahlak')" class="cat-pill pill-doodle-yellow text-sm" id="btn-cat-Ahlak">Ahlak & Muâşeret</button>
+        <button onclick="setFilter('Tefsir')" class="cat-pill pill-doodle-cyan text-sm" id="btn-cat-Tefsir">Kur'an & Tefsir</button>
+      </div>
+    </div>
+
+
+    <!-- Bölüm Kartları Izgarası (Grid) -->
+    <div id="episodes-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- JavaScript tarafından dinamik olarak doldurulacaktır -->
+    </div>
+
+  </div>
+
+
+  <!-- Sayfa İçi Okuma Modalı (Iframe Reader) -->
+  <div id="reader-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="p-3 bg-amber-400 border-b-2 border-amber-600 flex justify-between items-center text-slate-900 font-sans-bold">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">📖</span>
+          <span id="modal-title" class="font-extrabold text-base">Fasikül Okuyucu</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a id="modal-open-new-tab" href="#" target="_blank" class="px-3 py-1 bg-white hover:bg-slate-100 rounded-lg text-xs font-bold transition">
+            ↗️ Yeni Sekmede Aç
+          </a>
+          <button onclick="closeModal()" class="px-3 py-1 bg-rose-500 hover:bg-rose-600 text-white rounded-lg text-xs font-bold transition">
+            ✕ Kapat
+          </button>
+        </div>
+      </div>
+      <iframe id="modal-iframe" src="" class="w-full flex-1 border-0"></iframe>
+    </div>
+  </div>
+
+
+  <!-- JavaScript Mantığı -->
+  <script>
+    let allEpisodes = [];
+    let activeFilter = 'all';
+    let searchQuery = '';
+    let readStatus = JSON.parse(localStorage.getItem('demirli_read_status') || '{}');
+
+    // Load Episodes Data
+    async function init() {
+      try {
+        const res = await fetch('data/episodes.json');
+        allEpisodes = await res.json();
+      } catch (err) {
+        console.warn('Veri dosyasından okunamadı, yerel fallback yükleniyor:', err);
+      }
+      renderEpisodes();
+      updateProgress();
+    }
+
+    function renderEpisodes() {
+      const container = document.getElementById('episodes-grid');
+      container.innerHTML = '';
+
+      const filtered = allEpisodes.filter(ep => {
+        // Range & Category Filter
+        let matchesCat = true;
+        if (activeFilter === '1-10') matchesCat = ep.id >= 1 && ep.id <= 10;
+        else if (activeFilter === '11-20') matchesCat = ep.id >= 11 && ep.id <= 20;
+        else if (activeFilter === '21-31') matchesCat = ep.id >= 21 && ep.id <= 31;
+        else if (activeFilter !== 'all') matchesCat = ep.category === activeFilter;
+
+        // Search Filter
+        let matchesSearch = true;
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const str = (ep.id + ' ' + ep.title + ' ' + ep.sufi + ' ' + ep.hikmet + ' ' + (ep.topics||[]).join(' ') + ' ' + ep.summary).toLowerCase();
+          matchesSearch = str.includes(q);
+        }
+
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-12 box-hand-yellow p-8 bg-white">
+            <span class="text-4xl block mb-2">🔍</span>
+            <h3 class="text-2xl font-bold font-sans-bold text-slate-800">Aradığınız kriterlere uygun bölüm bulunamadı</h3>
+            <p class="text-slate-600 mt-1">Lütfen farklı bir anahtar kelime veya filtre seçiniz.</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(ep => {
+        const isRead = !!readStatus[ep.id];
+        const cardBoxClass = ep.id % 4 === 1 ? 'box-hand-yellow' :
+                             ep.id % 4 === 2 ? 'box-hand-purple' :
+                             ep.id % 4 === 3 ? 'box-hand-green' : 'box-hand-cyan';
+
+        const card = document.createElement('div');
+        card.className = `${cardBoxClass} p-6 bg-white flex flex-col justify-between hover:shadow-xl transition-all duration-200 relative`;
+        
+        card.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="pill-doodle-yellow text-sm font-sans-bold">${ep.id}. BÖLÜM</span>
+              <span class="pill-doodle-cyan text-xs font-sans-bold">${ep.category}</span>
+            </div>
+
+            <h3 class="text-2xl font-bold font-sans-bold text-slate-900 leading-snug mb-2">
+              ${ep.title}
+            </h3>
+
+            <p class="text-slate-700 text-base mb-4 italic">
+              "${ep.summary}"
+            </p>
+
+            <div class="space-y-2 mb-4 text-sm font-sans-bold">
+              <div class="flex items-center gap-1.5 text-amber-900">
+                <span>🌿</span>
+                <strong>Öncü Ârif:</strong> <span>${ep.sufi}</span>
+              </div>
+              <div class="flex items-start gap-1.5 text-purple-900">
+                <span>💎</span>
+                <div><strong>Hikem-i Atâiyye:</strong> <span class="font-normal italic">${ep.hikmet}</span></div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              ${(ep.topics || []).slice(0, 3).map(t => `<span class="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-sans-bold border border-slate-300">#${t}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="border-t-2 border-dashed border-amber-200 pt-4 mt-2">
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <label class="flex items-center gap-2 cursor-pointer select-none text-sm font-sans-bold text-slate-700">
+                <input type="checkbox" onchange="toggleRead(${ep.id})" ${isRead ? 'checked' : ''} class="w-4 h-4 text-emerald-600 rounded">
+                <span>${isRead ? '✓ Çalışıldı' : 'Çalışılmadı'}</span>
+              </label>
+              <span class="text-xs font-sans-bold text-slate-400">5 Sayfa</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 font-sans-bold text-sm">
+              <button onclick="openModal(${ep.id})" class="px-3 py-2 rounded-xl border border-amber-400 bg-amber-50 hover:bg-amber-100 text-amber-900 text-center transition">
+                🔍 Önizle
+              </button>
+              <a href="episodes/${ep.file}" target="_blank" class="px-3 py-2 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 text-center transition shadow-sm font-bold">
+                📖 Fasikülü Aç
+              </a>
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function setFilter(cat) {
+      activeFilter = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => btn.classList.remove('active', 'bg-yellow-400'));
+      const activeBtn = document.getElementById('btn-cat-' + cat);
+      if (activeBtn) activeBtn.classList.add('active', 'bg-yellow-400');
+      renderEpisodes();
+    }
+
+    function filterEpisodes() {
+      searchQuery = document.getElementById('search-input').value.trim();
+      renderEpisodes();
+    }
+
+    function resetFilters() {
+      document.getElementById('search-input').value = '';
+      searchQuery = '';
+      setFilter('all');
+    }
+
+    function toggleRead(id) {
+      readStatus[id] = !readStatus[id];
+      localStorage.setItem('demirli_read_status', JSON.stringify(readStatus));
+      renderEpisodes();
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const readCount = Object.values(readStatus).filter(Boolean).length;
+      const total = 31;
+      const pct = Math.round((readCount / total) * 100);
+      document.getElementById('progress-text').innerText = `${readCount} / ${total} Bölüm Tamamlandı (%${pct})`;
+      document.getElementById('progress-bar').style.width = pct + '%';
+    }
+
+    function openModal(id) {
+      const ep = allEpisodes.find(e => e.id === id);
+      if (!ep) return;
+      document.getElementById('modal-title').innerText = `${ep.id}. Bölüm • ${ep.title}`;
+      document.getElementById('modal-iframe').src = `episodes/${ep.file}`;
+      document.getElementById('modal-open-new-tab').href = `episodes/${ep.file}`;
+      document.getElementById('reader-modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('reader-modal').style.display = 'none';
+      document.getElementById('modal-iframe').src = '';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('reader-modal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+
+</body>
+</html>

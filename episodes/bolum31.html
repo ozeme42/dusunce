@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat 31. Bölüm • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(254, 240, 138, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(186, 230, 253, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(251, 207, 232, 0.35) 0%, transparent 45%),
+        #f5f3ec;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      font-size: 1.25rem;
+    }
+    .font-arabic { font-family: 'Amiri', serif; }
+    .font-sans-bold { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    .worksheet-paper {
+      width: 100%;
+      max-width: 920px;
+      min-height: 1300px;
+      margin: 0 auto 3rem auto;
+      background-color: #ffffff;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      border: 3.5px solid #eab308;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow: 
+        0 25px 50px -12px rgba(161, 98, 7, 0.15),
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(234, 179, 8, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 50px;
+    }
+
+    .box-hand-yellow {
+      border: 2.8px solid #eab308;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+    }
+    .box-hand-purple {
+      border: 2.8px solid #a855f7;
+      border-radius: 20px 26px 18px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+    }
+    .box-hand-green {
+      border: 2.8px solid #22c55e;
+      border-radius: 24px 18px 26px 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+    }
+    .box-hand-cyan {
+      border: 2.8px solid #0ea5e9;
+      border-radius: 18px 26px 20px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+    }
+    .box-hand-pink {
+      border: 2.8px solid #ec4899;
+      border-radius: 26px 20px 24px 18px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+    }
+
+    .pill-doodle-pink {
+      border: 2.5px solid #f43f5e;
+      color: #be123c;
+      background: #fff1f2;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-cyan {
+      border: 2.5px solid #0284c7;
+      color: #0369a1;
+      background: #f0f9ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-purple {
+      border: 2.5px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-green {
+      border: 2.5px solid #16a34a;
+      color: #15803d;
+      background: #f0fdf4;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-yellow {
+      border: 2.5px solid #d97706;
+      color: #b45309;
+      background: #fffbeb;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .badge-doodle {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      border: 2px dashed #64748b;
+      background: #f8fafc;
+    }
+
+    .lined-notes {
+      background-image: repeating-linear-gradient(transparent, transparent 34px, #e2e8f0 34px, #e2e8f0 36px);
+      line-height: 36px;
+      min-height: 144px;
+    }
+
+    @media print {
+      body { background: #ffffff !important; padding: 0 !important; }
+      .no-print { display: none !important; }
+      .worksheet-paper {
+        border: 2.5px solid #000000 !important;
+        box-shadow: none !important;
+        margin: 0 0 2rem 0 !important;
+        page-break-after: always;
+        min-height: 98vh;
+      }
+      .hidden { display: flex !important; }
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Üst Gezinme / Sayfa Seçici Menüsü -->
+  <header class="no-print w-full max-w-4xl mb-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border-2 border-amber-300 shadow-md flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+      <div>
+        <h1 class="text-xl font-bold font-sans-bold text-slate-800 leading-tight">Düşünce ve Hayat • 31. Bölüm</h1>
+        <p class="text-sm font-sans-bold text-amber-700">Prof. Dr. Ekrem Demirli • Radyo Ders Notları & Tefekkür Fasikülü</p>
+      </div>
+    </div>
+    
+    <div class="flex flex-wrap items-center gap-1.5 font-sans-bold text-sm">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 bg-yellow-400 text-slate-900 transition hover:bg-yellow-300">1. Kapak & Âcil</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">2. Akıl & Duygular</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">3. İmam Mâtürîdî</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">4. Kureyş Suresi & İmtihan</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">5. Hikem 47: Tamah & Zillet</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3 py-1.5 rounded-lg border-2 border-purple-400 text-purple-700 transition hover:bg-purple-100">📖 Tümünü Aç</button>
+      <button onclick="printFasikul()" class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-white shadow-sm flex items-center gap-1">🖨️ Yazdır / PDF</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 1: KAPAK & ZİHİN HARİTASI (ÂCİL VE ÂCİL DENGESİ)                      -->
+  <!-- ========================================================================= -->
+  <div id="page-1" class="worksheet-paper">
+    <!-- Üst Başlık Çubuğu -->
+    <div class="border-b-4 border-amber-400 pb-4">
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <span class="badge-doodle text-amber-800 border-amber-400 bg-amber-50">Vav Radyo • 18 Haziran 2019 Dersi</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2 font-sans-bold tracking-tight">DÜŞÜNCE VE HAYAT</h2>
+          <p class="text-xl md:text-2xl text-amber-800 font-bold mt-1">31. Bölüm • Âcil ve Âcil Dengesi, İmam Mâtürîdî ve Tamah Tohumu</p>
+        </div>
+        <div class="text-right">
+          <span class="pill-doodle-pink font-sans-bold">FASİKÜL NO: 31</span>
+          <p class="text-sm font-sans-bold text-slate-500 mt-1">Öğrenci / Okur: ______________</p>
+          <p class="text-sm font-sans-bold text-slate-500">Tarih: ____ / ____ / ________</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zihin Haritası Rozetleri -->
+    <div class="mt-6 mb-4">
+      <div class="flex flex-wrap gap-2 justify-center items-center">
+        <span class="pill-doodle-yellow">⏳ Âcil (Peşin) vs Âcil (Ebedi)</span>
+        <span class="pill-doodle-cyan">⚡ "Öfke Baldan Tatlıdır" Paradoksu</span>
+        <span class="pill-doodle-purple">📖 İmam Mâtürîdî'nin Tevil Edebi</span>
+        <span class="pill-doodle-green">🐪 Kureyş Suresi & Hayat Seferi</span>
+        <span class="pill-doodle-pink">🌱 Hikem 47: Zillet ve Tamah</span>
+      </div>
+    </div>
+
+    <!-- Ana Çerçeve 1: İki Âcil Arasındaki İmtihan -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-3xl">⏳</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-amber-900 font-sans-bold">İki Âcil Arasındaki Varoluşsal Tercih</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Prof. Dr. Ekrem Demirli derse dindeki iki kritik kavramın mukayesesiyle başlar: Biri ayınla <strong>Âcil (عَاجِل)</strong> yani peşin, hemen şimdi olan fani dünya lezzeti; diğeri elifle <strong>Âcil (آجِل)</strong> yani tehir edilmiş, sabır isteyen ebedi ahiret saadeti. İnsan fıtratı peşin olana meyleder; dindarlık ve akl-ı selim ise geniş ufuklu düşünmeyi, peşin hazların aldatıcılığını aşıp ebedi hayrı seçmeyi gerektirir.
+      </p>
+
+      <!-- Özet Vurgusu -->
+      <div class="box-hand-purple p-5 bg-purple-50/50 my-3">
+        <div class="text-center my-2 p-3 bg-white rounded-xl border-2 border-purple-300">
+          <p class="text-2xl font-extrabold text-purple-950 italic leading-relaxed">
+            "Akıl doğruyu bilir ama duyular peşin verir! Dinin asıl irtibatı akılladır; aklın nuruna ise kalp denir."
+          </p>
+          <span class="text-purple-800 font-sans-bold text-sm block mt-1">— Prof. Dr. Ekrem Demirli</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-5 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ 1. Sayfa Tefekkür Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Hayatındaki kararlarda anlık peşin hazları (âcil) mı, yoksa sabır gerektiren ebedi hayırları (âcil) mı tercih ediyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-amber-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-amber-800 font-extrabold">Sayfa 1 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 2: AKIL VE DUYGULARIN SAVAŞI: ÖFKE PARADOKSU                        -->
+  <!-- ========================================================================= -->
+  <div id="page-2" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-cyan-800 border-cyan-400 bg-cyan-50">31. Bölüm • İdrak Mertebeleri & Nefis</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Akıl ve Duyguların Savaşı: "Öfke Baldan Tatlıdır"</h2>
+        </div>
+        <span class="pill-doodle-cyan font-sans-bold">SAYFA 2</span>
+      </div>
+    </div>
+
+    <!-- Öfke Paradoksu -->
+    <div class="box-hand-cyan p-5 my-4 bg-sky-50/40">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">⚡</span>
+        <h3 class="text-2xl font-extrabold text-sky-950 font-sans-bold">Duyuların Peşin Tatmin Gücü</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Akıl öfkenin zararlı olduğunu bilir. Fakat duyular anlık bir deşarj sağladığı için atalarımız <em>"öfke baldan tatlıdır"</em> demiştir. Aslında öfke acı ve yıkıcı bir haldir; ancak peşin tatmin sağladığı için aklı devreden çıkarır.
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-sky-300 text-base text-slate-800 space-y-2">
+        <p>● <strong>Din-Duygu Yanılgısı:</strong> Dindarlık toplumda sadece coşku ve heyecan zannedilir. Oysa din hislerin taşkınlığı değil, aklın ve kalbin hakikat karşısındaki vakur sükûnetidir.</p>
+        <p>● <strong>Vakit Boşluğu Tuzağı:</strong> İrade ile netice arasındaki zaman boşluğu insanda ertelemeye (tesvîf) ve rehavete sebep olur. Mümin vaktini zikirle diri tutmalıdır.</p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-pink p-4 my-2 bg-rose-50/30">
+      <h4 class="text-xl font-extrabold text-rose-900 font-sans-bold mb-1">✍️ Duygu-Akıl Muhasebe Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Öfke ve heves gibi anlık duyguların aklının önüne geçtiği durumları nasıl frenliyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-cyan-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-cyan-800 font-extrabold">Sayfa 2 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 3: İMAM MÂTÜRÎDÎ VE TEFSİRDE İRFANİ TEVAZU                           -->
+  <!-- ========================================================================= -->
+  <div id="page-3" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-purple-800 border-purple-400 bg-purple-50">31. Bölüm • Tefsir Edebi & Nass</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">İmam Mâtürîdî ve Te'vil Ahlakı</h2>
+        </div>
+        <span class="pill-doodle-purple font-sans-bold">SAYFA 3</span>
+      </div>
+    </div>
+
+    <!-- Te'vilâtü'l-Kur'an Sırrı -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">📖</span>
+        <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold">Niçin "Tefsîru'l-Kur'ân" Değil de "Te'vîlât"?</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Büyük kelam ve tefsir imamımız <strong>Ebû Mansûr el-Mâtürîdî (ö. 333)</strong>, anıtsal Kur'an tefsirine <em>Te'vîlâtü'l-Kur'ân</em> ismini vermiştir. Ekrem Demirli hocamız bu tercihteki muazzam tevazuya dikkat çeker:
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-amber-300 text-base text-slate-800 space-y-2">
+        <p>● <strong>Tefsir Sahabenin Hakkıdır:</strong> Sahabe-i Kiram nüzul ortamını, ayetin nerede ve niçin indiğini bizzat müşahede etmiştir. Onların sözü hakikate en yakın tefsirdir.</p>
+        <p>● <strong>Te'vil Sonrakilerin İctihadıdır:</strong> Biz sonraki nesiller <em>'Allah kesinlikle bunu kastediyor'</em> diyemeyiz; ancak dille, akılla ve sünnetle bu mananın murad edilmiş olabileceğini te'vil ederiz.</p>
+      </div>
+    </div>
+
+    <!-- Günümüze Ders -->
+    <div class="box-hand-green p-5 my-3 bg-emerald-50/40">
+      <h4 class="text-xl font-extrabold text-emerald-950 font-sans-bold mb-2">🌿 Kendi Yorumunu Mutlak Hakikat Saymama Edebi</h4>
+      <p class="text-lg text-slate-800 leading-relaxed">
+        Kendi ideolojisini veya nefsi fikrini "Kur'an'ın tek hükmü" diye sunanlar İmam Mâtürîdî'nin tevil edebinden nasipsizdir. Mümin nass karşısında haddini bilendir.
+      </p>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-purple p-4 my-2 bg-purple-50/30">
+      <h4 class="text-xl font-extrabold text-purple-900 font-sans-bold mb-1">✍️ Nass ve Edep Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Dini meseleleri tartışırken kendi kanaatini mutlaklaştırmaktan nasıl sakınıyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-purple-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-purple-800 font-extrabold">Sayfa 3 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 4: KUREYŞ SURESİ VE RIZIK SEFERLERİMİZ                               -->
+  <!-- ========================================================================= -->
+  <div id="page-4" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">31. Bölüm • Rızık & İmtihan Şuuru</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Kureyş Suresi ve Rızık Seferlerimiz</h2>
+        </div>
+        <span class="pill-doodle-pink font-sans-bold">SAYFA 4</span>
+      </div>
+    </div>
+
+    <!-- Kureyş Suresi Tahlili -->
+    <div class="box-hand-pink p-5 my-4 bg-rose-50/40">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">🐪</span>
+        <h3 class="text-2xl font-extrabold text-rose-950 font-sans-bold">Hâdim Olan Sebepler: Firavun ve Ebrehe</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Allah bir şeye hükmettiğinde yeryüzündeki bütün sebepleri o hükmün hadimi (hizmetkârı) kılar: Firavun farkında olmadan Musa'yı sarayında büyüttü; Ebrehe farkında olmadan Kâbe'nin kadrini yüceltti ve Kureyş'in kış ve yaz seferlerini (rihlete'ş-şitâi ve's-sayf) emniyete kavuşturdu.
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-rose-300 text-base text-slate-800 space-y-2">
+        <p>● <strong>Herkes Kendi Hayatındaki Rihleyi Okumalıdır:</strong> Demirli hoca der ki: <em>"Cenab-ı Hak benim hayatımda kış ve yaz kapılarını nasıl açtı? Beni hangi korkulardan emin kıldı? Her insan kendi hayatında bu iki nimetin (doyurulmak ve korkudan emin olmak) şükrünü eda etmelidir."</em></p>
+        <p>● <strong>Verilenleri Maksat Sanma Yanılgısı:</strong> Diploma, zenginlik, mevki ve itibar birer maksat değil; kulun üzerinde sınandığı imtihan sahneleridir.</p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-4 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ Hayatımın Rızık Seferi Notu:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Zorluk (kış) ve kolaylık (yaz) dönemlerinde Allah'ın seni açlıktan doyurup korkulardan emin kıldığı anları tefekkür et:
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-rose-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-rose-800 font-extrabold">Sayfa 4 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 5: HİKEM-İ ATÂİYYE - ZİLLET AĞACI VE TAMAH TOHUMU                    -->
+  <!-- ========================================================================= -->
+  <div id="page-5" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-emerald-800 border-emerald-400 bg-emerald-50">31. Bölüm • Hikmet & İstiğna</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Hikem-i Atâiyye: Zillet ve Tamah</h2>
+        </div>
+        <span class="pill-doodle-green font-sans-bold">SAYFA 5</span>
+      </div>
+    </div>
+
+    <!-- Hikmet Metni -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">🌱</span>
+        <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold">İbn Atâullah el-İskenderî (Hikmet 47)</h3>
+      </div>
+      <div class="bg-white p-5 rounded-2xl border-2 border-amber-300 text-center my-3 shadow-sm space-y-2">
+        <div class="font-arabic text-2xl md:text-3xl text-rose-900 leading-loose" dir="rtl">
+          مَا بَسَقَتْ أَغْصَانُ ذُلٍّ إِلَّا عَلَى بَذْرِ طَمَعٍ
+        </div>
+        <p class="font-bold text-slate-900 font-sans-bold text-xl italic mt-2">
+          "Hiçbir zillet dalı yoktur ki, ancak bir tamah tohumu üzerinde boy atıp yeşermiş olmasın!"
+        </p>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-amber-300 text-slate-800 text-base mt-3 space-y-2">
+        <p><strong>Peder Nasihati:</strong> Ekrem Demirli rahmetli babasının şu sözünü nakleder: <em>"Karnını doyuracağın yerde açlığını belli etme!"</em> İnsanı başkasına el açtıran ve zillet altına sokan tek illet kullardan menfaat beklemektir.</p>
+        <p><strong>İstiğna İzzettir:</strong> Kimseden bir şey ummayan insanı kimse zelil kılamaz. Mümin fani dünyalığa karşı istiğna ehlidir; yalnız Allah'ın rahmetine ve marifetine tamahkârdır.</p>
+      </div>
+    </div>
+
+    <!-- 31. Bölüm Kazanım Kontrol Listesi -->
+    <div class="box-hand-green p-5 bg-green-50/60 mb-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-2xl">✅</span>
+        <span class="font-sans-bold font-bold text-emerald-950 text-xl">31. Bölüm Kazanım Kontrol Listesi</span>
+      </div>
+      <div class="space-y-2 text-base text-slate-800">
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Âcil (peşin dünya) ile Âcil (ertelenmiş ahiret) arasındaki varoluşsal imtihanı kavradım.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>'Öfke baldan tatlıdır' nükte ve paradoksunun duyuların aklı esir alışını anlattığını öğrendim.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>İmam Mâtürîdî'nin tefsir yerine 'tevil' kavramını seçişindeki ilmi tevazu ve edebi idrak ettim.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Kureyş Suresi ışığında dünyalık verilenlerin maksat değil birer sınav aracı olduğunu anladım.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Hikem-i Atâiyye'nin 47. Hikmetini ve tamah tohumunu terk ederek izzetli yaşama ahlakını idrak ettim.</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mühür ve Tamamlama Bölümü -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-emerald-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-emerald-800 font-extrabold">Sayfa 5 / 5 • Mühür</span>
+    </div>
+  </div>
+
+  <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+  <script>
+    function showPage(num) {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const activeBtnAll = document.getElementById('btn-all');
+      if (activeBtnAll) {
+        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
+      }
+
+      const activePage = document.getElementById('page-' + num);
+      const activeBtn = document.getElementById('btn-p' + num);
+      if (activePage) activePage.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
+        activeBtn.classList.remove('text-slate-700');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAllPages() {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const btnAll = document.getElementById('btn-all');
+      if (btnAll) {
+        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      }
+    }
+
+    function printFasikul() {
+      showAllPages();
+      setTimeout(() => {
+        window.print();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

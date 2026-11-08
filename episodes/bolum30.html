@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat 30. Bölüm • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(254, 240, 138, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(186, 230, 253, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(251, 207, 232, 0.35) 0%, transparent 45%),
+        #f5f3ec;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      font-size: 1.25rem;
+    }
+    .font-arabic { font-family: 'Amiri', serif; }
+    .font-sans-bold { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    .worksheet-paper {
+      width: 100%;
+      max-width: 920px;
+      min-height: 1300px;
+      margin: 0 auto 3rem auto;
+      background-color: #ffffff;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      border: 3.5px solid #eab308;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow: 
+        0 25px 50px -12px rgba(161, 98, 7, 0.15),
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(234, 179, 8, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 50px;
+    }
+
+    .box-hand-yellow {
+      border: 2.8px solid #eab308;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+    }
+    .box-hand-purple {
+      border: 2.8px solid #a855f7;
+      border-radius: 20px 26px 18px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+    }
+    .box-hand-green {
+      border: 2.8px solid #22c55e;
+      border-radius: 24px 18px 26px 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+    }
+    .box-hand-cyan {
+      border: 2.8px solid #0ea5e9;
+      border-radius: 18px 26px 20px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+    }
+    .box-hand-pink {
+      border: 2.8px solid #ec4899;
+      border-radius: 26px 20px 24px 18px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+    }
+
+    .pill-doodle-pink {
+      border: 2.5px solid #f43f5e;
+      color: #be123c;
+      background: #fff1f2;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-cyan {
+      border: 2.5px solid #0284c7;
+      color: #0369a1;
+      background: #f0f9ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-purple {
+      border: 2.5px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-green {
+      border: 2.5px solid #16a34a;
+      color: #15803d;
+      background: #f0fdf4;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-yellow {
+      border: 2.5px solid #d97706;
+      color: #b45309;
+      background: #fffbeb;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .badge-doodle {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      border: 2px dashed #64748b;
+      background: #f8fafc;
+    }
+
+    .lined-notes {
+      background-image: repeating-linear-gradient(transparent, transparent 34px, #e2e8f0 34px, #e2e8f0 36px);
+      line-height: 36px;
+      min-height: 144px;
+    }
+
+    @media print {
+      body { background: #ffffff !important; padding: 0 !important; }
+      .no-print { display: none !important; }
+      .worksheet-paper {
+        border: 2.5px solid #000000 !important;
+        box-shadow: none !important;
+        margin: 0 0 2rem 0 !important;
+        page-break-after: always;
+        min-height: 98vh;
+      }
+      .hidden { display: flex !important; }
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Üst Gezinme / Sayfa Seçici Menüsü -->
+  <header class="no-print w-full max-w-4xl mb-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border-2 border-amber-300 shadow-md flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+      <div>
+        <h1 class="text-xl font-bold font-sans-bold text-slate-800 leading-tight">Düşünce ve Hayat • 30. Bölüm</h1>
+        <p class="text-sm font-sans-bold text-amber-700">Prof. Dr. Ekrem Demirli • Radyo Ders Notları & Tefekkür Fasikülü</p>
+      </div>
+    </div>
+    
+    <div class="flex flex-wrap items-center gap-1.5 font-sans-bold text-sm">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 bg-yellow-400 text-slate-900 transition hover:bg-yellow-300">1. Kapak & Ebû Türâb</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">2. İrfani Ahlak</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">3. Fil Suresi & Kâbe</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">4. Karz-ı Hasen & Terk</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">5. Hikem 45-46: Nur Ordusu</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3 py-1.5 rounded-lg border-2 border-purple-400 text-purple-700 transition hover:bg-purple-100">📖 Tümünü Aç</button>
+      <button onclick="printFasikul()" class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-white shadow-sm flex items-center gap-1">🖨️ Yazdır / PDF</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 1: KAPAK & ZİHİN HARİTASI (EBÛ TÜRÂB EN-NAHŞEBÎ VE FİL SURESİ)       -->
+  <!-- ========================================================================= -->
+  <div id="page-1" class="worksheet-paper">
+    <!-- Üst Başlık Çubuğu -->
+    <div class="border-b-4 border-amber-400 pb-4">
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <span class="badge-doodle text-amber-800 border-amber-400 bg-amber-50">Vav Radyo • 11 Haziran 2019 Dersi</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2 font-sans-bold tracking-tight">DÜŞÜNCE VE HAYAT</h2>
+          <p class="text-xl md:text-2xl text-amber-800 font-bold mt-1">30. Bölüm • Ebû Türâb en-Nahşebî, Fil Suresi ve Kalbin Nur Ordusu</p>
+        </div>
+        <div class="text-right">
+          <span class="pill-doodle-pink font-sans-bold">FASİKÜL NO: 30</span>
+          <p class="text-sm font-sans-bold text-slate-500 mt-1">Öğrenci / Okur: ______________</p>
+          <p class="text-sm font-sans-bold text-slate-500">Tarih: ____ / ____ / ________</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zihin Haritası Rozetleri -->
+    <div class="mt-6 mb-4">
+      <div class="flex flex-wrap gap-2 justify-center items-center">
+        <span class="pill-doodle-yellow">🌿 Ebû Türâb en-Nahşebî</span>
+        <span class="pill-doodle-cyan">🔥 Halkla İlişkide Ateş Dengesi</span>
+        <span class="pill-doodle-purple">🕋 Fil Suresi & Beytullah</span>
+        <span class="pill-doodle-green">🌾 Karz-ı Hasen & Minnetsizlik</span>
+        <span class="pill-doodle-pink">✨ Hikem 45-46: Kalbin Nur Ordusu</span>
+      </div>
+    </div>
+
+    <!-- Ana Çerçeve 1: 3. Asrın Büyük Öncüsü -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-3xl">🌿</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-amber-900 font-sans-bold">Hicri 3. Asır: Şahısların Bizzat Eserleştiği Çağ</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Prof. Dr. Ekrem Demirli derse tasavvuf tarihinin altın çağı olan Hicri 3. asrın başlangıcıyla girer. Bu devirde henüz geniş hacimli tasavvuf kitapları yazılmamıştı; ancak <strong>insan olarak büyük şahsiyetler</strong> yetişmişti. İslam düşüncesinin kalbi, bu zatların hikmetli sözlerinde ve ahlaki duruşlarında billurlaşmıştı. Horasan irfanının büyük piri <strong>Ebû Türâb en-Nahşebî (ö. 245/859)</strong> bu öncü neslin en parlak kandillerindendir.
+      </p>
+
+      <!-- Ebû Türâb'ın Kanaat Tarifi -->
+      <div class="box-hand-purple p-5 bg-purple-50/50 my-3">
+        <div class="text-center my-2 p-3 bg-white rounded-xl border-2 border-purple-300">
+          <p class="text-2xl font-extrabold text-purple-950 italic leading-relaxed">
+            "Kanaat, kulun rızkını ve manevi gıdasını doğrudan doğruya Allah'tan almasıdır!"
+          </p>
+          <span class="text-purple-800 font-sans-bold text-sm block mt-1">— Ebû Türâb en-Nahşebî (k.s.)</span>
+        </div>
+        <p class="text-lg text-slate-800 leading-relaxed mt-3">
+          <strong>Hakiki Kanaat Nedir?</strong> Kanaat yalnızca azla yetinmek veya dünyadan mecburen el çekmek değildir; sebepleri ve aracıları aşıp Rezzâk-ı Zülcelâl'e itimat etmektir. Gıdasını fani insanlardan uman daima aç ve muhtaç kalır; rızkını Haktan bilen ise sarayda da zindanda da doygundur.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-5 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ 1. Sayfa Tefekkür Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Hayatında sebepleri mi rızık verici görüyorsun, yoksa sebepleri yaratan Rezzâk-ı Mutlak'tan mı gıdalanıyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-amber-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-amber-800 font-extrabold">Sayfa 1 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 2: HALKLA ATEŞ DENGESİ VE İNSANLARIN 3 SINIFI                       -->
+  <!-- ========================================================================= -->
+  <div id="page-2" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-cyan-800 border-cyan-400 bg-cyan-50">30. Bölüm • Sosyal Muâşeret & Mesafe</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Halkla Münasebette Ateş Dengesi</h2>
+        </div>
+        <span class="pill-doodle-cyan font-sans-bold">SAYFA 2</span>
+      </div>
+    </div>
+
+    <!-- Ateş Metaforu -->
+    <div class="box-hand-cyan p-5 my-4 bg-sky-50/40">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">🔥</span>
+        <h3 class="text-2xl font-extrabold text-sky-950 font-sans-bold">"Halkla Münasebetin Ateş Gibi Olsun!"</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Ebû Türâb en-Nahşebî hazretlerinin sosyal hayat için çizdiği muazzam düstur: <em>"İnsanlarla olan ilişkin ateşle olan münasebetin gibi olsun: Faydasından yararlan, fakat yakıcılığından ve alevinden kendini muhafaza et!"</em>
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-sky-300 text-base text-slate-800 space-y-2">
+        <p><strong>Ateşten Kaçarsan Donarsın:</strong> Toplumdan tamamen kopup inzivaya çekilirsen cemaat şuurundan, yardımlaşmadan ve hizmetten mahrum kalırsın.</p>
+        <p><strong>Ateşe Girersen Yanarsın:</strong> Fazla sokulursan dedikodu, gıybet, riya, övgü tutkusu ve kınanma korkusu kalbini küle çevirir.</p>
+      </div>
+    </div>
+
+    <!-- İnsanların Üç Sınıfı -->
+    <div class="box-hand-purple p-5 my-3 bg-purple-50/40">
+      <h4 class="text-xl font-extrabold text-purple-950 font-sans-bold mb-2">👥 İnsanların ve Dostlukların Üç Sınıfı</h4>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-2">
+        <div class="p-4 bg-white rounded-xl border-2 border-purple-300 text-center">
+          <strong class="font-sans-bold text-purple-950 block text-lg mb-1">🍞 1. Gıda (Ekmek-Su) Gibi</strong>
+          <p class="text-slate-700 text-sm">Varlığına her an muhtaç olunan salih dostlar. Onlar olmadan ruh beslenemez, iman kemale eremez.</p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border-2 border-sky-300 text-center">
+          <strong class="font-sans-bold text-sky-950 block text-lg mb-1">💊 2. İlaç Gibi Olanlar</strong>
+          <p class="text-slate-700 text-sm">Zaman zaman, ihtiyaç düştüğünde görüşülen kimseler. Muayyen iş bitince lüzumsuz meşgul olunmaz.</p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border-2 border-rose-300 text-center">
+          <strong class="font-sans-bold text-rose-950 block text-lg mb-1">⚠️ 3. Hastalık ve Dert Gibi</strong>
+          <p class="text-slate-700 text-sm">Varlığı kalbe yük, dedikodu ve gaflet getirenler. Mümin bunlardan sakınır, sabırla ıslaha çalışır.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-pink p-4 my-2 bg-rose-50/30">
+      <h4 class="text-xl font-extrabold text-rose-900 font-sans-bold mb-1">✍️ Muâşeret Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Arkadaş çevrendeki insanları bu üç sınıfa göre tarttığında, vaktini kimlerle geçiriyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-cyan-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-cyan-800 font-extrabold">Sayfa 2 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 3: FİL SURESİ VE BEYTULLAH SAVUNMASI                                 -->
+  <!-- ========================================================================= -->
+  <div id="page-3" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-purple-800 border-purple-400 bg-purple-50">30. Bölüm • Kur'an Tahlili & Tevhid</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Fil Suresi ve Beytullah Savunması</h2>
+        </div>
+        <span class="pill-doodle-purple font-sans-bold">SAYFA 3</span>
+      </div>
+    </div>
+
+    <!-- Ayet ve Tarihi Hadise -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">🕋</span>
+        <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold">Ebrehe, Kulleys Kilisesi ve "İlk Haçlı Seferi"</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Yemen valisi Ebrehe, San'a'da altın varaklı muazzam bir katedral (el-Kulleys) inşa etti. Amacı, Arapların yöneldiği Kâbe'yi işlevsiz kılmak ve ticaret akışını Yemen'e bağlamaktı. Ekrem Demirli der ki: <em>"Tarihteki ilk Haçlı Seferi Yemen'den Hicaz'a başladı; gaye Hristiyanlık dışında bağımsız bir tevhid merkezinin kalmasına müsaade etmemekti."</em>
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-amber-300 text-base text-slate-800 space-y-2">
+        <p>● <strong>Kâbe'nin Sırrı:</strong> Kulleys altınla süslüydü; Kâbe ise sade taştan bir küptü. Kâbe gücünü maddi mimariden değil, Hz. İbrahim'in duasından ve Cenab-ı Hakk'ın <em>"Evim" (Beytî)</em> tescilinden alır.</p>
+        <p>● <strong>Abdülmuttalib'in Sözü:</strong> <em>"Ben develerin sahibiyim; Kâbe'nin ise onu koruyacak bir Sahibi vardır!"</em> İnsanın aczini idrak edip mülkü asıl sahibine havale etmesindeki sarsılmaz tevhid bilincidir.</p>
+      </div>
+    </div>
+
+    <!-- Ebabil İbreti -->
+    <div class="box-hand-green p-5 my-3 bg-emerald-50/40">
+      <h4 class="text-xl font-extrabold text-emerald-950 font-sans-bold mb-2">🌿 Gönül Kâbesi ve Ebabil Uyanıklığı</h4>
+      <p class="text-lg text-slate-800 leading-relaxed">
+        Kâbe gibi müminin kalbi de Allah'ın evidir. Oraya saldıran kibir, heva ve sahte put ordularına karşı mümin kalbini Allah'ın himayesine teslim etmelidir.
+      </p>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-purple p-4 my-2 bg-purple-50/30">
+      <h4 class="text-xl font-extrabold text-purple-900 font-sans-bold mb-1">✍️ Gönül Beytullahı Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Kalbini dünyevi heveslerin istilasına karşı nasıl koruyor, Kâbe'nin Sahibi olan Allah'a nasıl sığınıyorsun?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-purple-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-purple-800 font-extrabold">Sayfa 3 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 4: KARZ-I HASEN ŞUURU VE MİNNETSİZLİK AHLAKI                         -->
+  <!-- ========================================================================= -->
+  <div id="page-4" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">30. Bölüm • İnfak Edebi & Terk</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Karz-ı Hasen Şuuru ve Minnetsizlik</h2>
+        </div>
+        <span class="pill-doodle-pink font-sans-bold">SAYFA 4</span>
+      </div>
+    </div>
+
+    <!-- Sadakanın Gayesi ve Karz-ı Hasen -->
+    <div class="box-hand-pink p-5 my-4 bg-rose-50/40">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">🌾</span>
+        <h3 class="text-2xl font-extrabold text-rose-950 font-sans-bold">Sadakanın Asıl Amacı: Vereni Temizlemek</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Sadaka ve zekâtın birinci gayesi verenin nefsini cimrilik ve mülkiyet iddiasından arındırmaktır (tathîr). Verdiğinde muhatabına minnet yükleyen, teşekkür veya boyun eğme bekleyen kimse ameli heba eder. Kur'an bu sebeple infakı muhtaca yardım değil, <strong>"Allah'a güzel bir borç vermek" (Karz-ı Hasen)</strong> olarak tanımlar.
+      </p>
+      <div class="bg-white p-4 rounded-xl border border-rose-300 text-base text-slate-800 space-y-2">
+        <p>● <strong>"Bana Bir Harf Öğretenin..." Sözünün Tashihi:</strong> Demirli hoca uyarır: Bu söz kula kulluk veya mutlak tahakküm manasına gelemez. Buradaki harf marifetullah bilgisidir. Âlim de talebesinden minnet ve kölelik bekleyemez.</p>
+        <p>● <strong>Önce Fiilin, Sonra Nefsin Terki:</strong> Tövbe günahla ilgilidir; terk ise iyilik ve amellerle de ilgilidir. Kul önce günahı terk eder, sonra "ben yaptım" diyen sahte faili aradan çeker.</p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-4 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ İyilik ve İhlas Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Yaptığın bir iyilikten sonra içinden gizli bir teşekkür veya hürmet beklentisi geçiyor mu? Minneti nasıl tasfiye edersin?
+      </p>
+      <div contenteditable="true" class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-rose-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-rose-800 font-extrabold">Sayfa 4 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 5: HİKEM-İ ATÂİYYE - KALBİN ORDUSU NUR, NEFSİN ZULMET                -->
+  <!-- ========================================================================= -->
+  <div id="page-5" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-emerald-800 border-emerald-400 bg-emerald-50">30. Bölüm • Hikmet & Muhasebe</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Hikem-i Atâiyye: Kalbin Ordusu Nur</h2>
+        </div>
+        <span class="pill-doodle-green font-sans-bold">SAYFA 5</span>
+      </div>
+    </div>
+
+    <!-- Hikmet Metni -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">✨</span>
+        <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold">İbn Atâullah el-İskenderî (Hikmet 45-46)</h3>
+      </div>
+      <div class="bg-white p-5 rounded-2xl border-2 border-amber-300 text-center my-3 shadow-sm space-y-2">
+        <div class="font-arabic text-2xl md:text-3xl text-rose-900 leading-loose" dir="rtl">
+          النُّورُ جُنْدُ الْقَلْبِ كَمَا أَنَّ الظُّلْمَةَ جُنْدُ النَّفْسِ، فَإِذَا أَرَادَ اللهُ أَنْ يَنْصُرَ عَبْدَهُ أَمَدَّهُ بِجُنُودِ الْأَنْوَارِ، وَقَطَعَ عَنْهُ مَدَدَ الظُّلَمِ وَالْأَغْيَارِ
+        </div>
+        <p class="font-bold text-slate-900 font-sans-bold text-lg italic mt-2">
+          "Nur kalbin ordusudur; zulmet (karanlık) ise nefsin ordusudur. Allah Teâlâ bir kuluna nusret ve zafer murad ettiğinde, ona nurlardan ordular gönderir ve ondan zulmetlerin ve ağyârın desteğini keser!"
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-800 text-base mt-3">
+        <div class="bg-white p-4 rounded-xl border border-sky-300">
+          <strong class="font-sans-bold text-sky-950 block text-lg mb-1">✨ Cünûdu'l-Envâr (Nur Orduları):</strong>
+          <p>İman, marifet, basiret, zikir, ihlas ve tefekkür. Kalp bunlarla kuvvet bulur; hakkı batıldan ayırt eder.</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-purple-300">
+          <strong class="font-sans-bold text-purple-950 block text-lg mb-1">🌑 Cünûdu'z-Zulem (Zulmet Orduları):</strong>
+          <p>Cehalet, gaflet, hevâ, kibir ve sahte benlik vehmi. Kalbe nur indiğinde zulmet orduları kendiliğinden yok olur.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 30. Bölüm Kazanım Kontrol Listesi -->
+    <div class="box-hand-green p-5 bg-green-50/60 mb-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-2xl">✅</span>
+        <span class="font-sans-bold font-bold text-emerald-950 text-xl">30. Bölüm Kazanım Kontrol Listesi</span>
+      </div>
+      <div class="space-y-2 text-base text-slate-800">
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Ebû Türâb en-Nahşebî'ye göre kanaatin rızkı ve gıdayı doğrudan Allah'tan bilmek olduğunu öğrendim.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Halkla münasebette ateş metaforunu ve insanların 3 sınıfını (Gıda, İlaç, Dert) kavradım.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Ebrehe'nin Kulleys girişiminin ve Fil hadisesinin tevhid tarihindeki yerini ve Kâbe'nin sırrını idrak ettim.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Karz-ı Hasen şuurunun infakta minneti ve başa kakmayı sıfırlayan Nebevî ahlak olduğunu anladım.</span>
+        </label>
+        <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+          <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+          <span>Nur ordularının kalbe inmesiyle nefsin karanlık ordularının zeval bulacağını idrak ettim.</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mühür ve Tamamlama Bölümü -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-emerald-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-emerald-800 font-extrabold">Sayfa 5 / 5 • Mühür</span>
+    </div>
+  </div>
+
+  <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+  <script>
+    function showPage(num) {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const activeBtnAll = document.getElementById('btn-all');
+      if (activeBtnAll) {
+        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
+      }
+
+      const activePage = document.getElementById('page-' + num);
+      const activeBtn = document.getElementById('btn-p' + num);
+      if (activePage) activePage.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
+        activeBtn.classList.remove('text-slate-700');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAllPages() {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const btnAll = document.getElementById('btn-all');
+      if (btnAll) {
+        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      }
+    }
+
+    function printFasikul() {
+      showAllPages();
+      setTimeout(() => {
+        window.print();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

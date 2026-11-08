@@ -1,0 +1,325 @@
+import os
+import json
+import re
+
+PROJECT_DIR = r"C:\Users\mahmut\.gemini\antigravity\scratch\dusunce-ve-hayat-rehberi"
+EPISODES_DIR = os.path.join(PROJECT_DIR, "episodes")
+DATA_DIR = os.path.join(PROJECT_DIR, "data")
+
+episodes = [
+  {
+    "id": 1,
+    "file": "bolum01.html",
+    "title": "İslam Düşüncesine Giriş ve Tasavvufun Doğuşu",
+    "topics": ["Hasan-ı Basrî", "Zühd Dönemi", "Dünya Sevgisi ve Zühd", "Hikem-i Atâiyye 1: Amellere Güven"],
+    "sufi": "Hasan-ı Basrî",
+    "hikmet": "Amellerden ümit kesmek veya amellere güvenmek",
+    "category": "Tasavvuf",
+    "summary": "İslam düşüncesinde amelin ve zühdün temelleri; Hasan-ı Basrî'nin hüznü ve nefis muhasebesi."
+  },
+  {
+    "id": 2,
+    "file": "bolum02.html",
+    "title": "Fudayl b. İyâz ve Sıdk Ahlakı",
+    "topics": ["Fudayl b. İyâz", "Haramlardan Kaçınma", "Tövbe ve İhlas", "Hikem-i Atâiyye 2: Tecrid ve Esbab"],
+    "sufi": "Fudayl b. İyâz",
+    "hikmet": "Esbapta iken tecrid, tecritte iken esbap istemek gizli şehvettir",
+    "category": "Ahlak",
+    "summary": "Eşkıyalığı bırakıp Hakk'a yönelen Fudayl'ın tevbesi; esbab ve tecrid makamlarının inceliği."
+  },
+  {
+    "id": 3,
+    "file": "bolum03.html",
+    "title": "İbrâhim b. Edhem ve Saltanatı Terk",
+    "topics": ["İbrâhim b. Edhem", "Mülkiyet ve Terk", "Sıdk ve Samimiyet", "Hikem-i Atâiyye 3: Himmet ve Kader"],
+    "sufi": "İbrâhim b. Edhem",
+    "hikmet": "Yüksek himmetler kader surlarını delemez",
+    "category": "Tasavvuf",
+    "summary": "Belh tahtını terk edip marifet yolunu seçen İbrahim b. Edhem; himmetin kader karşısındaki aczi."
+  },
+  {
+    "id": 4,
+    "file": "bolum04.html",
+    "title": "Dâvûd-i Tâî ve Yalnızlıkta Vuslat",
+    "topics": ["Dâvûd-i Tâî", "Uzlet ve İnziva", "Kalp Tasfiyesi", "Hikem-i Atâiyye 4: Şöhret ve Mahviyet"],
+    "sufi": "Dâvûd-i Tâî",
+    "hikmet": "Varlığını meçhuliyet toprağına göm",
+    "category": "Tasavvuf",
+    "summary": "Fıkıh ilminden uzlet ve irfan yoluna geçiş; nefsin şöhret arzusunu mahviyetle kırmak."
+  },
+  {
+    "id": 5,
+    "file": "bolum05.html",
+    "title": "Şakîk-i Belhî ve Tevekkülün Esasları",
+    "topics": ["Şakîk-i Belhî", "Tevekkül ve Rızık", "Açlık ve Sabır", "Hikem-i Atâiyye 5: Tedbir ve Takdir"],
+    "sufi": "Şakîk-i Belhî",
+    "hikmet": "Kendin için tedbir almaktan nefsini rahatlat",
+    "category": "Ahlak",
+    "summary": "Tevekkül mektebinin kurucusu Şakîk-i Belhî; kulun tedbiri Allah'ın takdirine bırakma huzuru."
+  },
+  {
+    "id": 6,
+    "file": "bolum06.html",
+    "title": "Ebû Süleyman ed-Dârânî ve Marifetullah",
+    "topics": ["Ebû Süleyman ed-Dârânî", "Gece İbadeti", "Havf ve Recâ", "Hikem-i Atâiyye 6: Duanın Gecikmesi"],
+    "sufi": "Ebû Süleyman ed-Dârânî",
+    "hikmet": "Duanın kabulünün gecikmesi ümitsizlik sebebi olmasın",
+    "category": "Tasavvuf",
+    "summary": "Şam irfanının piri ed-Dârânî; duada ısrar, gecenin bereketi ve kabulün hakiki manası."
+  },
+  {
+    "id": 7,
+    "file": "bolum07.html",
+    "title": "Ma'rûf-i Kerhî ve Civanmertlik (Fütüvvet)",
+    "topics": ["Ma'rûf-i Kerhî", "Fütüvvet", "Bağışlama Ahlakı", "Hikem-i Atâiyye 7: Vaadin Tecellisi"],
+    "sufi": "Ma'rûf-i Kerhî",
+    "hikmet": "Vaat edilen şey vaktinde gerçekleşmezse şüpheye düşme",
+    "category": "Ahlak",
+    "summary": "Bağdat velisi Ma'rûf-i Kerhî; düşmanına bile dua eden fütüvvet ruhu ve ilahi vaatlere teslimiyet."
+  },
+  {
+    "id": 8,
+    "file": "bolum08.html",
+    "title": "Serî es-Sakatî ve Hakiki Tevazu",
+    "topics": ["Serî es-Sakatî", "Nefis Tezkiyesi", "Mahlukata Şefkat", "Hikem-i Atâiyye 8: Fethin Kapısı"],
+    "sufi": "Serî es-Sakatî",
+    "hikmet": "Sana bir kapı açıldığında amelin azlığına bakma",
+    "category": "Tasavvuf",
+    "summary": "Cüneyd-i Bağdâdî'nin dayısı ve üstadı; bir 'Elhamdülillah'ın otuz yıllık tövbesi ve ilahi fütûhat."
+  },
+  {
+    "id": 9,
+    "file": "bolum09.html",
+    "title": "Bişr-i Hâfî ve Yalınayak Yürümek",
+    "topics": ["Bişr-i Hâfî", "Hürmet ve Edep", "Helal Lokma", "Hikem-i Atâiyye 9: Ameller ve Vâridat"],
+    "sufi": "Bişr-i Hâfî",
+    "hikmet": "Amellerin çeşitliliği kalbe gelen hallerin çeşitliliğindendir",
+    "category": "Ahlak",
+    "summary": "Yerdeki 'Bismillah' kağıdını kaldırıp ta'zim eden sarhoşun velayete yürüyüşü; amellerin ruhu."
+  },
+  {
+    "id": 10,
+    "file": "bolum10.html",
+    "title": "Zünnûn-ı Mısrî ve Marifetin Dili",
+    "topics": ["Zünnûn-ı Mısrî", "Kainatın Tesbihi", "Sırların Korunması", "Hikem-i Atâiyye 10: Amelde İhlas"],
+    "sufi": "Zünnûn-ı Mısrî",
+    "hikmet": "Ameller dikilmiş suretlerdir; ruhu ihlas sırrıdır",
+    "category": "Tasavvuf",
+    "summary": "Mısır pirinin marifet dili; dağların ve taşların zikrini duymak ve amelin ruhu olan ihlas."
+  },
+  {
+    "id": 11,
+    "file": "bolum11.html",
+    "title": "Bâyezîd-i Bistâmî ve Fenâfillah",
+    "topics": ["Bâyezîd-i Bistâmî", "Benliğin Terki", "Gayret ve Ceht", "Hikem-i Atâiyye 11: Şöhreti Terk"],
+    "sufi": "Bâyezîd-i Bistâmî",
+    "hikmet": "Gömülmeyen tohum tam kemale eremez",
+    "category": "Tasavvuf",
+    "summary": "Yılanın derisini bırakması gibi benliği soymak; Bâyezîd'in hayreti ve şöhreti ayaklar altına alması."
+  },
+  {
+    "id": 12,
+    "file": "bolum12.html",
+    "title": "Ebû Saîd el-Harrâz ve Zıtlarda Birlik",
+    "topics": ["Ebû Saîd el-Harrâz", "Zâhir ve Bâtın", "Fakrın Hakikati", "Hikem-i Atâiyye 12: Kalbin Tefekkürü"],
+    "sufi": "Ebû Saîd el-Harrâz",
+    "hikmet": "Kalbe uzlet ve tefekkür kadar faydalı bir şey yoktur",
+    "category": "Tasavvuf",
+    "summary": "Evvel ve Âhir, Zâhir ve Bâtın tecellileri; kalbin tefekkür meydanına uzletle girmesi."
+  },
+  {
+    "id": 13,
+    "file": "bolum13.html",
+    "title": "Cüneyd-i Bağdâdî ve Seyyidü't-Tâife",
+    "topics": ["Cüneyd-i Bağdâdî", "Sahv ve Sekr", "Tevhidin Zirvesi", "Hikem-i Atâiyye 13: Eşyanın Hakikati"],
+    "sufi": "Cüneyd-i Bağdâdî",
+    "hikmet": "Kalp dünyaya bağlıyken Allah'a nasıl kanatlanabilir?",
+    "category": "Tasavvuf",
+    "summary": "Tasavvufun piri Cüneyd-i Bağdâdî; coşkun vecdi şeriatın sükûnetiyle dengeleyen Sahv makamı."
+  },
+  {
+    "id": 14,
+    "file": "bolum14.html",
+    "title": "Ebû Bekir eş-Şiblî ve Cezbe Ahlakı",
+    "topics": ["Ebû Bekir eş-Şiblî", "Aşk ve Cezbe", "Makam ve Şöhreti Terk", "Hikem-i Atâiyye 14: Evren ve Nur"],
+    "sufi": "Ebû Bekir eş-Şiblî",
+    "hikmet": "Evren bütünüyle karanlıktır; onu nurlandıran Hakk'ın tecellisidir",
+    "category": "Tasavvuf",
+    "summary": "Valiliği bırakıp Cüneyd'in dergâhında tuz satmaya başlayan Şiblî'nin aşk ve cezbe ateşi."
+  },
+  {
+    "id": 15,
+    "file": "bolum15.html",
+    "title": "Hallâc-ı Mansûr ve Aşkın Bedeli",
+    "topics": ["Hallâc-ı Mansûr", "Ene'l-Hak Meselesi", "Feda ve Vefa", "Hikem-i Atâiyye 15: Tevhid Şahidi"],
+    "sufi": "Hallâc-ı Mansûr",
+    "hikmet": "Allah her şeyden öncedir, her şeyle birliktedir, her şeyden sonradır",
+    "category": "Tasavvuf",
+    "summary": "Varlığını mutlak Varlık'ta eriten Hallâc'ın darağacındaki tebessümü; zahir ve batın ulemasının ihtilafı."
+  },
+  {
+    "id": 16,
+    "file": "bolum16.html",
+    "title": "Ebû Bekir el-Verrâk ve Âlimlerin Edebi",
+    "topics": ["Ebû Bekir el-Verrâk", "İlim ve Amel", "Nefsin Hileleri", "Hikem-i Atâiyye 16: Nur ve Eşya"],
+    "sufi": "Ebû Bekir el-Verrâk",
+    "hikmet": "Eşyayı görüp Yaratan'ı görmeyen ne kadar gafildir",
+    "category": "Ahlak",
+    "summary": "Tirmiz pirlerinden el-Verrâk; ilim ehlinin enaniyeti, amelin bereketi ve eşyanın ardındaki nur."
+  },
+  {
+    "id": 17,
+    "file": "bolum17.html",
+    "title": "Hakîm et-Tirmizî ve Hatmü'l-Velâye",
+    "topics": ["Hakîm et-Tirmizî", "Velayet Felsefesi", "Kalbin Tabakaları", "Hikem-i Atâiyye 17: Cehaletin Zirvesi"],
+    "sufi": "Hakîm et-Tirmizî",
+    "hikmet": "Allah varken başka şeylere meyleden cehaletin zirvesindedir",
+    "category": "Tasavvuf",
+    "summary": "Velayetin mertebeleri ve peygamberlik mirası; Hakîm et-Tirmizî'nin derin tasavvufi antropolojisi."
+  },
+  {
+    "id": 18,
+    "file": "bolum18.html",
+    "title": "Ebû Saîd İbnü'l-A'râbî ve Varlık Şuuru",
+    "topics": ["İbnü'l-A'râbî", "Harem-i Şerif Ahlakı", "Vecd ve İrfan", "Hikem-i Atâiyye 18: İlahi Lütuf"],
+    "sufi": "İbnü'l-A'râbî",
+    "hikmet": "Amellerine değil Allah'ın fazlına güven",
+    "category": "Tasavvuf",
+    "summary": "Mekke mücavirlerinin reisi; Kâbe'nin gölgesinde hakikat arayışı ve lütuf şuuru."
+  },
+  {
+    "id": 19,
+    "file": "bolum19.html",
+    "title": "İbn Hafîf eş-Şîrâzî ve Şiraz İrfanı",
+    "topics": ["İbn Hafîf", "Riyazet ve Açlık", "Fütüvvet Ahlakı", "Hikem-i Atâiyye 19: Talebin Mahiyeti"],
+    "sufi": "İbn Hafîf eş-Şîrâzî",
+    "hikmet": "O seni istemeseydi sen O'nu isteyemezdin",
+    "category": "Tasavvuf",
+    "summary": "Şiraz'ın şeyhi İbn Hafîf'in çile ve fütüvvet dolu ömrü; kulun talebinden önce gelen ilahi murad."
+  },
+  {
+    "id": 20,
+    "file": "bolum20.html",
+    "title": "Ebû Bekir el-Kettânî ve Kâbe Âşıkları",
+    "topics": ["Ebû Bekir el-Kettânî", "Mekke Komşuluğu", "Muhabbetullahta Fenâ", "Hikem-i Atâiyye 20: Amelin Kabulü"],
+    "sufi": "Ebû Bekir el-Kettânî",
+    "hikmet": "Kabulün en açık alameti amelden sonraki tevazudur",
+    "category": "Tasavvuf",
+    "summary": "Kâbe'de tavaf ederken can veren el-Kettânî; Beytullah aşkı ve kabul edilen amelin alametleri."
+  },
+  {
+    "id": 21,
+    "file": "bolum21.html",
+    "title": "Ebû Hanîfe'nin Duası, Tevazu ve Hemcinsle İmtihan",
+    "topics": ["İmam Ebû Hanîfe", "Hakiki Tevazu", "Hemcinsle İmtihan", "Hikem-i Atâiyye: Allah Perdelenmez"],
+    "sufi": "İmam Ebû Hanîfe",
+    "hikmet": "Allah'ı perdeleyen bir şey olsaydı O'na galip gelirdi; perde kulun gözündedir",
+    "category": "Ahlak",
+    "summary": "Münazarada karşı tarafın haklı çıkmasını isteme fazileti; hayvan sevgisi değil insanla adalet sınavı."
+  },
+  {
+    "id": 22,
+    "file": "bolum22.html",
+    "title": "Hâtem-i Esam ve Settâriyet Ahlakı",
+    "topics": ["Hâtem-i Esam", "Ayıpları Örtmek", "Sıratta Namaz", "Hikem-i Atâiyye 34-35: Ayıpları Örtme"],
+    "sufi": "Hâtem-i Esam",
+    "hikmet": "Sana hürmet edenler sendeki ilahi örtüye hürmet ederler",
+    "category": "Ahlak",
+    "summary": "Bir kadının mahcubiyetini gizlemek için 30 yıl sağır rolü oynayan Hâtem; Settâr isminin ahlaklaşması."
+  },
+  {
+    "id": 23,
+    "file": "bolum23.html",
+    "title": "Sehl et-Tüsterî, Yunus Emre ve Kalp Nazargâhı",
+    "topics": ["Sehl et-Tüsterî", "Yunus Emre (72 Millet)", "Kalp Nazargâhı", "Hikem-i Atâiyye 36: el-Kerîm"],
+    "sufi": "Sehl et-Tüsterî",
+    "hikmet": "Kerîm olandan başkasına el açan mahrum kalır",
+    "category": "Tasavvuf",
+    "summary": "Gönül yıkmamanın Kâbe'yi yıkmaktan beter oluşu; Yunus'un tevhid dili ve Kerîm olan Allah'a iltica."
+  },
+  {
+    "id": 24,
+    "file": "bolum24.html",
+    "title": "Sünnete İttibâ, Nahl 66 ve Hacı Bayrâm-ı Velî",
+    "topics": ["Yazıcızâde Mehmed", "Hacı Bayrâm-ı Velî", "Nahl 66 İhlası", "Hikem-i Atâiyye 37-38: Nur Ağacı"],
+    "sufi": "Hacı Bayrâm-ı Velî",
+    "hikmet": "Ameller nurların dallarıdır; nurlar ise marifetin meyveleridir",
+    "category": "Tefsir",
+    "summary": "Kan ile fışkı arasından çıkan halis süt gibi ameli riyadan kurtarmak; Gönül Şehri'nin inşası."
+  },
+  {
+    "id": 25,
+    "file": "bolum25.html",
+    "title": "Ma'rûf-i Kerhî ve Beled Suresi: İnsanın Çilesi",
+    "topics": ["Ma'rûf-i Kerhî", "Beled Suresi (Kebed)", "Dedikodunun Gazap Oluşu", "Hikem-i Atâiyye 39: Lütuf ve İptilâ"],
+    "sufi": "Ma'rûf-i Kerhî",
+    "hikmet": "Sana lütuf gibi görünen şey fitne, iptilâ gibi görünen rahmet olabilir",
+    "category": "Tefsir",
+    "summary": "İnsanın çile ve meşakkat içinde yaratılışı (kebed); dedikoduyla amelleri ifsat etmenin tehlikesi."
+  },
+  {
+    "id": 26,
+    "file": "bolum26.html",
+    "title": "Mucize, Keramet ve Beled Suresi: Akabe Yokuşu",
+    "topics": ["Mucize ve İstidrac", "Beled Suresi (Akabe)", "Kalbin 5 Esası", "Hikem 40-41: Salih Dost"],
+    "sufi": "İbn Atâullah el-İskenderî",
+    "hikmet": "Hali seni uyandırmayan, sözü Allah'a götürmeyenle arkadaş olma",
+    "category": "Tefsir",
+    "summary": "Nefsin sarp yokuşu (Akabe) aşma mücadelesi; keramete takılmayıp istikamet aramak; salih dost ölçüsü."
+  },
+  {
+    "id": 27,
+    "file": "bolum27.html",
+    "title": "Serî es-Sakatî, Hümeze Suresi ve Ârifin Güneşi",
+    "topics": ["Serî es-Sakatî", "Hümeze Suresi (Hutame)", "Âlim vs Ârif", "Hikem 42: Kalbin Zühdü"],
+    "sufi": "Serî es-Sakatî",
+    "hikmet": "Zâhid kalbin ameli az olsa da kabulü yakındır",
+    "category": "Tefsir",
+    "summary": "Kusur arayan ve mal toplayanın Hutame cehennemi; ârifin güneş ve toprak gibi herkese hayat vermesi."
+  },
+  {
+    "id": 28,
+    "file": "bolum28.html",
+    "title": "Zünnûn-ı Mısrî, Hz. Zekeriyyâ Kıssası ve Kalbin Ölümü",
+    "topics": ["Zünnûn-ı Mısrî", "Hz. Zekeriyyâ Kıssası", "Oruç ve Sabır", "Hikem 43: Kalbin Ölüm Alameti"],
+    "sufi": "Zünnûn-ı Mısrî",
+    "hikmet": "Kaçırdığı taate üzülmemek ve işlediği günaha pişman olmamak kalbin ölümündendir",
+    "category": "Tefsir",
+    "summary": "Sebeplerin bittiği yerde Zekeriyyâ (a.s.) gibi Hakk'a yönelmek; kalbin diri kalmasının şifreleri."
+  },
+  {
+    "id": 29,
+    "file": "bolum29.html",
+    "title": "Îdü'l-Fıtr, Şeyh Üftâde ve Kabulü Umulan Amel",
+    "topics": ["Şeyh Üftâde", "Ahmed b. Hadraveyh", "Allahu Ekber ve İzzet", "Hikem 44: En Makbul Amel"],
+    "sufi": "Şeyh Üftâde",
+    "hikmet": "Kabulü en çok umulan amel, yaparken kendini fail görmediğin ameldir",
+    "category": "Ahlak",
+    "summary": "Gönül yangını ve fıtrat bayramı; fukaraya hizmetin üç büyük bereketi; amelini sahiplenmeme şuuru."
+  },
+  {
+    "id": 30,
+    "file": "bolum30.html",
+    "title": "Ebû Türâb en-Nahşebî, Fil Suresi ve Nur Ordusu",
+    "topics": ["Ebû Türâb en-Nahşebî", "Ateş Metaforu", "Fil Suresi & Kâbe", "Hikem 45-46: Kalbin Nur Ordusu"],
+    "sufi": "Ebû Türâb en-Nahşebî",
+    "hikmet": "Nur kalbin ordusudur, zulmet ise nefsin ordusudur",
+    "category": "Tasavvuf",
+    "summary": "Kanaat rızkı Haktan bilmektir; halkla ateşe benzer münasebet; Kâbe'nin Beytullah sırrı; nurlar ordusu."
+  },
+  {
+    "id": 31,
+    "file": "bolum31.html",
+    "title": "Âcil ve Âcil Dengesi, İmam Mâtürîdî ve Tamah Tohumu",
+    "topics": ["İmam Mâtürîdî", "Öfke Baldan Tatlıdır", "Kureyş Suresi", "Hikem 47: Zillet Ağacı"],
+    "sufi": "İmam Mâtürîdî",
+    "hikmet": "Hiçbir zillet dalı yoktur ki tamah tohumu üzerinde yeşermiş olmasın",
+    "category": "Tefsir",
+    "summary": "Peşin duygu ile ebedi aklın savaşı; Mâtürîdî'nin tevil tevazuu; hayatımızın kış ve yaz seferleri; istiğna."
+  }
+]
+
+with open(os.path.join(DATA_DIR, "episodes.json"), "w", encoding="utf-8") as f:
+    json.dump(episodes, f, ensure_ascii=False, indent=2)
+
+print("Created episodes.json successfully.")

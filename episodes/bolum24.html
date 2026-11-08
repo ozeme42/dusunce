@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat 24. Bölüm • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(254, 240, 138, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(186, 230, 253, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(251, 207, 232, 0.35) 0%, transparent 45%),
+        #f5f3ec;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      font-size: 1.25rem;
+    }
+
+    .font-arabic {
+      font-family: 'Amiri', serif;
+    }
+    .font-sans-bold {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Noktalı Çalışma Kâğıdı Dokusu */
+    .worksheet-paper {
+      width: 100%;
+      max-width: 920px;
+      min-height: 1300px;
+      margin: 0 auto 3rem auto;
+      background-color: #ffffff;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      border: 3.5px solid #eab308;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow: 
+        0 25px 50px -12px rgba(161, 98, 7, 0.15),
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(234, 179, 8, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 50px;
+    }
+
+    /* El Çizimi Renkli Kutular */
+    .box-hand-yellow {
+      border: 2.8px solid #eab308;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+    }
+    .box-hand-purple {
+      border: 2.8px solid #a855f7;
+      border-radius: 20px 26px 18px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+    }
+    .box-hand-green {
+      border: 2.8px solid #22c55e;
+      border-radius: 24px 18px 26px 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+    }
+    .box-hand-cyan {
+      border: 2.8px solid #0ea5e9;
+      border-radius: 18px 26px 20px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+    }
+    .box-hand-pink {
+      border: 2.8px solid #ec4899;
+      border-radius: 26px 20px 24px 18px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+    }
+
+    /* Renkli Elips Hap (Pill) Etiketler */
+    .pill-doodle-pink {
+      border: 2.5px solid #f43f5e;
+      color: #be123c;
+      background: #fff1f2;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-cyan {
+      border: 2.5px solid #0284c7;
+      color: #0369a1;
+      background: #f0f9ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-purple {
+      border: 2.5px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-green {
+      border: 2.5px solid #16a34a;
+      color: #15803d;
+      background: #f0fdf4;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-yellow {
+      border: 2.5px solid #d97706;
+      color: #b45309;
+      background: #fffbeb;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    /* Etiket Rozetleri */
+    .badge-doodle {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      border: 2px dashed #64748b;
+      background: #f8fafc;
+    }
+
+    /* Çizgili Yazı Alanları */
+    .lined-notes {
+      background-image: repeating-linear-gradient(transparent, transparent 34px, #e2e8f0 34px, #e2e8f0 36px);
+      line-height: 36px;
+      min-height: 144px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .worksheet-paper {
+        border: 2.5px solid #000000 !important;
+        box-shadow: none !important;
+        margin: 0 0 2rem 0 !important;
+        page-break-after: always;
+        min-height: 98vh;
+      }
+      .hidden {
+        display: flex !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Üst Gezinme / Sayfa Seçici Menüsü -->
+  <header class="no-print w-full max-w-4xl mb-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border-2 border-amber-300 shadow-md flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+      <span class="text-2xl">📜</span>
+      <div>
+        <h1 class="text-xl font-bold font-sans-bold text-slate-800 leading-tight">Düşünce ve Hayat • 24. Bölüm</h1>
+        <p class="text-sm font-sans-bold text-amber-700">Prof. Dr. Ekrem Demirli • Radyo Ders Notları & Tefekkür Fasikülü</p>
+      </div>
+    </div>
+    
+    <div class="flex flex-wrap items-center gap-1.5 font-sans-bold text-sm">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 bg-yellow-400 text-slate-900 transition hover:bg-yellow-300">1. Kapak & Sünnet</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">2. İhlas & Nahl 66</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">3. Muhammediye</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">4. Gönül Şehri</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">5. Hikem 37-38</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3 py-1.5 rounded-lg border-2 border-purple-400 text-purple-700 transition hover:bg-purple-100">📖 Tümünü Aç</button>
+      <button onclick="printFasikul()" class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-white shadow-sm flex items-center gap-1">🖨️ Yazdır / PDF</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 1: KAPAK & ZİHİN HARİTASI (TEVHİD VE SÜNNETE İTTİBÂ)                -->
+  <!-- ========================================================================= -->
+  <div id="page-1" class="worksheet-paper">
+    <!-- Üst Başlık Çubuğu -->
+    <div class="border-b-4 border-amber-400 pb-4">
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <span class="badge-doodle text-amber-800 border-amber-400 bg-amber-50">Vav Radyo • 23 Nisan 2019 Dersi</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2 font-sans-bold tracking-tight">DÜŞÜNCE VE HAYAT</h2>
+          <p class="text-xl md:text-2xl text-amber-800 font-bold mt-1">24. Bölüm • Sünnete İttibâ, İhlasın Arılığı ve Gönül Şehri</p>
+        </div>
+        <div class="text-right">
+          <span class="pill-doodle-pink font-sans-bold">FASİKÜL NO: 24</span>
+          <p class="text-sm font-sans-bold text-slate-500 mt-1">Öğrenci / Okur: ______________</p>
+          <p class="text-sm font-sans-bold text-slate-500">Tarih: ____ / ____ / ________</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zihin Haritası Rozetleri -->
+    <div class="mt-6 mb-4">
+      <div class="flex flex-wrap gap-2 justify-center items-center">
+        <span class="pill-doodle-yellow">🌿 Kelime-i Şehadet & Resûlullah</span>
+        <span class="pill-doodle-cyan">🥛 Nahl 66: Kan ile Fers Arasında Süt</span>
+        <span class="pill-doodle-purple">📖 Gelibolulu Yazıcızâdeler & Muhammediye</span>
+        <span class="pill-doodle-green">🏰 Hacı Bayrâm-ı Velî'nin Gönül Şehri</span>
+        <span class="pill-doodle-pink">💎 Hikem 37-38: İhtiyacı Başkasına Taşımamak</span>
+      </div>
+    </div>
+
+    <!-- Ana Çerçeve 1: Tevhid ve Sünnete İttibâ -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-3xl">🕊️</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-amber-900 font-sans-bold">Kelime-i Şehadet'in İki Kanadı: Tevhid ve Nübüvvet</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Prof. Dr. Ekrem Demirli derse İslam'ın özü olan şehadet kelimesinin iki rüknünü şerh ederek başlar: <em>"Eşhedü enlâ ilâhe illallah ve eşhedü enne Muhammeden Resûlullah."</em> İlk kısım tevhiddir ve dindarlık o tevhid üzerine kurulur. İkinci kısım ise peygamberliktir:
+      </p>
+      <div class="box-hand-purple p-4 bg-purple-50/50 mb-3">
+        <strong class="text-purple-900 font-sans-bold block text-lg mb-1">👑 "Muhammedün Resûlullah" Ne Demektir?</strong>
+        <p class="text-lg text-slate-800 leading-relaxed">
+          Hz. Peygamber (s.a.v.) bizim için sadece tarihte yaşamış bir dâhi, bir beşer ya da felsefî bir rehber değildir. "Allah'ın Resûlü" tamlamasındaki <em>Allah</em> lafzı, <em>Resûl</em> kelimesini yüceltilebilecek en kudsî makama yüceltir. Dolayısıyla O, Allah'ın muradını insanlığa bildiren mutlak kılavuzdur.
+        </p>
+      </div>
+
+      <div class="p-4 bg-white rounded-xl border-2 border-amber-300">
+        <strong class="text-amber-900 block font-sans-bold text-lg mb-1">⚖️ Doğrunun Ölçüsü Akıl mıdır, Sünnet midir?</strong>
+        <p class="text-lg text-slate-800 leading-relaxed">
+          Hoca çok mühim bir uyarıda bulunur: <em>"Mesele kuru bir doğru-yanlış meselesi değildir; mesele <strong>Peygamber'e uyarak doğru yapmaktır!</strong> Eğer sadece akılla doğru bulunabilseydi peygamberlere ihtiyaç kalmazdı. Müslüman için doğrunun, ahlakın ve hayrın çerçevesi bizzat Hz. Peygamber'in sünnetidir. Peygambere ittiba etmeyen kimsenin yaptığı 'iyilikler' menzile ulaştırmaz."</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-5 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ 1. Sayfa Tefekkür Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Hayatındaki kararlarda kendi aklını ve beğenilerini mi merkeze alıyorsun, yoksa Hz. Peygamber'in sünnetine ittiba etmeyi mi asıl ölçü sayıyorsun?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-amber-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-amber-800 font-extrabold">Sayfa 1 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 2: İHLASIN HAKİKATI & NAHL SURESİ 66. AYET (İBRET VE ARILIK)         -->
+  <!-- ========================================================================= -->
+  <div id="page-2" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-cyan-800 border-cyan-400 bg-cyan-50">24. Bölüm • İhlas & Kalp Temizliği</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Nahl 66: İhlasın Hakikati ve Arılık</h2>
+        </div>
+        <span class="pill-doodle-cyan font-sans-bold">SAYFA 2</span>
+      </div>
+    </div>
+
+    <!-- Nahl 66. Ayet-i Kerimesi -->
+    <div class="box-hand-cyan p-5 my-4 bg-sky-50/40">
+      <div class="text-center my-2 p-4 bg-white rounded-2xl border-2 border-sky-300 shadow-sm">
+        <p class="font-arabic text-2xl md:text-3xl text-sky-950 mb-2 leading-loose">
+          «وَإِنَّ لَكُمْ فِي الْأَنْعَامِ لَعِبْرَةً ۖ نُّسْقِيكُم مِّمَّا فِي بُطُونِهِ مِن بَيْنِ فَرْثٍ وَدَمٍ لَّبَنًا خَالِصًا سَائِغًا لِّلشَّارِبِينَ»
+        </p>
+        <p class="text-base md:text-lg text-slate-700 font-sans-bold">
+          "Kuşkusuz sağmal hayvanlarda da sizin için ibretler vardır. Onların karınlarındaki fers (işkembe pisliği) ile kan arasından süzülen, içenlerin boğazından kolaylıkla geçen katıksız (hâlis) bir süt içiriyoruz." (Nahl, 16/66)
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-extrabold text-sky-950 font-sans-bold mt-4 mb-2">🥛 İmam Gazâlî'nin Muazzam İhlas Teşbihi:</h3>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        İmam Gazâlî der ki: <em>"İhlas işte tam olarak bu ayetteki sütün halidir!"</em> Eğer süte bir damla kan veya bir zerre işkembe pisliği karışsa o süt bozulur, kimse onu içemez. Amel de böyledir:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+        <div class="p-4 bg-white rounded-xl border-2 border-rose-300">
+          <strong class="text-rose-900 block font-sans-bold text-lg mb-1">🩸 KAN: Kibir, Soy ve İktidar Dairesi</strong>
+          <p class="text-slate-700 text-base leading-relaxed">
+            Günlük dilde "asil kan", "damarlarındaki kan" deriz. Kan; insanın benliğini, ırkını, soy üstünlüğünü ve kibrini temsil eder. Ameline enaniyet katan kimse süte kan karıştırmıştır.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border-2 border-amber-300">
+          <strong class="text-amber-900 block font-sans-bold text-lg mb-1">🫀 İŞKEMBE (FERS): Menfaat ve Süfli Arzular</strong>
+          <p class="text-slate-700 text-base leading-relaxed">
+            İşkembe hayvanî şehvetleri, dünyevi menfaatleri, doymak bilmez çıkar hesaplarını temsil eder. Amelinde dünyalık paye güden kimse süte fers bulaştırmıştır.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- İhlasın En Ağır İmtihanı -->
+    <div class="box-hand-pink p-5 my-3 bg-rose-50/40">
+      <h4 class="text-xl font-extrabold text-rose-950 font-sans-bold mb-2">⚠️ Hizmeti Başa Kakmamak ve Gizli Riya:</h4>
+      <p class="text-lg text-slate-800 leading-relaxed">
+        Hoca uyarır: İhlas en büyük sınavını hizmet ettikten sonra verir! İnsan: <em>"Ben bu kadar koşturdum, bu kadar fedakarlık yaptım; bir teşekkür bile edilmedi... Bir dua etseler yeterdi"</em> dediği an ihlas zedelenir. "Bir dua etseniz yeter" cümlesinde dahi gizli bir paye ve takdir beklentisi yatabilir. Peygamberlerin dilinde asla "ben şunu yaptım bana paye verin" iddiası yoktur; onlar amellerini sadece Allah'a arz edip unuturlar.
+      </p>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-purple p-4 my-2 bg-purple-50/30">
+      <h4 class="text-xl font-extrabold text-purple-900 font-sans-bold mb-1">✍️ Amel Muhasebesi Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Yaptığın ibadet ve hizmet sütüne kibir kanı veya menfaat işkembesi bulaşıyor mu? İyiliklerini dille sayıp dökme zaafından nasıl arınabilirsin?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-cyan-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-cyan-800 font-extrabold">Sayfa 2 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 3: GELİBOLULU YAZICIZÂDELER VE MUHAMMEDİYE                         -->
+  <!-- ========================================================================= -->
+  <div id="page-3" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-purple-800 border-purple-400 bg-purple-50">24. Bölüm • İrfan Mirasımız</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Gelibolulu Yazıcızâdeler ve Muhammediye</h2>
+        </div>
+        <span class="pill-doodle-purple font-sans-bold">SAYFA 3</span>
+      </div>
+    </div>
+
+    <!-- Muhammediye ve Anadolu İrfanı -->
+    <div class="box-hand-purple p-6 my-4 bg-purple-50/40">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-3xl">📖</span>
+        <h3 class="text-2xl font-extrabold text-purple-950 font-sans-bold">Anadolu'nun Kurucu İrfan Metni: Muhammediye</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Ekrem Demirli hoca Anadolu'nun İslamlaşmasında ikinci büyük dönemin (1400'lü yıllar ve sonrası) mimarlarından olan <strong>Yazıcızâde Mehmed Efendi</strong> ve kardeşi <strong>Ahmed Bîcan Efendi</strong>'yi hürmetle yâd eder.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-3">
+        <div class="p-4 bg-white rounded-xl border-2 border-purple-300">
+          <strong class="text-purple-900 block font-sans-bold text-lg mb-1">Yazıcızâde Mehmed Efendi:</strong>
+          <p class="text-slate-800 text-base leading-relaxed">
+            Meşhur manzum <em>Muhammediye</em> kitabının müellifidir. Gelibolu'da bir çilehanede telif ettiği bu eser, asırlar boyu Osmanlı coğrafyasında köy odalarından saraylara kadar her mecliste gözyaşlarıyla okunmuştur.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border-2 border-amber-300">
+          <strong class="text-amber-900 block font-sans-bold text-lg mb-1">Ahmed Bîcan Efendi:</strong>
+          <p class="text-slate-800 text-base leading-relaxed">
+            Meşhur <em>Envârü'l-Âşıkîn</em> (Âşıkların Nurları) kitabının yazarıdır. Hacı Bayram-ı Velî'nin talebeleri olan bu iki kardeş, şeyhlerinin irfanını Türkçe'nin duru ırmağıyla halka ulaştırmışlardır.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 bg-white rounded-xl border border-purple-200">
+        <h4 class="font-sans-bold text-purple-900 text-lg mb-1">🕊️ Türkçe ile İman Mayalamak:</h4>
+        <p class="text-lg text-slate-800 leading-relaxed">
+          Demirli hoca der ki: <em>"Muhammediye'nin bu topraklara hizmeti tarif edilemez. Çünkü Türkçe yazıldı, halkın doğrudan kalbine hitap etti. Peygamber Efendimiz'in hayatını, ahlakını ve muhabbetini Anadolu insanının ruhuna nakşetti. Bugün de bu metinlerin yeniden okunup anlaşılmasına ekmek kadar, su kadar ihtiyacımız vardır."</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-yellow p-4 my-2 bg-amber-50/30">
+      <h4 class="text-xl font-extrabold text-amber-900 font-sans-bold mb-1">✍️ Kültür ve İrfan Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Evinde ve kütüphanende medeniyetimizin kurucu metinleri (Muhammediye, Mesnevi, Yunus Divanı vb.) ne kadar yer tutuyor? Bu irfan pınarından ne sıklıkla besleniyorsun?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-purple-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-purple-800 font-extrabold">Sayfa 3 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 4: HACI BAYRÂM-I VELÎ'NİN ŞEHRİ: İKİ CİHAN ARASINDA GÖNÜL         -->
+  <!-- ========================================================================= -->
+  <div id="page-4" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-emerald-800 border-emerald-400 bg-emerald-50">24. Bölüm • Gönül & İrfan</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Hacı Bayrâm-ı Velî: İki Cihan Arasında Gönül</h2>
+        </div>
+        <span class="pill-doodle-green font-sans-bold">SAYFA 4</span>
+      </div>
+    </div>
+
+    <!-- Hacı Bayrâm-ı Velî'nin Meşhur Nutku -->
+    <div class="box-hand-green p-6 my-4 bg-emerald-50/40">
+      <div class="text-center my-2 p-4 bg-white rounded-2xl border-2 border-emerald-300 shadow-sm">
+        <p class="text-2xl md:text-3xl font-extrabold text-emerald-950 italic leading-relaxed">
+          "Çalabım bir şâr yaratmış iki cihan âresinde,<br>
+          Bakıcak dîdâr görünür ol şârın kenâresinde...<br>
+          Nâgihân ol şâra vardım, ol şârı yapılır gördüm,<br>
+          Ben dahi bile yapıldım taş u toprak âresinde!"
+        </p>
+        <span class="text-emerald-800 font-sans-bold text-lg mt-2 block">— Hacı Bayrâm-ı Velî</span>
+      </div>
+
+      <h3 class="text-2xl font-extrabold text-emerald-950 font-sans-bold mt-4 mb-2">🏰 'Şâr' (Şehir) Aslında GÖNÜLDÜR!</h3>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Ekrem Demirli hoca bu beyti şerh ederken muazzam bir hakikati açıklar: Allah'ın iki cihan arasında kurduğu o kutlu şehir, <strong>insanın gönlüdür (sadrdır).</strong>
+      </p>
+
+      <div class="p-4 bg-white rounded-xl border border-emerald-200 mb-3">
+        <strong class="text-emerald-900 font-sans-bold block text-lg mb-1">⚖️ İki Cihanın Kesişme Noktasında İnsan:</strong>
+        <p class="text-slate-800 text-lg leading-relaxed">
+          Gönlün bir kanadı <strong>Melekûta</strong> (öte dünyaya, ulvî değerlere, merhamete, cömertliğe ve Allah'a) açılır; diğer kanadı ise <strong>Mülke</strong> (dünyaya, bedene, toprağa) bakar. İnsan bu iki cihanın berzahında, tam kesişme noktasında duran varlıktır.
+        </p>
+      </div>
+
+      <div class="p-4 bg-yellow-50 rounded-xl border-2 border-yellow-400">
+        <strong class="text-amber-950 font-sans-bold block text-lg mb-1">🔨 "Ben Dahi Bile Yapıldım Taş u Toprak Âresinde":</strong>
+        <p class="text-slate-800 text-lg leading-relaxed">
+          İnsan hazır olarak dünyaya gelmez; insan inşa edilir! Gönül şehrini ibadetle, aşkla ve edeple imar ederken insan bizzat kendini de inşa eder. Taş ve toprağın arasında yoğrularak kâmil insan haline gelir.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-cyan p-4 my-2 bg-sky-50/30">
+      <h4 class="text-xl font-extrabold text-sky-900 font-sans-bold mb-1">✍️ Gönül İnşası Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Senin gönül şehrinde hangi kanat daha baskın: Dünyaya bakan mülk kanadı mı, Hakk'a bakan melekût kanadı mı? Kendini nasıl inşa ediyorsun?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-emerald-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-emerald-800 font-extrabold">Sayfa 4 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 5: HİKEM-İ ATÂİYYE 37-38 (İHTİYACI ALLAH'TAN BAŞKASINA TAŞIMAMAK)   -->
+  <!-- ========================================================================= -->
+  <div id="page-5" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">24. Bölüm • Hikem-i Atâiyye Şerhi</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">İhtiyacı Allah'tan Başkasına Taşımamak</h2>
+        </div>
+        <span class="pill-doodle-pink font-sans-bold">SAYFA 5</span>
+      </div>
+    </div>
+
+    <!-- Hikmet Metinleri (Arapça & Türkçe) -->
+    <div class="box-hand-pink p-5 my-4 bg-rose-50/50">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">💎</span>
+        <h3 class="text-2xl font-extrabold text-rose-950 font-sans-bold">İbn Atâullah el-İskenderî'nin 37. ve 38. Hikmetleri</h3>
+      </div>
+      
+      <!-- Hikmet 37 -->
+      <div class="p-4 bg-white rounded-xl border-2 border-rose-300 text-center mb-3">
+        <p class="font-arabic text-2xl md:text-3xl text-rose-950 mb-1 leading-loose">
+          «لَا تَرْفَعَنَّ إِلَى غَيْرِهِ حَاجَةً هُوَ مُورِدُهَا عَلَيْكَ، فَكَيْفَ يَرْفَعُ غَيْرُهُ مَا كَانَ هُوَ لَهُ وَاضِعًا؟»
+        </p>
+        <p class="text-lg md:text-xl text-rose-900 font-extrabold mt-1">
+          "O'nun senin üzerine indirdiği bir ihtiyacı (sıkıntıyı) sakın başkasına arz etme! Zira O'nun koyduğu bir yükü başkası nasıl kaldırabilir ki?"
+        </p>
+      </div>
+
+      <!-- Hikmet 38 -->
+      <div class="p-4 bg-white rounded-xl border-2 border-purple-300 text-center mb-3">
+        <p class="font-arabic text-2xl md:text-3xl text-purple-950 mb-1 leading-loose">
+          «مَنْ لَمْ يَسْتَطِعْ أَنْ يَرْفَعَ حَاجَةً عَنْ نَفْسِهِ، فَكَيْفَ يَسْتَطِيعُ أَنْ يَكُونَ لَهَا مِنْ غَيْرِهِ رَافِعًا؟»
+        </p>
+        <p class="text-lg md:text-xl text-purple-900 font-extrabold mt-1">
+          "Kendi nefsinden bir ihtiyacı defetmeye gücü yetmeyen aciz bir fani, başkasının ihtiyacını nasıl gidersin?"
+        </p>
+      </div>
+
+      <div class="p-4 bg-white rounded-xl border border-rose-200">
+        <h4 class="font-sans-bold text-rose-900 text-lg mb-1">💡 Demirli Hoca'nın Şerhi:</h4>
+        <p class="text-slate-800 text-base md:text-lg leading-relaxed">
+          Dert de derman da Allah'tandır. Cenab-ı Hak sana bir darlık veya fakirlik vermişse, bunun gayesi seni kendine yöneltmektir. Kulun bu derdi alıp Allah'ı bırakarak aciz kullara şikâyet etmesi veya çözümü fanilerde araması büyük bir cehalettir. Kendi derdine derman olamayan bir fani, senin derdine nasıl çare olabilir?
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Tatbikat Çetelesi -->
+    <div class="box-hand-yellow p-5 my-3 bg-amber-50/50">
+      <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold mb-3">📋 24. Bölüm Tefekkür ve Tatbikat Çetelesi</h3>
+      <div class="space-y-3 text-lg md:text-xl text-slate-800">
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Sünnete İttibâ:</strong> Hayatımdaki iyilik ve doğruluk ölçüsünü sadece kendi aklıma değil, Peygamberimiz'in sünnetine bağladım.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Nahl 66 İhlası:</strong> Amellerime benlik ve kibir kanını, menfaat ve çıkar pisliğini bulaştırmadan arı duru tutmaya gayret ettim.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Hizmeti Başa Kakmama:</strong> Yaptığım iyilikleri sayıp dökmedim; insanlardan teşekkür ve paye bekleme tuzağından kaçındım.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Gönül Şehrini İmar:</strong> İki cihanın berzahı olan kalbimi melekûta açarak kâmil insan olma yolunda kendimi inşa ettim.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>İhtiyacı Allah'a Arz Etmek:</strong> Başımın sıkıntısını ve ihtiyaçlarımı fanilere değil, derdin ve dermanın yegâne sahibi Allah'a açtım.</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mühür ve Tamamlama Bölümü -->
+    <div class="mt-6 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🌟</span>
+        <span class="text-amber-900 font-extrabold">24. Bölüm Tefekkür Fasikülü Tamamlandı</span>
+      </div>
+      <div class="text-amber-800 font-extrabold">Sayfa 5 / 5 • Mühür</div>
+    </div>
+  </div>
+
+
+  <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+  <script>
+    function showPage(num) {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const activeBtnAll = document.getElementById('btn-all');
+      if (activeBtnAll) {
+        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
+      }
+
+      const activePage = document.getElementById('page-' + num);
+      const activeBtn = document.getElementById('btn-p' + num);
+      if (activePage) activePage.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
+        activeBtn.classList.remove('text-slate-700');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAllPages() {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const btnAll = document.getElementById('btn-all');
+      if (btnAll) {
+        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      }
+    }
+
+    function printFasikul() {
+      showAllPages();
+      setTimeout(() => {
+        window.print();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

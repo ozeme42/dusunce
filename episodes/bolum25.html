@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat 25. Bölüm • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(254, 240, 138, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(186, 230, 253, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(251, 207, 232, 0.35) 0%, transparent 45%),
+        #f5f3ec;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      font-size: 1.25rem;
+    }
+
+    .font-arabic {
+      font-family: 'Amiri', serif;
+    }
+    .font-sans-bold {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Noktalı Çalışma Kâğıdı Dokusu */
+    .worksheet-paper {
+      width: 100%;
+      max-width: 920px;
+      min-height: 1300px;
+      margin: 0 auto 3rem auto;
+      background-color: #ffffff;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      border: 3.5px solid #eab308;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow: 
+        0 25px 50px -12px rgba(161, 98, 7, 0.15),
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(234, 179, 8, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 50px;
+    }
+
+    /* El Çizimi Renkli Kutular */
+    .box-hand-yellow {
+      border: 2.8px solid #eab308;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+    }
+    .box-hand-purple {
+      border: 2.8px solid #a855f7;
+      border-radius: 20px 26px 18px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+    }
+    .box-hand-green {
+      border: 2.8px solid #22c55e;
+      border-radius: 24px 18px 26px 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+    }
+    .box-hand-cyan {
+      border: 2.8px solid #0ea5e9;
+      border-radius: 18px 26px 20px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+    }
+    .box-hand-pink {
+      border: 2.8px solid #ec4899;
+      border-radius: 26px 20px 24px 18px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+    }
+
+    /* Renkli Elips Hap (Pill) Etiketler */
+    .pill-doodle-pink {
+      border: 2.5px solid #f43f5e;
+      color: #be123c;
+      background: #fff1f2;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-cyan {
+      border: 2.5px solid #0284c7;
+      color: #0369a1;
+      background: #f0f9ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-purple {
+      border: 2.5px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-green {
+      border: 2.5px solid #16a34a;
+      color: #15803d;
+      background: #f0fdf4;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-yellow {
+      border: 2.5px solid #d97706;
+      color: #b45309;
+      background: #fffbeb;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    /* Etiket Rozetleri */
+    .badge-doodle {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      border: 2px dashed #64748b;
+      background: #f8fafc;
+    }
+
+    /* Çizgili Yazı Alanları */
+    .lined-notes {
+      background-image: repeating-linear-gradient(transparent, transparent 34px, #e2e8f0 34px, #e2e8f0 36px);
+      line-height: 36px;
+      min-height: 144px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .worksheet-paper {
+        border: 2.5px solid #000000 !important;
+        box-shadow: none !important;
+        margin: 0 0 2rem 0 !important;
+        page-break-after: always;
+        min-height: 98vh;
+      }
+      .hidden {
+        display: flex !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center">
+
+  <!-- Üst Gezinme / Sayfa Seçici Menüsü -->
+  <header class="no-print w-full max-w-4xl mb-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border-2 border-amber-300 shadow-md flex flex-wrap items-center justify-between gap-3">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+      <span class="text-2xl">📜</span>
+      <div>
+        <h1 class="text-xl font-bold font-sans-bold text-slate-800 leading-tight">Düşünce ve Hayat • 25. Bölüm</h1>
+        <p class="text-sm font-sans-bold text-amber-700">Prof. Dr. Ekrem Demirli • Radyo Ders Notları & Tefekkür Fasikülü</p>
+      </div>
+    </div>
+    
+    <div class="flex flex-wrap items-center gap-1.5 font-sans-bold text-sm">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 bg-yellow-400 text-slate-900 transition hover:bg-yellow-300">1. Kapak & Civanmertlik</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">2. Mâlâyânî & Gazap</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">3. Beled Suresi & Çile</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">4. Başa Kakma Tuzağı</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">5. Hikem 39 & Baki Olan</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3 py-1.5 rounded-lg border-2 border-purple-400 text-purple-700 transition hover:bg-purple-100">📖 Tümünü Aç</button>
+      <button onclick="printFasikul()" class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-white shadow-sm flex items-center gap-1">🖨️ Yazdır / PDF</button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 1: KAPAK & ZİHİN HARİTASI (MA'RÛF-İ KERHÎ VE CİVANMERTLİK)           -->
+  <!-- ========================================================================= -->
+  <div id="page-1" class="worksheet-paper">
+    <!-- Üst Başlık Çubuğu -->
+    <div class="border-b-4 border-amber-400 pb-4">
+      <div class="flex justify-between items-start gap-4">
+        <div>
+          <span class="badge-doodle text-amber-800 border-amber-400 bg-amber-50">Vav Radyo • 30 Nisan 2019 Dersi</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2 font-sans-bold tracking-tight">DÜŞÜNCE VE HAYAT</h2>
+          <p class="text-xl md:text-2xl text-amber-800 font-bold mt-1">25. Bölüm • Ma'rûf-i Kerhî ve Civanmertliğin Üç Alameti</p>
+        </div>
+        <div class="text-right">
+          <span class="pill-doodle-pink font-sans-bold">FASİKÜL NO: 25</span>
+          <p class="text-sm font-sans-bold text-slate-500 mt-1">Öğrenci / Okur: ______________</p>
+          <p class="text-sm font-sans-bold text-slate-500">Tarih: ____ / ____ / ________</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zihin Haritası Rozetleri -->
+    <div class="mt-6 mb-4">
+      <div class="flex flex-wrap gap-2 justify-center items-center">
+        <span class="pill-doodle-yellow">🗡️ Ma'rûf-i Kerhî & Civanmertlik</span>
+        <span class="pill-doodle-cyan">⚡ Mâlâyânî: İlâhî Gazabın Cezası</span>
+        <span class="pill-doodle-purple">🏔️ Beled Suresi & Kebed (Çile)</span>
+        <span class="pill-doodle-green">💸 İyiliği Başa Kakmama Ahlakı</span>
+        <span class="pill-doodle-pink">💎 Hikem 39: Seninle Kalmayacak Olan</span>
+      </div>
+    </div>
+
+    <!-- Ana Çerçeve 1: Ma'rûf-i Kerhî ve Fütüvvet -->
+    <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-3xl">🤝</span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-amber-900 font-sans-bold">Civanmertlik (Fütüvvet) Kuru Bir İddia Değildir</h3>
+      </div>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Prof. Dr. Ekrem Demirli derse Bağdat tasavvuf mektebinin kurucu büyüklerinden <strong>Ma'rûf-i Kerhî</strong> (ö. 200/815) hazretlerinin hikmetleriyle başlar. Bir kimsenin "Ben yiğidim, delikanlıyım, civanmerdim" demesiyle civanmert olunamayacağını belirten Ma'rûf hazretleri, gerçek fütüvvetin üç alametini sayar:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-3">
+        <!-- 1. Şartsız Vefa -->
+        <div class="p-4 bg-white rounded-xl border-2 border-amber-400 shadow-sm text-center">
+          <span class="text-3xl block mb-1">📜</span>
+          <h4 class="font-sans-bold text-amber-950 text-xl mb-1">1. Hilafsız Vefa</h4>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Menfaatler değişse de sözünden, dostluğundan ve ahdinden zerre kadar caymamak; şartlar ne olursa olsun vefayı korumaktır.
+          </p>
+        </div>
+
+        <!-- 2. Karşılıksız Övgü -->
+        <div class="p-4 bg-white rounded-xl border-2 border-purple-400 shadow-sm text-center">
+          <span class="text-3xl block mb-1">🕊️</span>
+          <h4 class="font-sans-bold text-purple-950 text-xl mb-1">2. Karşılıksız Övgü</h4>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Bir kimseden kişisel bir iyilik veya hayır görmesen bile onun faziletini, iyiliğini teslim edip hayırla anabilmektir.
+          </p>
+        </div>
+
+        <!-- 3. İstenmeden Vermek -->
+        <div class="p-4 bg-white rounded-xl border-2 border-emerald-400 shadow-sm text-center">
+          <span class="text-3xl block mb-1">🎁</span>
+          <h4 class="font-sans-bold text-emerald-950 text-xl mb-1">3. İstenmeden Vermek</h4>
+          <p class="text-slate-700 text-sm leading-relaxed">
+            Muhatabı el açıp isteme, minnet etme zilletine düşürmeden halinden anlayıp cömertçe ikramda bulunmaktır.
+          </p>
+        </div>
+      </div>
+
+      <!-- "İnsan İhsanın Kuludur" Sözünün Tashihi -->
+      <div class="p-4 bg-white rounded-xl border-2 border-amber-300 mt-2">
+        <strong class="text-amber-950 block font-sans-bold text-lg mb-1">💡 "el-İnsânü Abdu'l-İhsân" (İnsan İhsanın Kuludur) Yanılgısı:</strong>
+        <p class="text-lg text-slate-800 leading-relaxed">
+          Hoca der ki: Bir insanın kendisine iyilik yapan faninin kulu/kölesi olması ahlaki bir kemal değildir. Mümin <em>"Abdu'l-Muhsin"</em> olmalı, yani asıl ihsan sahibi olan Allah'a kul olmalıdır. İnsan menfaati gereği değil, hak ve adalet gereği insanları övmeli; menfaat görmediği kimsenin faziletini de ikrar edebilmelidir.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-green p-5 my-2 bg-green-50/30">
+      <h4 class="text-xl font-extrabold text-green-900 font-sans-bold mb-1">✍️ 1. Sayfa Fütüvvet Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Sana hiçbir menfaati veya iyiliği dokunmayan bir insanın faziletini takdir edebiliyor musun? İyilik yaparken muhatabın istemesini beklemeden davranabiliyor musun?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-amber-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-amber-800 font-extrabold">Sayfa 1 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 2: MÂLÂYÂNÎ (BOŞ İŞLER) VE DEDİKODU: İLÂHÎ GAZABIN CEZASI            -->
+  <!-- ========================================================================= -->
+  <div id="page-2" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">25. Bölüm • Dilin Âfetleri & Gazap</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Mâlâyânî ve Dedikodu: İlâhî Gazabın Cezası</h2>
+        </div>
+        <span class="pill-doodle-pink font-sans-bold">SAYFA 2</span>
+      </div>
+    </div>
+
+    <!-- Ma'rûf-i Kerhî'nin Sarsıcı Sözü -->
+    <div class="box-hand-pink p-6 my-4 bg-rose-50/50">
+      <div class="text-center my-2 p-4 bg-white rounded-2xl border-2 border-rose-300 shadow-sm">
+        <p class="font-arabic text-2xl md:text-3xl text-rose-950 mb-2 leading-loose">
+          «عَلَامَةُ مَقْتِ اللهِ تَعَالَى لِلْعَبْدِ: أَنْ يَكُونَ مَشْغُولًا بِمَا لَا يَعْنِيهِ»
+        </p>
+        <p class="text-xl md:text-2xl font-extrabold text-rose-900 font-sans-bold">
+          "Kulun kendisini ilgilendirmeyen (mâlâyânî) boş işlerle meşgul olması, Allah Teâlâ'nın o kuluna gazap ettiğinin delilidir!"
+        </p>
+        <span class="text-rose-800 font-sans-bold text-sm block mt-1">— Ma'rûf-i Kerhî</span>
+      </div>
+
+      <h3 class="text-2xl font-extrabold text-rose-950 font-sans-bold mt-4 mb-2">⚡ Demirli Hoca'nın Çarpıcı Tahlili:</h3>
+      <div class="p-4 bg-white rounded-xl border border-rose-200 mb-3">
+        <p class="text-lg md:text-xl text-slate-800 leading-relaxed font-bold text-rose-900">
+          "Dedikodu, lâf yarıştırma ve başkalarının ayıbını konuşmak basit bir şahsi tercih veya masum bir vakit geçirme değildir; o, kulun ilâhî gazaba uğramış olmasının bizzat cezasıdır!"
+        </p>
+      </div>
+      <p class="text-lg text-slate-800 leading-relaxed">
+        Allah bir kula gazap ettiğinde onun kalbini nurlu amellerden mahrum bırakır; onu dedikoduyla, iftirayla, başkaları hakkında fikir yürütüp çekiştirmeyle cezalandırır. Kişi kendini eğleniyor sanırken aslında ilahî rahmetten kovulmuşluğun cezasını çekmektedir.
+      </p>
+    </div>
+
+    <!-- Hayır Kapısı ve Ağız Dalaşı Kapısı -->
+    <div class="box-hand-cyan p-5 my-3 bg-sky-50/40">
+      <h4 class="text-xl font-extrabold text-sky-950 font-sans-bold mb-2">🚪 İki Kapı: Amel Kapısı vs. Lâf Yarıştırma Kapısı</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 bg-white rounded-xl border-2 border-emerald-300">
+          <strong class="text-emerald-900 block font-sans-bold text-lg mb-1">✅ Allah Hayır Murad Ettiğinde:</strong>
+          <p class="text-slate-700 text-base leading-relaxed">
+            <em>"Allah bir kuluna hayır murad ederse ona amel ve hayır yapma kapısını açar; ağız dalaşı ve cedel kapısını kapatır."</em> Kişi boş tartışmalardan çekilir, sükûnetle hayra koşar.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border-2 border-rose-300">
+          <strong class="text-rose-900 block font-sans-bold text-lg mb-1">❌ Allah Gazap Ettiğinde:</strong>
+          <p class="text-slate-700 text-base leading-relaxed">
+            Kula amel kapısı kapanır, ağız dalaşı ve polemik kapısı açılır. Sabahtan akşama kadar dinî, siyasî veya şahsî dedikodular yapar ama ortaya tek bir salih amel koyamaz.
+          </p>
+        </div>
+      </div>
+      <p class="text-slate-800 text-lg mt-3 italic text-center font-bold">
+        "Ne övelim, ne yerelim; dilimizi mâlâyânîden koruyalım!"
+      </p>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-purple p-4 my-2 bg-purple-50/30">
+      <h4 class="text-xl font-extrabold text-purple-900 font-sans-bold mb-1">✍️ Dil Muhasebesi Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Gün içinde vaktin amel ve tefekkürle mi geçiyor, yoksa sosyal medyada ve sohbetlerde dedikodu ve cedelle mi? Açık olan kapın hangisi?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-rose-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-rose-800 font-extrabold">Sayfa 2 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 3: BELED SURESİ TEFSİRİ: İNSANIN ÇİLESİ VE MEKÂNIN TESİRİ          -->
+  <!-- ========================================================================= -->
+  <div id="page-3" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-purple-800 border-purple-400 bg-purple-50">25. Bölüm • Kur'an Tefsiri</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Beled Suresi: İnsanın Çilesi ve Mekânın Tesiri</h2>
+        </div>
+        <span class="pill-doodle-purple font-sans-bold">SAYFA 3</span>
+      </div>
+    </div>
+
+    <!-- Beled Suresi İlk Ayetler -->
+    <div class="box-hand-purple p-6 my-4 bg-purple-50/40">
+      <div class="text-center my-2 p-4 bg-white rounded-2xl border-2 border-purple-300 shadow-sm">
+        <p class="font-arabic text-2xl md:text-3xl text-purple-950 mb-2 leading-loose">
+          «لَا أُقْسِمُ بِهَٰذَا الْبَلَدِ ﴿١﴾ وَأَنتَ حِلٌّ بِهَٰذَا الْبَلَدِ ﴿٢﴾ وَوَالِدٍ وَمَا وَلَدَ ﴿٣﴾ لَقَدْ خَلَقْنَا الْإِنسَانَ فِي كَبَدٍ ﴿٤﴾»
+        </p>
+        <p class="text-base md:text-lg text-slate-700 font-sans-bold">
+          "Kasem ederim bu beldeye (Mekke'ye)! Ki sen bu beldede oturmaktasın. Doğurana ve doğana (babaya ve evlada) andolsun! Doğrusu biz insanı bir meşakkat ve çile (kebed) içinde yarattık!" (Beled, 90/1-4)
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-extrabold text-purple-950 font-sans-bold mt-4 mb-2">🏙️ Şehir, Nesil ve Karakter</h3>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Ekrem Demirli hoca ayetin derinliğini şöyle izah eder: Cenab-ı Hak Mekke şehrine, orada yaşayan Peygamberimiz'e ve Hz. İbrahim'den kıyamete kadar gelen nesillere (vâlid ve veled) yemin ederek insanın varoluşsal kanununu ilan eder.
+      </p>
+
+      <div class="p-4 bg-white rounded-xl border border-purple-200 mb-3">
+        <strong class="text-purple-900 font-sans-bold block text-lg mb-1">🌍 Coğrafyanın Karakter Üzerindeki Tesiri:</strong>
+        <p class="text-slate-800 text-lg leading-relaxed">
+          Mekân ve iklim insan tabiatını doğrudan şekillendirir. Çölün veya sert kışların yaşandığı zorlu coğrafyalarda yaşayan insanların mizaçları da o sertlikle yoğrulur. İnsan, yaşadığı tabiatın ve tarihin bir çocuğudur.
+        </p>
+      </div>
+    </div>
+
+    <!-- "Fî Kebed": Çilenin Hakikati -->
+    <div class="box-hand-yellow p-5 my-3 bg-amber-50/50">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">🏔️</span>
+        <h4 class="text-2xl font-extrabold text-amber-950 font-sans-bold">"Lekad Halakne'l-İnsâne Fî Kebed": Meşakkat Kanunu</h4>
+      </div>
+      <p class="text-lg text-slate-800 leading-relaxed mb-2">
+        Arapça'da <strong>kebed</strong>; meşakkat, zorluk, çile ve dik durma mücadelesi demektir. 
+      </p>
+      <div class="p-4 bg-white rounded-xl border-2 border-amber-400">
+        <blockquote class="text-xl font-extrabold text-amber-900 italic">
+          "Dünya zahmetsiz bir konfor ve keyif yurdu değildir. İnsan doğduğu andan son nefesine kadar bir zorluk, meşakkat ve imtihan çilesi içinde yoğrulur. Olgunlaşma ancak bu çilenin sabırla göğüslenmesiyle mümkündür."
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-cyan p-4 my-2 bg-sky-50/30">
+      <h4 class="text-xl font-extrabold text-sky-900 font-sans-bold mb-1">✍️ Kebed (Çile) Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Hayatındaki zorlukları ve meşakkatleri bir ceza ve şikayet sebebi mi görüyorsun, yoksa seni olgunlaştıran ilâhî 'kebed' kanunu mu?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-purple-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-purple-800 font-extrabold">Sayfa 3 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 4: EMEĞİ VE HİZMETİ BAŞA KAKMA TUZAĞI (BELED 6 TEFSİRİ)              -->
+  <!-- ========================================================================= -->
+  <div id="page-4" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-emerald-800 border-emerald-400 bg-emerald-50">25. Bölüm • İhlas & Minnet</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Emeği Başa Kakma ve Amelleri Sıfırlama Tehlikesi</h2>
+        </div>
+        <span class="pill-doodle-green font-sans-bold">SAYFA 4</span>
+      </div>
+    </div>
+
+    <!-- Beled 6. Ayet-i Kerimesi -->
+    <div class="box-hand-green p-6 my-4 bg-emerald-50/40">
+      <div class="text-center my-2 p-4 bg-white rounded-2xl border-2 border-emerald-300 shadow-sm">
+        <p class="font-arabic text-2xl md:text-3xl text-emerald-950 mb-2 leading-loose">
+          «يَقُولُ أَهْلَكْتُ مَالًا لُّبَدًا»
+        </p>
+        <p class="text-xl md:text-2xl font-extrabold text-emerald-900 font-sans-bold">
+          "İnsan: 'Yığınla mal tükettim, ne paralar harcadım!' der." (Beled, 90/6)
+        </p>
+      </div>
+
+      <h3 class="text-2xl font-extrabold text-emerald-950 font-sans-bold mt-4 mb-2">💸 Başa Kakma İlleti: Emeği Putlaştırmak</h3>
+      <p class="text-lg md:text-xl text-slate-800 leading-relaxed mb-3">
+        Demirli hoca der ki: İnsan zorlukla kazandığı için kendi emeğine aşırı kıymet verir. Yaptığı harcamayı veya fedakarlığı hemen sayıp dökmeye başlar:
+      </p>
+
+      <div class="p-4 bg-white rounded-xl border border-emerald-200 mb-3">
+        <strong class="text-emerald-900 font-sans-bold block text-lg mb-1">🗣️ Günlük Hayattaki Tezahürleri:</strong>
+        <p class="text-slate-800 text-lg leading-relaxed">
+          <em>"Anne baba evladına: 'Ben sizin için saçımı süpürge ettim, şu kadar masraf yaptım!' der. İlim adamı: 'Ben bu akademi için neler çektim!' der. Bir dernekte koşturan: 'Bunca fedakarlık yaptım!' der... Bir adam 'Ben bu kadar mal ve emek harcadım' dediği anda yaptığı bütün ameller boşa gider (ihbât-ı amel). Çünkü başa kakmak, ameli kökünden kurutur!"</em>
+        </p>
+      </div>
+    </div>
+
+    <!-- Peygamber Efendimiz ve Kevser Örneği -->
+    <div class="box-hand-yellow p-5 my-3 bg-amber-50/50">
+      <h4 class="text-xl font-extrabold text-amber-950 font-sans-bold mb-2">👑 Peygamberimiz'in (s.a.v.) Örnekliği ve Kevser Suresi</h4>
+      <p class="text-lg text-slate-800 leading-relaxed mb-2">
+        Cenab-ı Hak Resûlullah'a: <em>"İnnâ a'taynâke'l-Kevser"</em> (Biz sana pek çok hayır ve Kevser'i verdik) buyurur. Peki zahiren ne verdi?
+      </p>
+      <div class="p-4 bg-white rounded-xl border-2 border-amber-300">
+        <p class="text-slate-800 text-lg leading-relaxed">
+          Peygamber Efendimiz'e 7 evlat verdi; fakat 6'sının vefat acısını bizzat yaşattı! 27 gazve, onlarca seriyye, taşlanma, açlık ve ambargo meşakkati verdi. Fakat O (s.a.v.) asla <em>"Ben ümmetim için saçımı süpürge ettim"</em> demedi; çektiği çileyi başa kakmadı, sadece şükretti ve affetti.
+        </p>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Not Alanı -->
+    <div class="box-hand-purple p-4 my-2 bg-purple-50/30">
+      <h4 class="text-xl font-extrabold text-purple-900 font-sans-bold mb-1">✍️ İhlas ve Minnet Notun:</h4>
+      <p class="text-lg text-slate-700 mb-2">
+        Ailene, dostlarına veya hizmet ettiğin kurumlara yaptığın fedakarlıkları hatırlatıp başa kakıyor musun? Emeğini Allah için unutup sıfırlayabiliyor musun?
+      </p>
+      <div class="lined-notes text-slate-800 text-lg"></div>
+    </div>
+
+    <!-- Alt Çubuk -->
+    <div class="mt-4 pt-3 border-t-2 border-dashed border-emerald-300 flex justify-between items-center text-sm font-sans-bold text-slate-600">
+      <span>Düşünce ve Hayat Fasikülleri • Prof. Dr. Ekrem Demirli</span>
+      <span class="text-emerald-800 font-extrabold">Sayfa 4 / 5</span>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 5: HİKEM-İ ATÂİYYE 39 (SENİNLE KALMAYACAK OLANIN PEŞİNDEN GİTME)     -->
+  <!-- ========================================================================= -->
+  <div id="page-5" class="worksheet-paper hidden">
+    <!-- Üst Başlık -->
+    <div class="border-b-4 border-amber-400 pb-3">
+      <div class="flex justify-between items-center">
+        <div>
+          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">25. Bölüm • Hikem-i Atâiyye Şerhi</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Seninle Kalmayacak Olanın Peşinden Koşma!</h2>
+        </div>
+        <span class="pill-doodle-pink font-sans-bold">SAYFA 5</span>
+      </div>
+    </div>
+
+    <!-- Hikmet Metni (Arapça & Türkçe) -->
+    <div class="box-hand-pink p-5 my-4 bg-rose-50/50">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="text-3xl">💎</span>
+        <h3 class="text-2xl font-extrabold text-rose-950 font-sans-bold">İbn Atâullah el-İskenderî'nin 39. Hikmeti</h3>
+      </div>
+      
+      <div class="p-4 bg-white rounded-xl border-2 border-rose-300 text-center mb-3">
+        <p class="font-arabic text-2xl md:text-3xl text-rose-950 mb-2 leading-loose">
+          «مَا لَا يَبْقَى مَعَكَ لَا تَتْبَعْهُ، وَمَا لَا يَنْفَكُّ عَنْكَ لَا تَهْرُبْ مِنْهُ»
+        </p>
+        <p class="text-lg md:text-xl text-rose-900 font-extrabold mt-2">
+          "Seninle ebediyen kalamayacak fani şeylerin peşinden gitme! Senden asla ayrılamayacak olan baki hakikatlerden de kaçmaya kalkışma!"
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+        <div class="p-4 bg-white rounded-xl border border-rose-200">
+          <h4 class="font-sans-bold text-rose-900 text-xl mb-1">⏳ Seninle Kalamayacak Olanlar:</h4>
+          <p class="text-slate-800 text-base md:text-lg leading-relaxed">
+            Şehvet, makam, dünyalık unvanlar, zenginlik ve bedenî güzellik... Bunların hepsi kabir kapısında senden ayrılacaktır. Fani olan bir şeyin peşinde ömrünü tüketmek ahmaklıktır.
+          </p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-purple-200">
+          <h4 class="font-sans-bold text-purple-900 text-xl mb-1">🌟 Senden Asla Ayrılmayacak Olanlar:</h4>
+          <p class="text-slate-800 text-base md:text-lg leading-relaxed">
+            İman, ihlas, doğruluk, merhamet ve ahlak... Bunlar kabre de seninle girer, sırattan da seninle geçer. İnsanın asıl gayreti kendisinden ayrılmayacak olan bu manevi cevherleri kuşanmak olmalıdır.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tefekkür ve Tatbikat Çetelesi -->
+    <div class="box-hand-yellow p-5 my-3 bg-amber-50/50">
+      <h3 class="text-2xl font-extrabold text-amber-950 font-sans-bold mb-3">📋 25. Bölüm Tefekkür ve Tatbikat Çetelesi</h3>
+      <div class="space-y-3 text-lg md:text-xl text-slate-800">
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Fütüvvet Ahlakı:</strong> Menfaatim olmasa dahi insanların faziletini takdir etmeyi ve istenmeden ikram etmeyi prensip edindim.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Mâlâyânîden Uzaklaşma:</strong> Dedikodu ve laf yarıştırmanın ilahî gazap cezası olduğunu bilerek dilimi gıybetten korudum.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Çileyi (Kebed) Sabırla Karşılama:</strong> Beled Suresi'nin hükmünce dünyanın imtihan yurdu olduğunu idrak edip meşakkatlere sabrettim.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Başa Kakmama Şuuru:</strong> Yaptığım harcamaları ve fedakarlıkları sayıp dökerek amellerimi sıfırlama tuzağına düşmedim.</span>
+        </label>
+        <label class="flex items-start gap-3 p-2 bg-white rounded-lg border border-amber-200 cursor-pointer hover:bg-amber-100/50 transition">
+          <input type="checkbox" class="mt-1.5 w-6 h-6 rounded border-amber-400 text-amber-600 focus:ring-amber-400">
+          <span><strong>Baki Hakikatlere Tutunma:</strong> Kabirde beni terk edecek fani heveslerin değil, benimle ebediyete gelecek ihlas ve ahlakın peşinden gittim.</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Mühür ve Tamamlama Bölümü -->
+    <div class="mt-6 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🌟</span>
+        <span class="text-amber-900 font-extrabold">25. Bölüm Tefekkür Fasikülü Tamamlandı</span>
+      </div>
+      <div class="text-amber-800 font-extrabold">Sayfa 5 / 5 • Mühür</div>
+    </div>
+  </div>
+
+
+  <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+  <script>
+    function showPage(num) {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const activeBtnAll = document.getElementById('btn-all');
+      if (activeBtnAll) {
+        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
+      }
+
+      const activePage = document.getElementById('page-' + num);
+      const activeBtn = document.getElementById('btn-p' + num);
+      if (activePage) activePage.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
+        activeBtn.classList.remove('text-slate-700');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAllPages() {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const btnAll = document.getElementById('btn-all');
+      if (btnAll) {
+        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      }
+    }
+
+    function printFasikul() {
+      showAllPages();
+      setTimeout(() => {
+        window.print();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>

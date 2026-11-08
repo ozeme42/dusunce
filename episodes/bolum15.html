@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Düşünce ve Hayat 15. Bölüm • Prof. Dr. Ekrem Demirli</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+      background: 
+        radial-gradient(circle at 10% 15%, rgba(254, 240, 138, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 90% 25%, rgba(186, 230, 253, 0.45) 0%, transparent 35%),
+        radial-gradient(circle at 50% 80%, rgba(251, 207, 232, 0.35) 0%, transparent 45%),
+        #f5f3ec;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      font-size: 1.25rem; /* Büyük ve ferah punto */
+    }
+
+    .font-arabic {
+      font-family: 'Amiri', serif;
+    }
+    .font-sans-bold {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Noktalı Çalışma Kâğıdı Dokusu */
+    .worksheet-paper {
+      width: 100%;
+      max-width: 920px;
+      min-height: 1300px;
+      margin: 0 auto 3rem auto;
+      background-color: #ffffff;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+      border: 3.5px solid #eab308;
+      border-radius: 26px 20px 28px 22px;
+      box-shadow: 
+        0 25px 50px -12px rgba(161, 98, 7, 0.15),
+        0 10px 25px -5px rgba(0, 0, 0, 0.08),
+        0 0 0 1px rgba(234, 179, 8, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 44px 50px;
+    }
+
+    /* El Çizimi Renkli Kutular */
+    .box-hand-yellow {
+      border: 2.8px solid #eab308;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+    }
+    .box-hand-purple {
+      border: 2.8px solid #a855f7;
+      border-radius: 20px 26px 18px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+    }
+    .box-hand-green {
+      border: 2.8px solid #22c55e;
+      border-radius: 24px 18px 26px 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+    }
+    .box-hand-cyan {
+      border: 2.8px solid #0ea5e9;
+      border-radius: 18px 26px 20px 24px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+    }
+    .box-hand-pink {
+      border: 2.8px solid #ec4899;
+      border-radius: 26px 20px 24px 18px;
+      background: #ffffff;
+      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+    }
+
+    /* Renkli Elips Hap (Pill) Etiketler */
+    .pill-doodle-pink {
+      border: 2.5px solid #f43f5e;
+      color: #be123c;
+      background: #fff1f2;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-cyan {
+      border: 2.5px solid #0284c7;
+      color: #0369a1;
+      background: #f0f9ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-green {
+      border: 2.5px solid #16a34a;
+      color: #15803d;
+      background: #f0fdf4;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-yellow {
+      border: 2.5px solid #ca8a04;
+      color: #854d0e;
+      background: #fefce8;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+    .pill-doodle-purple {
+      border: 2.5px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 5px 18px;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    /* Numara Daireleri */
+    .num-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2.8px solid #0f172a;
+      font-weight: 900;
+      font-size: 1.3rem;
+      background: #fef08a;
+      flex-shrink: 0;
+    }
+
+    /* Fosforlu Kalem Vurguları */
+    .hl-soft-yellow {
+      background: linear-gradient(180deg, transparent 45%, #fef08a 45%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+    .hl-soft-pink {
+      background: linear-gradient(180deg, transparent 45%, #fbcfe8 45%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+    .hl-soft-cyan {
+      background: linear-gradient(180deg, transparent 45%, #bae6fd 45%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+    .hl-soft-green {
+      background: linear-gradient(180deg, transparent 45%, #bbf7d0 45%);
+      padding: 0 6px;
+      border-radius: 4px;
+    }
+
+    /* Pembe Bulut Başlık Rozeti */
+    .cloud-banner-pink {
+      background: #fff1f2;
+      border: 3px solid #fb7185;
+      border-radius: 22px;
+      padding: 14px 28px;
+      display: inline-block;
+      box-shadow: 0 4px 14px rgba(251, 113, 133, 0.18);
+      position: relative;
+    }
+
+    /* Zikzak Vurgu Çizgisi */
+    .zigzag-line {
+      display: inline-block;
+      color: #eab308;
+      font-size: 1.35rem;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    @media print {
+      body {
+        background: #fff !important;
+        font-size: 1.15rem !important;
+      }
+      .worksheet-paper {
+        margin: 0 !important;
+        page-break-after: always !important;
+        box-shadow: none !important;
+        border: 2.5px solid #eab308 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
+</head>
+<body class="py-8 px-4 text-slate-800 leading-relaxed">
+
+  <!-- Navigasyon Çubuğu (no-print) -->
+  <div class="max-w-4xl mx-auto mb-6 flex flex-wrap justify-between items-center gap-3 no-print bg-white/95 backdrop-blur-sm p-4 rounded-2xl border-2 border-amber-300 shadow-md">
+    <div class="flex items-center gap-2">
+      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+      <span class="text-2xl">📚</span>
+      <span class="font-sans-bold font-extrabold text-slate-800 text-base">Düşünce ve Hayat 15. Bölüm</span>
+      <span class="bg-amber-100 text-amber-900 text-xs px-3 py-1 rounded-full font-extrabold border border-amber-300 font-sans-bold">Prof. Dr. Ekrem Demirli</span>
+    </div>
+    <div class="flex items-center gap-2 flex-wrap">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 bg-yellow-400 text-slate-900 shadow-sm">Kapak</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">15.1 Evliya Kimdir?</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">15.2 Aile & Tefviz</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">15.3 Perde Nerededir?</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">15.4 Nasır & Şaşılık</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3.5 py-1.5 rounded-xl border border-purple-300 bg-purple-50 text-purple-800 font-sans-bold text-xs font-bold hover:bg-purple-200 transition">Tümünü Aç</button>
+      <button onclick="printFasikul()" class="px-3.5 py-1.5 rounded-xl bg-emerald-500 text-white font-sans-bold text-xs font-bold hover:bg-emerald-600 transition shadow">🖨️ Yazdır / PDF Kaydet</button>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- SAYFA 1: KAPAK & GENEL BAKIŞ               -->
+  <!-- ========================================== -->
+  <div id="page-1" class="worksheet-paper">
+    
+    <div>
+      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
+        <div class="flex items-center gap-2">
+          <span class="bg-amber-400 text-slate-900 px-3.5 py-1 rounded-full text-xs font-black tracking-wider uppercase font-sans-bold shadow-sm">彡 15. BÖLÜM 彡</span>
+          <span class="text-base font-bold text-slate-600">Vav Radyo • Düşünce ve Hayat Serisi</span>
+        </div>
+        <div class="zigzag-line font-sans-bold text-base text-amber-600">
+          Σ Düşünce ve Hayat • 15. Bölüm Σ
+        </div>
+      </div>
+
+      <!-- Ana Başlık Banner -->
+      <div class="text-center my-6">
+        <div class="cloud-banner-pink mb-3">
+          <h1 class="text-3xl md:text-5xl font-extrabold text-rose-800 tracking-tight">
+            İbn Hanbel, Bişr-i Hâfî ve Masivayı Aşan Tevhid
+          </h1>
+        </div>
+        <div class="text-2xl md:text-3xl text-slate-700 font-bold mt-2">
+          Prof. Dr. Ekrem Demirli Ders Notları ve Kavram Haritası
+        </div>
+      </div>
+
+      <!-- Günün İlham Verici Sözü -->
+      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
+        <div class="flex items-start gap-4">
+          <span class="text-4xl">🕊️</span>
+          <div>
+            <div class="font-extrabold text-amber-950 text-2xl font-sans-bold mb-2">
+              Dersin Ruhunu Özetleyen Temel Düşünce:
+            </div>
+            <p class="text-2xl italic text-slate-900 leading-snug">
+              <span class="hl-soft-yellow font-bold">"Evliya dendiğinde yalnızca mutasavvıflar akla geliyorsa</span> bu işi yanlış anlamışız demektir. Büyük fakihler ve helal lokma peşindeki babalar da evliyaullahtandır.<br>
+              <span class="text-xl text-slate-800 not-italic block mt-2 font-normal">
+                Ahmed b. Hanbel çocuklarının helal rızkı ve sabrı için yaşayarak kemale erdi. <span class="hl-soft-green font-bold">Nasıl olur da yaratılmış bir şey Allah'ı perdeleyebilir?</span> Perde alemde değil; nasır tutmuş kalplerde ve tek olanı iki gören şaşı bakıştadır!"
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fasikül İçindekiler Tablosu -->
+      <div class="box-hand-purple p-6 bg-purple-50/50 mb-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="pill-doodle-purple text-base">YOL HARİTASI</span>
+          <span class="text-lg font-sans-bold font-bold text-purple-950">15. Bölümde Neler İnceleniyor?</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-800">
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-purple-200">
+            <span class="num-circle bg-purple-200">1</span>
+            <div>
+              <div class="font-bold text-xl text-purple-950 font-sans-bold">Evliya Kimdir? İbn Hanbel Edebi</div>
+              <p class="text-base text-slate-600">Evliya kavramının genişliği; Bişr-i Hâfî'nin İbn Hanbel'i üstün tutma sebebi ve fıkıh-tasavvuf nezaketi.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-green-200">
+            <span class="num-circle bg-green-200">2</span>
+            <div>
+              <div class="font-bold text-xl text-emerald-950 font-sans-bold">Mürebbi Olarak Aile & Tefviz</div>
+              <p class="text-base text-slate-600">Ailenin insanı terbiye eden gücü; 'Seni Allah'a havale ediyorum' bedduasının hakiki tefviz ile tashîhi.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-yellow-200">
+            <span class="num-circle bg-yellow-200">3</span>
+            <div>
+              <div class="font-bold text-xl text-amber-950 font-sans-bold">Hikem İrfanı: Perde Nerededir?</div>
+              <p class="text-base text-slate-600">"Kânallâhu ve lem yekun meahu şey'ün": Allah'ı perdeleyecek hiçbir zıt yoktur; perde kulun idrakindedir.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-cyan-200">
+            <span class="num-circle bg-cyan-200">4</span>
+            <div>
+              <div class="font-bold text-xl text-sky-950 font-sans-bold">Nasır & Mevlânâ'nın Şaşılığı</div>
+              <p class="text-base text-slate-600">Nasırlı elle letafet hissedilemez; kâinatın tebessümünü görmek için kalbi arındırmak ve ikilikten tevhidi bulmak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temel Kavramlar Hap Etiketleri -->
+      <div class="box-hand-cyan p-5 bg-sky-50/60">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">🏷️</span>
+          <span class="font-sans-bold font-bold text-sky-950 text-base">Bu Bölümün Anahtar Kavramları:</span>
+        </div>
+        <div class="flex flex-wrap gap-2.5">
+          <span class="pill-doodle-yellow text-base font-sans-bold">Evliyaullah (Veliler)</span>
+          <span class="pill-doodle-green text-base font-sans-bold">Helal Rızık & Cihad</span>
+          <span class="pill-doodle-purple text-base font-sans-bold">İbn Hanbel & Bişr-i Hâfî</span>
+          <span class="pill-doodle-pink text-base font-sans-bold">Mürebbi Olarak Aile</span>
+          <span class="pill-doodle-cyan text-base font-sans-bold">Tefvîz-i Umûr</span>
+          <span class="pill-doodle-yellow text-base font-sans-bold">Vahdet & Masiva</span>
+          <span class="pill-doodle-pink text-base font-sans-bold">Şaşılık (Ahvelî) Metaforu</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alt Bilgi / İsim & Tarih -->
+    <div class="mt-8 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div>Talebe Notu: <span class="border-b-2 border-slate-400 inline-block w-48">&nbsp;</span></div>
+      <div>Tarih: <span class="border-b-2 border-slate-400 inline-block w-28">&nbsp;</span></div>
+      <div class="text-amber-800 font-extrabold">Sayfa 1 / 5 • Kapak</div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- SAYFA 2: 15.1 EVLİYA KİMDİR? İBN HANBEL     -->
+  <!-- ========================================== -->
+  <div id="page-2" class="worksheet-paper hidden">
+    
+    <div>
+      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
+        <span class="pill-doodle-pink">15.1 KONU</span>
+        <div class="zigzag-line font-sans-bold text-base text-rose-600">Evliyaullah • İbn Hanbel • Bişr-i Hâfî</div>
+      </div>
+
+      <div class="my-5">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Evliya Kimdir? İmam Ahmed b. Hanbel ve Bişr-i Hâfî Nezaketi
+        </h2>
+        <p class="text-slate-600 text-lg mt-1 font-sans-bold">
+          Velilik tasavvuf tekelinde değildir; ilim, amel ve helal rızık ehlini kuşatır
+        </p>
+      </div>
+
+      <!-- Evliya Algısındaki Yanılgı -->
+      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">👥</span>
+          <span class="font-sans-bold font-extrabold text-amber-950 text-2xl">Kelimelerin ve Zihinlerin Daralması:</span>
+        </div>
+        <p class="text-lg text-slate-800 leading-relaxed mb-3">
+          Arapçada <span class="hl-soft-yellow font-bold">"evliya"</span>, veli kelimesinin çoğuludur (Allah'ın dostları demektir). Günümüzde ise sanki tekil bir unvan ve yalnızca belli tasavvufi şahsiyetlere (Zünnûn, Bestâmî, Cüneyd, Mevlânâ vb.) mahsus gibi algılanmaktadır.
+        </p>
+        <div class="bg-white p-4 rounded-xl border-l-4 border-amber-500 text-base text-slate-800">
+          <span class="font-bold text-amber-900 font-sans-bold">Prof. Dr. Ekrem Demirli'nin Tespiti:</span>
+          "Evliya / kamil insan dendiğinde aklımıza sadece tasavvuf geliyorsa biz bu işi yanlış anladık demektir. Büyük fakihler, hadis imamları, adaletle hükmeden yöneticiler ve ailesine helal lokma yedirmek için alın teri döken her salih mümin evliyaullah dairesindedir."
+        </div>
+      </div>
+
+      <!-- Bişr-i Hâfî'nin İtirafı: Helal Lokma Cihadı -->
+      <div class="box-hand-purple p-6 bg-purple-50/50 mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="pill-doodle-purple text-base">ZAHİD İLE ÂLİM</span>
+          <span class="text-xl font-sans-bold font-extrabold text-purple-950">Bişr-i Hâfî: "Ahmed b. Hanbel Benden Üstündür!"</span>
+        </div>
+
+        <div class="bg-white p-5 rounded-2xl border-2 border-purple-300 text-lg text-slate-800 space-y-3">
+          <p class="italic text-purple-950 font-bold font-sans-bold">
+            "Büyük zahid Bişr-i Hâfî'ye sordular: 'İmam Ahmed b. Hanbel mi daha üstündür, sen mi?' Bişr şöyle dedi: <br>
+            <span class="text-rose-800 not-italic font-extrabold">'Ahmed b. Hanbel benden üstündür! Çünkü o hem kendisinin hem de ailesinin, çocuklarının rızkı ve helal lokması için çalıştı. Ben ise yalnızca kendi başıma bunu aradım!'"</span>
+          </p>
+          <p class="text-base text-slate-700">
+            İbrâhim b. Edhem'in dediği gibi: <span class="hl-soft-green font-bold">"Bütün tarikat ve Hakk'a giden yol helal lokma üzerine kuruludur."</span> Ailesinin nafakasını helalden temin etmek, tek başına köşeye çekilip ibadet etmekten daha büyük bir manevi cihad ve kemalattır.
+          </p>
+        </div>
+      </div>
+
+      <!-- İbn Hanbel'in Tevazu ve Edebi -->
+      <div class="box-hand-green p-5 bg-green-50/60">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl">🤝</span>
+          <div>
+            <div class="font-sans-bold font-extrabold text-emerald-950 text-xl">İlim ile İrfanın Kucaklaşması:</div>
+            <p class="text-lg text-slate-800 mt-1">
+              "İmam Ahmed b. Hanbel'e fıkıh ve muamelat sorulduğunda derin vukufiyetiyle cevap verirdi. Fakat ihlas, tevekkül, kalp halleri ve rıza gibi tasavvufi derinlikler sorulduğunda edeble: <span class="hl-soft-green font-bold">'Gidin Bişr-i Hâfî'ye sorun, asıl imam odur!'</span> diyerek oraya yönlendirirdi. İki büyük zatın birbirine duyduğu bu hürmet, ümmetin örnek alması gereken nebevi zarafettir."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div>Konu: Evliyaullah & İbn Hanbel Edebi</div>
+      <div class="text-amber-800 font-extrabold">Sayfa 2 / 5</div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- SAYFA 3: 15.2 AİLE VE TEFVİZ               -->
+  <!-- ========================================== -->
+  <div id="page-3" class="worksheet-paper hidden">
+    
+    <div>
+      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
+        <span class="pill-doodle-green">15.2 KONU</span>
+        <div class="zigzag-line font-sans-bold text-base text-emerald-600">Mürebbi Olarak Aile • Nefis Terbiyesi • Tefvîz</div>
+      </div>
+
+      <div class="my-5">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Bir Mürebbi Olarak Aile ve Hakiki Tefviz Şuuru
+        </h2>
+        <p class="text-slate-600 text-lg mt-1 font-sans-bold">
+          Sosyal hayat kaçılacak bir engel değil; nefsi yontan en hakiki tekkedir
+        </p>
+      </div>
+
+      <!-- Aile İnsanın En Büyük Mürebbisidir -->
+      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">🏡</span>
+          <span class="font-sans-bold font-extrabold text-amber-950 text-2xl">İnsan Kendi Kusurlarını Ne Zaman Fark Eder?</span>
+        </div>
+        <p class="text-lg text-slate-800 leading-relaxed mb-3">
+          Tek başına yaşayan, ailesi ve sorumluluğu olmayan bir kimse kendini sabırlı, cömert ve hasetsiz zannedebilir. Oysa bu haller ancak <span class="hl-soft-yellow font-bold">hayatın imtihan potasında</span> test edilebilir:
+        </p>
+        <div class="bg-white p-4 rounded-xl border border-amber-300 text-base text-slate-800 space-y-2">
+          <p>
+            ● <span class="font-bold text-amber-900">Çocuk Sahibi Olmak:</span> "Gerçekte bende haset var mı yok mu, cimri miyim cömert miyim, bunu ancak evladım olduğunda ve başkasının çocuğuyla karşılaştığımda anlarım."
+          </p>
+          <p>
+            ● <span class="font-bold text-amber-900">Aile Bir Okuldur:</span> İbn Hanbel evlenerek, çoluk çocuk büyüterek, cemaate sabrederek sabrı, merhameti, kin tutmamayı ve tevhidi yaşayarak öğrendi. Aile babayı da anneyi de terbiye eden bir mürebbidir.
+          </p>
+        </div>
+      </div>
+
+      <!-- Seni Allah'a Havale Ediyorum Sözünün Düzeltilmesi -->
+      <div class="box-hand-pink p-6 bg-rose-50/60 mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="pill-doodle-pink text-base">DİL VE KAVRAM TASHÎHİ</span>
+          <span class="text-xl font-sans-bold font-extrabold text-rose-950">"Seni Allah'a Havale Ediyorum" Beddua mıdır?</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-rose-300 mb-3 text-center">
+          <p class="font-arabic text-2xl text-slate-800 mb-1">وَاُفَوِّضُ اَمْرٖٓي اِلَى اللّٰهِۜ اِنَّ اللّٰهَ بَصٖيرٌ بِالْعِبَادِ</p>
+          <p class="text-lg text-rose-900 font-bold font-sans-bold italic">
+            "Ben kendi işimi ve durumumu Allah'a havale ediyorum. Şüphesiz Allah kullarını hakkıyla görendir!" (Mü'min 44)
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-base text-slate-800">
+          <div class="bg-white/80 p-3.5 rounded-xl border border-rose-200">
+            <div class="font-bold text-rose-900 font-sans-bold mb-1">Halk Arasındaki Yanlış Kullanım:</div>
+            <p>"Seni Allah'a havale ediyorum" sözü öfkeyle, beddua ve intikam arzusuyla bir ceza aracı olarak söylenir.</p>
+          </div>
+          <div class="bg-white/80 p-3.5 rounded-xl border border-rose-200">
+            <div class="font-bold text-emerald-900 font-sans-bold mb-1">Kur'anî ve İrfanî Hakikat (Tefviz):</div>
+            <p>"Benim seninle kavgam yok; ben kendi halimi, acziyetimi ve hakkımı Rabbime arz ediyor, O'nun hükmüne razı oluyorum."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Çıkarım Çerçevesi -->
+      <div class="box-hand-cyan p-5 bg-sky-50/60">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl">🕊️</span>
+          <div>
+            <div class="font-sans-bold font-extrabold text-sky-950 text-xl">Rıza ve Teslimiyet Kapısı:</div>
+            <p class="text-lg text-slate-800 mt-1">
+              "Tefviz, kulun kalbindeki husumeti döküp sükûnete ermesidir. İşi Allah'a havale eden kul, O ne takdir ederse razı olur ve nefsin kör dövüşünden hürleşir."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div>Konu: Mürebbi Olarak Aile & Tefviz</div>
+      <div class="text-amber-800 font-extrabold">Sayfa 3 / 5</div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- SAYFA 4: 15.3 PERDE NEREDEDİR?             -->
+  <!-- ========================================== -->
+  <div id="page-4" class="worksheet-paper hidden">
+    
+    <div>
+      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
+        <span class="pill-doodle-yellow">15.3 KONU</span>
+        <div class="zigzag-line font-sans-bold text-base text-amber-600">Hikem-i Atâiyye • Vahdet • Masiva Perdesi</div>
+      </div>
+
+      <div class="my-5">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Hikem-i Atâiyye: Hiçbir Şey Allah'ı Perdeleyemez
+        </h2>
+        <p class="text-slate-600 text-lg mt-1 font-sans-bold">
+          "Kânallâhu ve lem yekun meahu şey'ün" sırrı: Varlıkta müstakil bir perde yoktur
+        </p>
+      </div>
+
+      <!-- Hadis-i Şerif ve Ezeli Hakikat -->
+      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">✨</span>
+          <span class="font-sans-bold font-extrabold text-amber-950 text-2xl">Buhârî Hadisi: Ezelî Vahdet:</span>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-amber-300 text-center my-2 shadow-sm">
+          <p class="font-arabic text-2xl text-slate-800 mb-1">كَانَ اللّٰهُ وَلَمْ يَكُنْ مَعَهُ شَيْءٌ</p>
+          <p class="text-xl text-amber-900 font-bold font-sans-bold">
+            "Allah var idi ve O'nunla beraber başka hiçbir şey yok idi!"
+          </p>
+        </div>
+        <p class="text-base text-slate-800 mt-2">
+          Cüneyd-i Bağdâdî bu hadis üzerine şu şerhi eklemiştir: <span class="hl-soft-yellow font-bold">"Ve hüve'l-ân kemâ kân"</span> (O, şu anda da ezelde olduğu gibidir). Yani varlık sahnesindeki çokluk, Allah'ın mutlak ve eşsiz varlığına bir ortak veya O'nu gölgeleyen bir zıt teşkil edemez.
+        </p>
+      </div>
+
+      <!-- İbn Atâullah'ın Hayreti: Nasıl Olur da Perdelenir? -->
+      <div class="box-hand-purple p-6 bg-purple-50/50 mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="pill-doodle-purple text-base">HİKEM ŞERHİ</span>
+          <span class="text-xl font-sans-bold font-extrabold text-purple-950">İbn Atâullah el-İskenderî'nin Sorusundaki Sır</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-xl border border-purple-300 space-y-3 text-base text-slate-800">
+          <div class="font-bold text-purple-950 font-sans-bold text-lg">
+            "Nasıl olur da herhangi bir şey Allah'ı perdeleyebilir? Halbuki:"
+          </div>
+          <p>
+            1. O, her şeyin varlığından önce var olan idi. <br>
+            2. Her şey O'nunla, O'nun var etmesiyle ve O'na muhtaç olarak kaimdir. <br>
+            3. Her şeyin içinde, zahirinde ve batınında O'nun tecellisi aşikârdır.
+          </p>
+          <div class="bg-purple-100/70 p-3 rounded-lg border-l-4 border-purple-600 font-semibold text-purple-950">
+            Hüküm: Varlık aleminde Allah'a zıt veya O'nu gizleyebilecek bağımsız bir varlık tabakası yoktur. Öyleyse perde nerededir?
+          </div>
+        </div>
+      </div>
+
+      <!-- Perde Nerededir? -->
+      <div class="box-hand-green p-5 bg-green-50/60">
+        <div class="flex items-start gap-3">
+          <span class="text-3xl">👁️</span>
+          <div>
+            <div class="font-sans-bold font-extrabold text-emerald-950 text-xl">Perde Eşyada Değil, Kalbin Pasındadır!</div>
+            <p class="text-lg text-slate-800 mt-1">
+              "Güneş bulutla örtülebilir ama Allah Teâlâ hiçbir şeyle örtülemez. Eğer insan Allah'ı göremiyorsa, sorun Hakk'ın tecellisinde veya kâinatta değil; <span class="hl-soft-pink font-bold">kulun kendi nefsi, günahları ve idrak tutulmasındadır.</span> Gözdeki tozu temizleyen, her zerrede Hakk'ı müşahede eder."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div>Konu: Hikem-i Atâiyye & Perde Meselesi</div>
+      <div class="text-amber-800 font-extrabold">Sayfa 4 / 5</div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== -->
+  <!-- SAYFA 5: 15.4 NASIR VE ŞAŞILIK             -->
+  <!-- ========================================== -->
+  <div id="page-5" class="worksheet-paper hidden">
+    
+    <div>
+      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
+        <span class="pill-doodle-cyan">15.4 KONU</span>
+        <div class="zigzag-line font-sans-bold text-base text-sky-600">Nasırlı Eller • Mütebessim Kâinat • Şaşılık Metaforu</div>
+      </div>
+
+      <div class="my-5">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Nasırlı Eller, Mütebessim Kâinat ve Şaşılık Metaforu
+        </h2>
+        <p class="text-slate-600 text-lg mt-1 font-sans-bold">
+          "Nasır tutmuş ellerle varlığın letafeti hissedilemez; tek olanı iki gören şaşılıktan uyanmalıdır"
+        </p>
+      </div>
+
+      <!-- Nasırlı Eller ve Kalp Benzetmesi -->
+      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="text-3xl">🖐️</span>
+          <span class="font-sans-bold font-extrabold text-amber-950 text-2xl">Varlığın İnceliğini Duyumsamak:</span>
+        </div>
+        <p class="text-lg text-slate-800 leading-relaxed mb-3">
+          Bir insanın eli ağır işlerden ötürü nasır bağlamışsa, o elle ipeğin, gül yaprağının veya suyun yumuşaklığını hissedemez. Dokunduğu her şeyi sert ve kaba algılar:
+        </p>
+        <div class="bg-white p-4 rounded-xl border border-amber-300 text-base text-slate-800 space-y-2">
+          <p>
+            ● <span class="font-bold text-amber-900">Kalp ve Dilin Nasırı:</span> İnsan günahlarla, kibirle ve dedikoduyla kalbini ve dilini nasırlaştırdığında varlığın tazeliğini ve ilahi tecellilerin letafetini kavrayamaz.
+          </p>
+          <p>
+            ● <span class="font-bold text-amber-900">Kâinat Sana Küsmüş Değildir:</span> Moralimiz bozulduğunda sanki bütün dünya bize küsmüş gibi hissederiz. Oysa kâinatın yüzü <span class="hl-soft-yellow font-bold">mütebessimdir (tebessüm eder).</span> Küskünlük dünyada değil, senin nasır tutmuş kalbindedir!
+          </p>
+        </div>
+      </div>
+
+      <!-- Mevlânâ'nın Şaşı Çırak Hikayesi -->
+      <div class="box-hand-purple p-6 bg-purple-50/50 mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="pill-doodle-purple text-base">MESNEVÎ'DEN HİKMET</span>
+          <span class="text-xl font-sans-bold font-extrabold text-purple-950">Şaşılık (Ahvelî): Tek Olanı İki Görme Hastalığı</span>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border-2 border-purple-200 text-base text-slate-800 space-y-2 my-2">
+          <p>
+            Usta, şaşı çırağına der ki: *"Git içerideki şişeyi getir!"* Çırak içeri girer ve *"Usta, orada bir değil iki şişe var, hangisini getireyim?"* der. Usta: *"Orada iki şişe yok, tek şişe var; git birini kır!"* der. Çırak birini kırınca <span class="hl-soft-pink font-bold">diğeri de yok olur!</span> Çünkü ikinci şişe gerçekte yoktur; şaşı gözün vehmidir.
+          </p>
+          <div class="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-500 font-bold text-purple-900">
+            Tevhid Dersi: Hakikatte Allah'tan başka hakiki fâil ve mutlak varlık yoktur. Dünyayı müstakil bir güç, nefsi bağımsız bir ilah gibi gören bakış, şaşılığın kurbanıdır.
+          </div>
+        </div>
+      </div>
+
+      <!-- 15. Bölüm Kazanım Kontrol Listesi -->
+      <div class="box-hand-green p-5 bg-green-50/60 mb-4">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">✅</span>
+          <span class="font-sans-bold font-bold text-emerald-950 text-xl">15. Bölüm Kazanım Kontrol Listesi</span>
+        </div>
+        <div class="space-y-2 text-base text-slate-800">
+          <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+            <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+            <span>Evliya kavramının mutasavvıflarla sınırlı olmadığını, fakih ve salih müminleri de kapsadığını anladım.</span>
+          </label>
+          <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+            <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+            <span>Aile hayatının ve helal rızık arayışının insanı terbiye eden en hakiki mektep olduğunu kavradım.</span>
+          </label>
+          <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+            <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+            <span>'İşimi Allah'a havale ediyorum' ayetinin intikam değil, teslimiyet ve rıza kapısı olduğunu öğrendim.</span>
+          </label>
+          <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+            <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+            <span>Allah'ı perdeleyecek hiçbir bağımsız varlığın olmadığını; perdenin nefiste olduğunu idrak ettim.</span>
+          </label>
+          <label class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-green-200">
+            <input type="checkbox" checked class="w-5 h-5 text-emerald-600 rounded">
+            <span>Nasırlı el ve şaşı çırak temsilleriyle tevhidin berrak idrakine ulaşma şuurunu kazandım.</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mühür ve Tamamlama Bölümü -->
+    <div class="mt-8 pt-4 border-t-2 border-dashed border-amber-300 flex flex-wrap justify-between items-center text-sm font-sans-bold text-slate-600">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🌟</span>
+        <span class="text-amber-900 font-extrabold">15. Bölüm Tefekkür Fasikülü Tamamlandı</span>
+      </div>
+      <div class="text-amber-800 font-extrabold">Sayfa 5 / 5 • Mühür</div>
+    </div>
+  </div>
+
+
+  <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+  <script>
+    function showPage(num) {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.add('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const activeBtnAll = document.getElementById('btn-all');
+      if (activeBtnAll) {
+        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
+      }
+
+      const activePage = document.getElementById('page-' + num);
+      const activeBtn = document.getElementById('btn-p' + num);
+      if (activePage) activePage.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
+        activeBtn.classList.remove('text-slate-700');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showAllPages() {
+      for (let i = 1; i <= 5; i++) {
+        const page = document.getElementById('page-' + i);
+        const btn = document.getElementById('btn-p' + i);
+        if (page) page.classList.remove('hidden');
+        if (btn) {
+          btn.classList.remove('bg-yellow-400', 'text-slate-900');
+          btn.classList.add('text-slate-700');
+        }
+      }
+      const btnAll = document.getElementById('btn-all');
+      if (btnAll) {
+        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      }
+    }
+
+    function printFasikul() {
+      showAllPages();
+      setTimeout(() => {
+        window.print();
+      }, 300);
+    }
+  </script>
+
+</body>
+</html>
