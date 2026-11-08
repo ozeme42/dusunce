@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Düşünce ve Hayat 31. Bölüm • Prof. Dr. Ekrem Demirli</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <link rel="stylesheet" href="../assets/css/worksheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Caveat:wght@600;700&family=Amiri:wght@700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/worksheet.css">
   
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
       background: 
@@ -24,19 +26,22 @@
       min-height: 100vh;
       font-size: 1.25rem;
     }
-    .font-arabic { font-family: 'Amiri', serif; }
-    .font-sans-bold { font-family: 'Plus Jakarta Sans', sans-serif; }
-
+    .font-arabic {
+      font-family: 'Amiri', serif;
+    }
+    .font-sans-bold {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
     .worksheet-paper {
       width: 100%;
-      max-width: 920px;
-      min-height: 1300px;
-      margin: 0 auto 3rem auto;
+      max-width: 890px;
+      min-height: 1240px;
+      margin: 0 auto 2.5rem auto;
       background-color: #ffffff;
-      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
-      background-size: 22px 22px;
+      background-image: radial-gradient(#d1d5db 1.1px, transparent 1.1px);
+      background-size: 20px 20px;
       border: 3.5px solid #eab308;
-      border-radius: 26px 20px 28px 22px;
+      border-radius: 24px 18px 26px 20px;
       box-shadow: 
         0 25px 50px -12px rgba(161, 98, 7, 0.15),
         0 10px 25px -5px rgba(0, 0, 0, 0.08),
@@ -46,184 +51,299 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 44px 50px;
+      padding: 38px 46px;
     }
-
     .box-hand-yellow {
-      border: 2.8px solid #eab308;
+      border: 2.5px solid #eab308;
       border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
       background: #ffffff;
-      box-shadow: 0 5px 15px rgba(234, 179, 8, 0.10);
+      box-shadow: 0 4px 12px rgba(234, 179, 8, 0.08);
     }
     .box-hand-purple {
-      border: 2.8px solid #a855f7;
-      border-radius: 20px 26px 18px 24px;
+      border: 2.5px solid #a855f7;
+      border-radius: 18px 24px 16px 22px;
       background: #ffffff;
-      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.10);
+      box-shadow: 0 4px 12px rgba(168, 85, 247, 0.08);
     }
     .box-hand-green {
-      border: 2.8px solid #22c55e;
-      border-radius: 24px 18px 26px 20px;
+      border: 2.5px solid #22c55e;
+      border-radius: 22px 16px 24px 18px;
       background: #ffffff;
-      box-shadow: 0 5px 15px rgba(34, 197, 94, 0.10);
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.08);
     }
     .box-hand-cyan {
-      border: 2.8px solid #0ea5e9;
-      border-radius: 18px 26px 20px 24px;
+      border: 2.5px solid #0ea5e9;
+      border-radius: 16px 24px 18px 22px;
       background: #ffffff;
-      box-shadow: 0 5px 15px rgba(14, 165, 233, 0.10);
+      box-shadow: 0 4px 12px rgba(14, 165, 233, 0.08);
     }
     .box-hand-pink {
-      border: 2.8px solid #ec4899;
-      border-radius: 26px 20px 24px 18px;
+      border: 2.5px solid #ec4899;
+      border-radius: 24px 18px 22px 16px;
       background: #ffffff;
-      box-shadow: 0 5px 15px rgba(236, 72, 153, 0.10);
+      box-shadow: 0 4px 12px rgba(236, 72, 153, 0.08);
     }
-
+    .cloud-banner-pink {
+      background: linear-gradient(135deg, #f43f5e, #ec4899);
+      color: #ffffff;
+      border: 2px dashed #fce7f3;
+      border-radius: 40px;
+      box-shadow: 0 4px 15px rgba(244, 63, 94, 0.25);
+    }
     .pill-doodle-pink {
-      border: 2.5px solid #f43f5e;
+      border: 2px solid #f43f5e;
       color: #be123c;
       background: #fff1f2;
       border-radius: 9999px;
-      padding: 5px 18px;
+      padding: 3px 14px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
     }
     .pill-doodle-cyan {
-      border: 2.5px solid #0284c7;
+      border: 2px solid #0284c7;
       color: #0369a1;
       background: #f0f9ff;
       border-radius: 9999px;
-      padding: 5px 18px;
+      padding: 3px 14px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
-    }
-    .pill-doodle-purple {
-      border: 2.5px solid #9333ea;
-      color: #6b21a8;
-      background: #faf5ff;
-      border-radius: 9999px;
-      padding: 5px 18px;
-      font-weight: 800;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.15rem;
     }
     .pill-doodle-green {
-      border: 2.5px solid #16a34a;
+      border: 2px solid #16a34a;
       color: #15803d;
       background: #f0fdf4;
       border-radius: 9999px;
-      padding: 5px 18px;
+      padding: 3px 14px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
     }
     .pill-doodle-yellow {
-      border: 2.5px solid #d97706;
-      color: #b45309;
-      background: #fffbeb;
+      border: 2px solid #ca8a04;
+      color: #854d0e;
+      background: #fefce8;
       border-radius: 9999px;
-      padding: 5px 18px;
+      padding: 3px 14px;
       font-weight: 800;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.15rem;
     }
-
-    .badge-doodle {
-      display: inline-block;
-      padding: 4px 14px;
-      border-radius: 8px;
+    .pill-doodle-purple {
+      border: 2px solid #9333ea;
+      color: #6b21a8;
+      background: #faf5ff;
+      border-radius: 9999px;
+      padding: 3px 14px;
       font-weight: 800;
-      font-size: 1.1rem;
-      border: 2px dashed #64748b;
-      background: #f8fafc;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
-
-    .lined-notes {
-      background-image: repeating-linear-gradient(transparent, transparent 34px, #e2e8f0 34px, #e2e8f0 36px);
-      line-height: 36px;
-      min-height: 144px;
+    .hl-soft-yellow {
+      background: linear-gradient(104deg, rgba(254, 240, 138, 0.9) 0%, rgba(250, 204, 21, 0.95) 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #713f12;
     }
-
+    .hl-soft-pink {
+      background: linear-gradient(104deg, rgba(251, 207, 232, 0.9) 0%, rgba(244, 114, 182, 0.9) 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #831843;
+    }
+    .hl-soft-green {
+      background: linear-gradient(104deg, rgba(187, 247, 208, 0.9) 0%, rgba(74, 222, 128, 0.9) 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #14532d;
+    }
+    .hl-soft-cyan {
+      background: linear-gradient(104deg, rgba(186, 230, 253, 0.9) 0%, rgba(56, 189, 248, 0.9) 100%);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #075985;
+    }
     @media print {
       body { background: #ffffff !important; padding: 0 !important; }
       .no-print { display: none !important; }
       .worksheet-paper {
-        border: 2.5px solid #000000 !important;
         box-shadow: none !important;
-        margin: 0 0 2rem 0 !important;
-        page-break-after: always;
-        min-height: 98vh;
+        margin: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 100vh !important;
+        page-break-after: always !important;
+        display: flex !important;
+        border-radius: 0 !important;
+        border: 2px solid #eab308 !important;
       }
-      .hidden { display: flex !important; }
     }
   </style>
 </head>
-<body class="p-4 md:p-8 flex flex-col items-center">
+<body class="p-3 md:p-8">
 
-  <!-- Üst Gezinme / Sayfa Seçici Menüsü -->
-  <header class="no-print w-full max-w-4xl mb-6 bg-white/95 backdrop-blur-md p-4 rounded-2xl border-2 border-amber-300 shadow-md flex flex-wrap items-center justify-between gap-3">
-    <div class="flex items-center gap-2">
-      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+  <!-- Üst Menü & Sayfa Butonları -->
+  <div class="max-w-[890px] mx-auto mb-6 flex flex-wrap items-center justify-between gap-3 bg-white/90 backdrop-blur-md p-4 rounded-2xl border-2 border-yellow-400 shadow-lg no-print">
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-900 flex items-center justify-center font-black text-2xl shadow-sm border border-yellow-500 hover:scale-105 transition" title="Kütüphaneye Dön">
+        ★
+      </a>
       <div>
-        <h1 class="text-xl font-bold font-sans-bold text-slate-800 leading-tight">Düşünce ve Hayat • 31. Bölüm</h1>
-        <p class="text-sm font-sans-bold text-amber-700">Prof. Dr. Ekrem Demirli • Radyo Ders Notları & Tefekkür Fasikülü</p>
+        <h2 class="text-base font-extrabold text-slate-900 tracking-tight font-sans-bold">DÜŞÜNCE VE HAYAT ATÖLYESİ</h2>
+        <p class="text-xs text-slate-600 font-sans-bold">Prof. Dr. Ekrem Demirli • 31. Bölüm Çalışma Fasikülü</p>
       </div>
     </div>
-    
-    <div class="flex flex-wrap items-center gap-1.5 font-sans-bold text-sm">
-      <button onclick="showPage(1)" id="btn-p1" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 bg-yellow-400 text-slate-900 transition hover:bg-yellow-300">1. Kapak & Âcil</button>
-      <button onclick="showPage(2)" id="btn-p2" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">2. Akıl & Duygular</button>
-      <button onclick="showPage(3)" id="btn-p3" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">3. İmam Mâtürîdî</button>
-      <button onclick="showPage(4)" id="btn-p4" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">4. Kureyş Suresi & İmtihan</button>
-      <button onclick="showPage(5)" id="btn-p5" class="px-3 py-1.5 rounded-lg border-2 border-amber-400 text-slate-700 transition hover:bg-yellow-200">5. Hikem 47: Tamah & Zillet</button>
-      <button onclick="showAllPages()" id="btn-all" class="px-3 py-1.5 rounded-lg border-2 border-purple-400 text-purple-700 transition hover:bg-purple-100">📖 Tümünü Aç</button>
-      <button onclick="printFasikul()" class="px-3 py-1.5 rounded-lg bg-rose-500 hover:bg-rose-600 text-white shadow-sm flex items-center gap-1">🖨️ Yazdır / PDF</button>
+
+    <!-- Sayfa Değiştirici -->
+    <div class="flex items-center gap-1.5 bg-amber-50 p-1.5 rounded-2xl text-xs font-extrabold font-sans-bold border border-amber-200">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3.5 py-2 rounded-xl bg-yellow-400 text-slate-900 shadow-sm transition">1. Kapak</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 2</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 3</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 4</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 5</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3.5 py-2 rounded-xl text-amber-800 hover:bg-yellow-200/50 transition">Tümünü Aç</button>
     </div>
-  </header>
+
+    <!-- Yazdır Butonu -->
+    <button onclick="printFasikul()" class="px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-black rounded-xl text-xs flex items-center gap-2 shadow-md hover:brightness-105 transition font-sans-bold">
+      <span>🖨️</span>
+      <span>Yazdır / PDF Kaydet</span>
+    </button>
+  </div>
 
   <!-- ========================================================================= -->
-  <!-- SAYFA 1: KAPAK & ZİHİN HARİTASI (ÂCİL VE ÂCİL DENGESİ)                      -->
+  <!-- SAYFA 1: KAPAK & İÇİNDEKİLER GENEL BAKIŞ                                 -->
   <!-- ========================================================================= -->
   <div id="page-1" class="worksheet-paper">
-    <!-- Üst Başlık Çubuğu -->
-    <div class="border-b-4 border-amber-400 pb-4">
-      <div class="flex justify-between items-start gap-4">
-        <div>
-          <span class="badge-doodle text-amber-800 border-amber-400 bg-amber-50">Vav Radyo • 18 Haziran 2019 Dersi</span>
-          <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2 font-sans-bold tracking-tight">DÜŞÜNCE VE HAYAT</h2>
-          <p class="text-xl md:text-2xl text-amber-800 font-bold mt-1">31. Bölüm • Âcil ve Âcil Dengesi, İmam Mâtürîdî ve Tamah Tohumu</p>
+    
+    <div>
+      <!-- Üst Başlık Bölümü -->
+      <div class="text-center pt-2 relative">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="text-amber-500 text-2xl">✨</span>
+          <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-6 py-1 rounded-full text-amber-900 font-extrabold text-2xl tracking-wider">
+            彡 31. Bölüm 彡
+          </div>
+          <span class="text-amber-500 text-2xl">✨</span>
         </div>
-        <div class="text-right">
-          <span class="pill-doodle-pink font-sans-bold">FASİKÜL NO: 31</span>
-          <p class="text-sm font-sans-bold text-slate-500 mt-1">Öğrenci / Okur: ______________</p>
-          <p class="text-sm font-sans-bold text-slate-500">Tarih: ____ / ____ / ________</p>
+
+        <h1 class="text-5xl md:text-6xl font-black tracking-wider text-slate-900 drop-shadow-sm">
+          DÜŞÜNCE VE HAYAT
+        </h1>
+        <div class="text-4xl md:text-5xl font-black text-amber-600 tracking-widest mt-1">
+          — 31. DERS —
         </div>
+        <div class="text-3xl font-extrabold text-sky-600 tracking-widest mt-0.5">
+          &gt; İki Âcil Arasındaki Tercih, İmam Mâtürîdî ve İzzet Ağacı &lt;
+        </div>
+      </div>
+
+      <!-- Orta Kart: İllüstrasyon Kutusu & Manevi Söz -->
+      <div class="my-6 border-2 border-amber-400 rounded-3xl p-6 bg-gradient-to-br from-amber-50 via-orange-50/50 to-sky-50/60 relative overflow-hidden shadow-sm">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 py-2 px-2">
+          
+          <div class="space-y-3.5 text-left max-w-md">
+            <div class="text-5xl flex items-center gap-3">
+              <span>⚖️</span>
+              <span>🧠</span>
+              <span>🌾</span>
+              <span>🌳</span>
+            </div>
+            <p class="text-3xl text-amber-900 italic font-bold leading-snug">
+              "Akıl doğruyu bilir ama duyular peşin verir! <br>Hiçbir zillet dalı yoktur ki tamah tohumu üzerinde yeşermiş olmasın..."
+            </p>
+            <p class="text-base text-slate-700 font-sans-bold">
+              👤 Müderris: <strong class="text-slate-900 font-black">Prof. Dr. Ekrem Demirli</strong> | Vav Radyo
+            </p>
+          </div>
+
+          <!-- Sağ: Renkli Post-It Notu (Checklist) -->
+          <div class="bg-amber-100 text-slate-900 p-5 rounded-2xl shadow-md rotate-2 max-w-[250px] border-2 border-amber-300 font-bold text-lg space-y-2">
+            <div class="flex items-center gap-2">
+              <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+              <span class="text-emerald-700 text-xl">☑</span> <span>İki Âcil Tercihi & Akıl</span>
+            </div>
+            <div class="flex items-center gap-2"><span class="text-sky-700 text-xl">☑</span> <span>Öfke Baldan Tatlıdır Tuzağı</span></div>
+            <div class="flex items-center gap-2"><span class="text-purple-700 text-xl">☑</span> <span>İmam Mâtürîdî: Te'vil Edebi</span></div>
+            <div class="flex items-center gap-2"><span class="text-rose-700 text-xl">☑</span> <span>Kureyş & Hikem 47: Tamah Ağacı</span></div>
+            <div class="text-center pt-1 text-2xl">😊</div>
+          </div>
+
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-amber-300 text-center text-lg font-bold text-amber-950">
+          ✨ <em>"Hiçbir zillet dalı yoktur ki tamah tohumu üzerinde yeşermiş olmasın." — Hikem-i Atâiyye 47</em> ✨
+        </div>
+      </div>
+
+      <!-- 4 Ana Konu Şeridi -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-base font-bold">
+        <div class="p-3 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-800 shadow-sm">
+          31.1. İki Âcil & Akıl
+        </div>
+        <div class="p-3 rounded-2xl border-2 border-sky-400 bg-sky-50 text-sky-800 shadow-sm">
+          31.2. Öfke Tuzağı
+        </div>
+        <div class="p-3 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 shadow-sm">
+          31.3. Mâtürîdî & Te'vil
+        </div>
+        <div class="p-3 rounded-2xl border-2 border-amber-400 bg-amber-50 text-amber-900 shadow-sm">
+          31.4. Hikem 47: Zillet & Tamah
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
+      </div>
+      <div>
+        <span>Sayfa 1 / 5</span>
       </div>
     </div>
 
-    <!-- Zihin Haritası Rozetleri -->
-    <div class="mt-6 mb-4">
-      <div class="flex flex-wrap gap-2 justify-center items-center">
-        <span class="pill-doodle-yellow">⏳ Âcil (Peşin) vs Âcil (Ebedi)</span>
-        <span class="pill-doodle-cyan">⚡ "Öfke Baldan Tatlıdır" Paradoksu</span>
-        <span class="pill-doodle-purple">📖 İmam Mâtürîdî'nin Tevil Edebi</span>
-        <span class="pill-doodle-green">🐪 Kureyş Suresi & Hayat Seferi</span>
-        <span class="pill-doodle-pink">🌱 Hikem 47: Zillet ve Tamah</span>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 2: İki Âcil & Akıl                                             -->
+  <!-- ========================================================================= -->
+  <div id="page-2" class="worksheet-paper hidden">
+    <div>
+      <!-- Üst Şerit -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-4 py-1 rounded-full text-amber-900 font-bold text-xl">
+          彡 31. Bölüm 彡
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-black tracking-wider text-sky-700">
+            Σ Düşünce ve Hayat • 31. Bölüm Σ
+          </div>
+          <div class="cloud-banner-pink px-7 py-2 text-lg md:text-xl font-bold mt-1 inline-block shadow-md">
+            31.1. İki Âcil & Akıl
+          </div>
+        </div>
+        <div class="text-right text-xs text-amber-800 italic hidden sm:block max-w-[160px] font-bold">
+          "İki Âcil Tercihi & Akıl"
+        </div>
       </div>
-    </div>
+
+</div>
+
+    <!-- Zihin Haritası Rozetleri -->
+    
 
     <!-- Ana Çerçeve 1: İki Âcil Arasındaki İmtihan -->
     <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
@@ -266,19 +386,8 @@
   <!-- ========================================================================= -->
   <!-- SAYFA 2: AKIL VE DUYGULARIN SAVAŞI: ÖFKE PARADOKSU                        -->
   <!-- ========================================================================= -->
-  <div id="page-2" class="worksheet-paper hidden">
-    <!-- Üst Başlık -->
-    <div class="border-b-4 border-amber-400 pb-3">
-      <div class="flex justify-between items-center">
-        <div>
-          <span class="badge-doodle text-cyan-800 border-cyan-400 bg-cyan-50">31. Bölüm • İdrak Mertebeleri & Nefis</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Akıl ve Duyguların Savaşı: "Öfke Baldan Tatlıdır"</h2>
-        </div>
-        <span class="pill-doodle-cyan font-sans-bold">SAYFA 2</span>
-      </div>
-    </div>
 
-    <!-- Öfke Paradoksu -->
+<!-- Öfke Paradoksu -->
     <div class="box-hand-cyan p-5 my-4 bg-sky-50/40">
       <div class="flex items-center gap-2 mb-2">
         <span class="text-3xl">⚡</span>
@@ -313,19 +422,44 @@
   <!-- ========================================================================= -->
   <!-- SAYFA 3: İMAM MÂTÜRÎDÎ VE TEFSİRDE İRFANİ TEVAZU                           -->
   <!-- ========================================================================= -->
-  <div id="page-3" class="worksheet-paper hidden">
-    <!-- Üst Başlık -->
-    <div class="border-b-4 border-amber-400 pb-3">
-      <div class="flex justify-between items-center">
-        <div>
-          <span class="badge-doodle text-purple-800 border-purple-400 bg-purple-50">31. Bölüm • Tefsir Edebi & Nass</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">İmam Mâtürîdî ve Te'vil Ahlakı</h2>
-        </div>
-        <span class="pill-doodle-purple font-sans-bold">SAYFA 3</span>
-      </div>
     </div>
 
-    <!-- Te'vilâtü'l-Kur'an Sırrı -->
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
+      </div>
+      <div>
+        <span>Sayfa 2 / 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 3: Öfke Tuzağı                                             -->
+  <!-- ========================================================================= -->
+  <div id="page-3" class="worksheet-paper hidden">
+    <div>
+      <!-- Üst Şerit -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-4 py-1 rounded-full text-amber-900 font-bold text-xl">
+          彡 31. Bölüm 彡
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-black tracking-wider text-sky-700">
+            Σ Düşünce ve Hayat • 31. Bölüm Σ
+          </div>
+          <div class="cloud-banner-pink px-7 py-2 text-lg md:text-xl font-bold mt-1 inline-block shadow-md">
+            31.2. Öfke Tuzağı
+          </div>
+        </div>
+        <div class="text-right text-xs text-amber-800 italic hidden sm:block max-w-[160px] font-bold">
+          "Öfke Baldan Tatlıdır Tuzağı"
+        </div>
+      </div>
+
+<!-- Te'vilâtü'l-Kur'an Sırrı -->
     <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
       <div class="flex items-center gap-3 mb-2">
         <span class="text-3xl">📖</span>
@@ -368,19 +502,44 @@
   <!-- ========================================================================= -->
   <!-- SAYFA 4: KUREYŞ SURESİ VE RIZIK SEFERLERİMİZ                               -->
   <!-- ========================================================================= -->
-  <div id="page-4" class="worksheet-paper hidden">
-    <!-- Üst Başlık -->
-    <div class="border-b-4 border-amber-400 pb-3">
-      <div class="flex justify-between items-center">
-        <div>
-          <span class="badge-doodle text-rose-800 border-rose-400 bg-rose-50">31. Bölüm • Rızık & İmtihan Şuuru</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Kureyş Suresi ve Rızık Seferlerimiz</h2>
-        </div>
-        <span class="pill-doodle-pink font-sans-bold">SAYFA 4</span>
-      </div>
     </div>
 
-    <!-- Kureyş Suresi Tahlili -->
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
+      </div>
+      <div>
+        <span>Sayfa 3 / 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 4: Mâtürîdî & Te'vil                                             -->
+  <!-- ========================================================================= -->
+  <div id="page-4" class="worksheet-paper hidden">
+    <div>
+      <!-- Üst Şerit -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-4 py-1 rounded-full text-amber-900 font-bold text-xl">
+          彡 31. Bölüm 彡
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-black tracking-wider text-sky-700">
+            Σ Düşünce ve Hayat • 31. Bölüm Σ
+          </div>
+          <div class="cloud-banner-pink px-7 py-2 text-lg md:text-xl font-bold mt-1 inline-block shadow-md">
+            31.3. Mâtürîdî & Te'vil
+          </div>
+        </div>
+        <div class="text-right text-xs text-amber-800 italic hidden sm:block max-w-[160px] font-bold">
+          "İmam Mâtürîdî: Te'vil Edebi"
+        </div>
+      </div>
+
+<!-- Kureyş Suresi Tahlili -->
     <div class="box-hand-pink p-5 my-4 bg-rose-50/40">
       <div class="flex items-center gap-2 mb-2">
         <span class="text-3xl">🐪</span>
@@ -415,19 +574,44 @@
   <!-- ========================================================================= -->
   <!-- SAYFA 5: HİKEM-İ ATÂİYYE - ZİLLET AĞACI VE TAMAH TOHUMU                    -->
   <!-- ========================================================================= -->
-  <div id="page-5" class="worksheet-paper hidden">
-    <!-- Üst Başlık -->
-    <div class="border-b-4 border-amber-400 pb-3">
-      <div class="flex justify-between items-center">
-        <div>
-          <span class="badge-doodle text-emerald-800 border-emerald-400 bg-emerald-50">31. Bölüm • Hikmet & İstiğna</span>
-          <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-sans-bold mt-1">Hikem-i Atâiyye: Zillet ve Tamah</h2>
-        </div>
-        <span class="pill-doodle-green font-sans-bold">SAYFA 5</span>
-      </div>
     </div>
 
-    <!-- Hikmet Metni -->
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
+      </div>
+      <div>
+        <span>Sayfa 4 / 5</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SAYFA 5: Hikem 47: Zillet & Tamah                                             -->
+  <!-- ========================================================================= -->
+  <div id="page-5" class="worksheet-paper hidden">
+    <div>
+      <!-- Üst Şerit -->
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-4 py-1 rounded-full text-amber-900 font-bold text-xl">
+          彡 31. Bölüm 彡
+        </div>
+        <div class="text-center">
+          <div class="text-2xl font-black tracking-wider text-sky-700">
+            Σ Düşünce ve Hayat • 31. Bölüm Σ
+          </div>
+          <div class="cloud-banner-pink px-7 py-2 text-lg md:text-xl font-bold mt-1 inline-block shadow-md">
+            31.4. Hikem 47: Zillet & Tamah
+          </div>
+        </div>
+        <div class="text-right text-xs text-amber-800 italic hidden sm:block max-w-[160px] font-bold">
+          "Kureyş & Hikem 47: Tamah Ağacı"
+        </div>
+      </div>
+
+<!-- Hikmet Metni -->
     <div class="box-hand-yellow p-6 my-4 bg-amber-50/40">
       <div class="flex items-center gap-3 mb-2">
         <span class="text-3xl">🌱</span>
@@ -486,28 +670,43 @@
   </div>
 
   <!-- Sayfa Değiştirme ve Yazdırma Fonksiyonları -->
+    </div>
+
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
+      <div class="flex items-center gap-2">
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
+      </div>
+      <div>
+        <span>Sayfa 5 / 5</span>
+      </div>
+    </div>
+  </div>
+
   <script>
-    function showPage(num) {
+    function showPage(pageNumber) {
       for (let i = 1; i <= 5; i++) {
         const page = document.getElementById('page-' + i);
         const btn = document.getElementById('btn-p' + i);
-        if (page) page.classList.add('hidden');
+        if (page) {
+          if (i === pageNumber) {
+            page.classList.remove('hidden');
+          } else {
+            page.classList.add('hidden');
+          }
+        }
         if (btn) {
-          btn.classList.remove('bg-yellow-400', 'text-slate-900');
-          btn.classList.add('text-slate-700');
+          if (i === pageNumber) {
+            btn.className = 'px-3.5 py-2 rounded-xl bg-yellow-400 text-slate-900 shadow-sm transition';
+          } else {
+            btn.className = 'px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition';
+          }
         }
       }
-      const activeBtnAll = document.getElementById('btn-all');
-      if (activeBtnAll) {
-        activeBtnAll.classList.remove('bg-yellow-400', 'text-slate-900');
-      }
-
-      const activePage = document.getElementById('page-' + num);
-      const activeBtn = document.getElementById('btn-p' + num);
-      if (activePage) activePage.classList.remove('hidden');
-      if (activeBtn) {
-        activeBtn.classList.add('bg-yellow-400', 'text-slate-900');
-        activeBtn.classList.remove('text-slate-700');
+      const allBtn = document.getElementById('btn-all');
+      if (allBtn) {
+        allBtn.className = 'px-3.5 py-2 rounded-xl text-amber-800 hover:bg-yellow-200/50 transition';
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -517,24 +716,21 @@
         const page = document.getElementById('page-' + i);
         const btn = document.getElementById('btn-p' + i);
         if (page) page.classList.remove('hidden');
-        if (btn) {
-          btn.classList.remove('bg-yellow-400', 'text-slate-900');
-          btn.classList.add('text-slate-700');
-        }
+        if (btn) btn.className = 'px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition';
       }
-      const btnAll = document.getElementById('btn-all');
-      if (btnAll) {
-        btnAll.classList.add('bg-yellow-400', 'text-slate-900');
+      const allBtn = document.getElementById('btn-all');
+      if (allBtn) {
+        allBtn.className = 'px-3.5 py-2 rounded-xl bg-purple-500 text-white shadow-sm transition';
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function printFasikul() {
       showAllPages();
-      setTimeout(() => {
+      setTimeout(function() {
         window.print();
-      }, 300);
+      }, 350);
     }
   </script>
-
 </body>
 </html>

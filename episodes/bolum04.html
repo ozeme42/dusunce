@@ -227,141 +227,134 @@
 </head>
 <body class="py-8 px-4 text-slate-800 leading-relaxed">
 
-  <!-- Navigasyon Çubuğu (no-print) -->
-  <div class="max-w-4xl mx-auto mb-6 flex flex-wrap justify-between items-center gap-3 no-print bg-white/95 backdrop-blur-sm p-4 rounded-2xl border-2 border-amber-300 shadow-md">
-    <div class="flex items-center gap-2">
-      <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
-      <span class="text-2xl">📚</span>
-      <span class="font-sans-bold font-extrabold text-slate-800 text-base">Düşünce ve Hayat 4. Bölüm</span>
-      <span class="bg-amber-100 text-amber-900 text-xs px-3 py-1 rounded-full font-extrabold border border-amber-300 font-sans-bold">Prof. Dr. Ekrem Demirli</span>
+  <!-- Üst Menü & Sayfa Butonları -->
+  <div class="max-w-[890px] mx-auto mb-6 flex flex-wrap items-center justify-between gap-3 bg-white/90 backdrop-blur-md p-4 rounded-2xl border-2 border-yellow-400 shadow-lg no-print">
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-900 flex items-center justify-center font-black text-2xl shadow-sm border border-yellow-500 hover:scale-105 transition" title="Kütüphaneye Dön">
+        ★
+      </a>
+      <div>
+        <h2 class="text-base font-extrabold text-slate-900 tracking-tight font-sans-bold">DÜŞÜNCE VE HAYAT ATÖLYESİ</h2>
+        <p class="text-xs text-slate-600 font-sans-bold">Prof. Dr. Ekrem Demirli • 4. Bölüm Çalışma Fasikülü</p>
+      </div>
     </div>
-    <div class="flex items-center gap-2 flex-wrap">
-      <button onclick="showPage(1)" id="btn-p1" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 bg-yellow-400 text-slate-900 shadow-sm">Kapak</button>
-      <button onclick="showPage(2)" id="btn-p2" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">4.1 Yûnus & Vahdet</button>
-      <button onclick="showPage(3)" id="btn-p3" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">4.2 Hakikatin Hakkı</button>
-      <button onclick="showPage(4)" id="btn-p4" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">4.3 Meczubun Sorusu</button>
-      <button onclick="showPage(5)" id="btn-p5" class="px-3.5 py-1.5 rounded-xl border border-amber-300 font-sans-bold text-xs font-bold transition hover:bg-yellow-200 text-slate-700">4.4 Yûsuf & Akabe</button>
-      <button onclick="showAllPages()" id="btn-all" class="px-3.5 py-1.5 rounded-xl border border-purple-300 bg-purple-50 text-purple-800 font-sans-bold text-xs font-bold hover:bg-purple-200 transition">Tümünü Aç</button>
-      <button onclick="printFasikul()" class="px-3.5 py-1.5 rounded-xl bg-emerald-500 text-white font-sans-bold text-xs font-bold hover:bg-emerald-600 transition shadow">🖨️ Yazdır / PDF Kaydet</button>
+
+    <!-- Sayfa Değiştirici -->
+    <div class="flex items-center gap-1.5 bg-amber-50 p-1.5 rounded-2xl text-xs font-extrabold font-sans-bold border border-amber-200">
+      <button onclick="showPage(1)" id="btn-p1" class="px-3.5 py-2 rounded-xl bg-yellow-400 text-slate-900 shadow-sm transition">1. Kapak</button>
+      <button onclick="showPage(2)" id="btn-p2" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 2</button>
+      <button onclick="showPage(3)" id="btn-p3" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 3</button>
+      <button onclick="showPage(4)" id="btn-p4" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 4</button>
+      <button onclick="showPage(5)" id="btn-p5" class="px-3.5 py-2 rounded-xl text-slate-700 hover:text-slate-900 transition">Sayfa 5</button>
+      <button onclick="showAllPages()" id="btn-all" class="px-3.5 py-2 rounded-xl text-amber-800 hover:bg-yellow-200/50 transition">Tümünü Aç</button>
     </div>
+
+    <!-- Yazdır Butonu -->
+    <button onclick="printFasikul()" class="px-4 py-2 bg-gradient-to-r from-amber-500 to-yellow-500 text-slate-950 font-black rounded-xl text-xs flex items-center gap-2 shadow-md hover:brightness-105 transition font-sans-bold">
+      <span>🖨️</span>
+      <span>Yazdır / PDF Kaydet</span>
+    </button>
   </div>
 
 
-  <!-- ========================================== -->
-  <!-- SAYFA 1: KAPAK & GENEL BAKIŞ               -->
-  <!-- ========================================== -->
+  <!-- ========================================================================= -->
+  <!-- SAYFA 1: KAPAK & İÇİNDEKİLER GENEL BAKIŞ                                 -->
+  <!-- ========================================================================= -->
   <div id="page-1" class="worksheet-paper">
     
-    <!-- Üst Başlık Bölümü -->
     <div>
-      <div class="flex justify-between items-center pb-3 border-b-2 border-amber-300">
-        <div class="flex items-center gap-2">
-          <span class="bg-amber-400 text-slate-900 px-3.5 py-1 rounded-full text-xs font-black tracking-wider uppercase font-sans-bold shadow-sm">彡 4. BÖLÜM 彡</span>
-          <span class="text-base font-bold text-slate-600">Vav Radyo • Düşünce ve Hayat Serisi</span>
+      <!-- Üst Başlık Bölümü -->
+      <div class="text-center pt-2 relative">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="text-amber-500 text-2xl">✨</span>
+          <div class="border-2 border-dashed border-amber-500 bg-amber-100/70 px-6 py-1 rounded-full text-amber-900 font-extrabold text-2xl tracking-wider">
+            彡 4. Bölüm 彡
+          </div>
+          <span class="text-amber-500 text-2xl">✨</span>
         </div>
-        <div class="zigzag-line font-sans-bold text-base text-amber-600">
-          Σ Düşünce ve Hayat • 4. Bölüm Σ
+
+        <h1 class="text-5xl md:text-6xl font-black tracking-wider text-slate-900 drop-shadow-sm">
+          DÜŞÜNCE VE HAYAT
+        </h1>
+        <div class="text-4xl md:text-5xl font-black text-amber-600 tracking-widest mt-1">
+          — 4. DERS —
+        </div>
+        <div class="text-3xl font-extrabold text-sky-600 tracking-widest mt-0.5">
+          &gt; Yûnus Emre, Hakikatin Hakkı ve Birlik Şuuru &lt;
         </div>
       </div>
 
-      <!-- Ana Başlık Banner (Daha Büyük Font) -->
-      <div class="text-center my-6">
-        <div class="cloud-banner-pink mb-3">
-          <h1 class="text-3xl md:text-5xl font-extrabold text-rose-800 tracking-tight">
-            Yûnus Emre, Hakikatin Hakkı ve Birlik Şuuru
-          </h1>
-        </div>
-        <div class="text-2xl md:text-3xl text-slate-700 font-bold mt-2">
-          Prof. Dr. Ekrem Demirli Ders Notları ve Kavram Haritası
-        </div>
-      </div>
-
-      <!-- Günün İlham Verici Sözü (Büyük Font) -->
-      <div class="box-hand-yellow p-6 bg-amber-50/70 mb-6">
-        <div class="flex items-start gap-4">
-          <span class="text-4xl">🕊️</span>
-          <div>
-            <div class="font-extrabold text-amber-950 text-2xl font-sans-bold mb-2">
-              Dersin Ruhunu Özetleyen Temel Düşünce:
+      <!-- Orta Kart: İllüstrasyon Kutusu & Manevi Söz -->
+      <div class="my-6 border-2 border-amber-400 rounded-3xl p-6 bg-gradient-to-br from-amber-50 via-orange-50/50 to-sky-50/60 relative overflow-hidden shadow-sm">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6 py-2 px-2">
+          
+          <div class="space-y-3.5 text-left max-w-md">
+            <div class="text-5xl flex items-center gap-3">
+              <span>📜</span>
+              <span>🌊</span>
+              <span>🌿</span>
+              <span>💎</span>
             </div>
-            <p class="text-2xl italic text-slate-900 leading-snug">
-              <span class="hl-soft-yellow font-bold">"Benim bunda karârım yok, ben bunda gitmeğe geldim... Bezirgânam metâım çok, alana satmağa geldim."</span><br>
-              <span class="text-xl text-slate-800 not-italic block mt-2 font-normal">
-                Dünyaya yaptıklarımızın yükünü taşımaya değil; <span class="hl-soft-green font-bold">bir kuş gibi hür ve hafif geriye dönebilmek için</span> elimizde ne varsa elden çıkarmaya geldik. Hakikatin hakkı âlidir; insanları memnun etmek için hakikat feda edilemez!
-              </span>
+            <p class="text-3xl text-amber-900 italic font-bold leading-snug">
+              "Benim bunda karârım yok, ben bunda gitmeğe geldim... <br>Bezirgânam metâım çok, alana satmağa geldim."
+            </p>
+            <p class="text-base text-slate-700 font-sans-bold">
+              👤 Müderris: <strong class="text-slate-900 font-black">Prof. Dr. Ekrem Demirli</strong> | Vav Radyo
             </p>
           </div>
+
+          <!-- Sağ: Renkli Post-It Notu (Checklist) -->
+          <div class="bg-amber-100 text-slate-900 p-5 rounded-2xl shadow-md rotate-2 max-w-[250px] border-2 border-amber-300 font-bold text-lg space-y-2">
+            <div class="flex items-center gap-2">
+              <a href="../index.html" class="text-2xl hover:scale-110 transition p-1 bg-amber-100 rounded-lg border border-amber-300" title="Kütüphaneye Dön">🏠</a>
+              <span class="text-emerald-700 text-xl">☑</span> <span>Yûnus & Vahdet Dili</span>
+            </div>
+            <div class="flex items-center gap-2"><span class="text-sky-700 text-xl">☑</span> <span>Hakikatin Hakkı</span></div>
+            <div class="flex items-center gap-2"><span class="text-purple-700 text-xl">☑</span> <span>Meczubun Sorusu</span></div>
+            <div class="flex items-center gap-2"><span class="text-rose-700 text-xl">☑</span> <span>Yûsuf & Akabe Yokuşu</span></div>
+            <div class="text-center pt-1 text-2xl">😊</div>
+          </div>
+
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-amber-300 text-center text-lg font-bold text-amber-950">
+          ✨ <em>"Varlığını meçhuliyet toprağına göm; gömülmeyen tohum neşvünemâ bulmaz." — Hikem-i Atâiyye</em> ✨
         </div>
       </div>
 
-      <!-- Fasikül İçindekiler Tablosu (Büyük Yazı Desteği) -->
-      <div class="box-hand-purple p-6 bg-purple-50/50 mb-6">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="pill-doodle-purple text-base">YOL HARİTASI</span>
-          <span class="text-lg font-sans-bold font-bold text-purple-950">4. Bölümde Neler İnceleniyor?</span>
+      <!-- 4 Ana Konu Şeridi -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-base font-bold">
+        <div class="p-3 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-800 shadow-sm">
+          4.1. Yûnus & Vahdet
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-purple-200">
-            <span class="num-circle bg-rose-200 border-rose-600">1</span>
-            <div>
-              <div class="font-bold text-rose-900 font-sans-bold text-xl">4.1. Yûnus Emre & 'Gitmeğe Geldim'</div>
-              <div class="text-slate-700 text-base mt-1">İkilikten birliğe tevhid hicreti, amellerin yükünden sıyrılma ve secde hakikati.</div>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-purple-200">
-            <span class="num-circle bg-sky-200 border-sky-600">2</span>
-            <div>
-              <div class="font-bold text-sky-900 font-sans-bold text-xl">4.2. Hakikatin Hakkı & Takva İtibarı</div>
-              <div class="text-slate-700 text-base mt-1">İbnü'l-Arabî'nin tespiti: İnsanları razı etmek imkânsızdır; fetvayı aşan takva ahlakı.</div>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-purple-200">
-            <span class="num-circle bg-emerald-200 border-emerald-600">3</span>
-            <div>
-              <div class="font-bold text-emerald-900 font-sans-bold text-xl">4.3. Meczubun Tek Sorusu & Simya</div>
-              <div class="text-slate-700 text-base mt-1">'Ben seninleydim, sen kiminleydin?' hakikati; kanaatin ruhu altına çeviren simyası.</div>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3 bg-white p-4 rounded-xl border border-purple-200">
-            <span class="num-circle bg-amber-200 border-amber-600">4</span>
-            <div>
-              <div class="font-bold text-amber-900 font-sans-bold text-xl">4.4. Hz. Yûsuf & Sarp Yokuş (Akabe)</div>
-              <div class="text-slate-700 text-base mt-1">Kur'an'ın beşeri gerçekçiliği, garantisizlik şuuru ve 'Akabe' yokuşunu aşmak.</div>
-            </div>
-          </div>
+        <div class="p-3 rounded-2xl border-2 border-sky-400 bg-sky-50 text-sky-800 shadow-sm">
+          4.2. Hakikatin Hakkı
+        </div>
+        <div class="p-3 rounded-2xl border-2 border-emerald-400 bg-emerald-50 text-emerald-800 shadow-sm">
+          4.3. Meczubun Sorusu
+        </div>
+        <div class="p-3 rounded-2xl border-2 border-amber-400 bg-amber-50 text-amber-900 shadow-sm">
+          4.4. Yûsuf & Akabe
         </div>
       </div>
 
-      <!-- Alt Bilgi Kutusu -->
-      <div class="box-hand-cyan p-4 bg-sky-50/60 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">🎧</span>
-          <span class="text-base font-sans-bold text-sky-950 font-bold">
-            Vav Radyo • Düşünce ve Hayat 4. Bölüm • Süre: ~100 Dk • Prof. Dr. Ekrem Demirli
-          </span>
-        </div>
-        <span class="pill-doodle-cyan text-sm">Modül 4 / Sayfa 1</span>
-      </div>
     </div>
 
-    <!-- Footer -->
-    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex justify-between items-center text-sm font-bold text-slate-600 font-sans-bold">
+    <!-- Alt Bilgi (Footer) -->
+    <div class="mt-8 pt-3 border-t-2 border-amber-300 flex flex-wrap justify-between items-center text-xs font-bold text-slate-600 font-sans-bold">
       <div class="flex items-center gap-2">
-        <span>📱 Akıllı Fasikül Sistemi</span>
-        <span>•</span>
-        <span>Büyük Yazı & Açık Tema Düzeni</span>
+        <span class="text-amber-600 text-base">▶</span>
+        <span>Vav Radyo | Düşünce ve Hayat - Prof. Dr. Ekrem Demirli</span>
       </div>
-      <div>Sayfa 1 / 5</div>
+      <div>
+        <span>Sayfa 1 / 5</span>
+      </div>
     </div>
 
   </div>
 
 
-  <!-- ========================================== -->
+<!-- ========================================== -->
   <!-- SAYFA 2: 4.1 YÛNUS & TEVHİD HİCRETİ         -->
   <!-- ========================================== -->
   <div id="page-2" class="worksheet-paper hidden">
