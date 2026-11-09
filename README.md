@@ -2,6 +2,9 @@
 
 Vav Radyo'da yayımlanan Prof. Dr. Ekrem Demirli'nin **"Düşünce ve Hayat"** radyo dersleri serisinin 1'den 31'e kadar tüm bölümlerinin kapsamlı, interaktif ve açık tema çalışma fasikülleri.
 
+> 📺 **Resmi YouTube Oynatma Listesi:** [Prof. Dr. Ekrem Demirli ile Düşünce ve Hayat - Vav Radyo](https://www.youtube.com/playlist?list=PLaK3SezGSNwkveYROjTnIAqzb3bshquQ-)  
+> 🎙️ **31. Bölüm YouTube Kaydı:** [Prof. Dr. Ekrem Demirli ile Düşünce ve Hayat 31. Bölüm](https://www.youtube.com/watch?v=MUrJwEc_YsI) | Detaylı Döküm: [`episodes/bolum31_ozet.md`](episodes/bolum31_ozet.md)
+
 ## 📁 Proje Dizin Yapısı
 
 ```
